@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Form cell
+   ========================================================================== */
+
+.c-form-cell {
+    @include no-spacing;
+    @include clearfix;
+}
+
+    .c-form-cell__label {
+        display: block;
+
+        &:after {
+            content: ':';
+        }
+    }
+
+    .c-form-cell__input {
+        display: block;
+    }

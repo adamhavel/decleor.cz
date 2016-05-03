@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/* Helpers
+   ========================================================================== */
+
+// Returns a multiple of the leading. Used to create any sort of vertical spacing.
+@function lines($count: 1, $correction: null) {
+    @if $count == 0 {
+        @return 0;
+    } @else if $correction == null  {
+        @return $count * const(LINE_HEIGHT) * 1rem;
+    } @else {
+        @return calc(#{$count * const(LINE_HEIGHT) * 1rem} + #{$correction});
+    }
+}
+
+// Create a pretty underline.
+@mixin underline($weight: 1px, $background: color(background), $color: currentColor, $hover: color(text), $position: 90%) {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient($color, $color) no-repeat;
+    background-size: 100% $weight;
+    background-position: 0 $position;
+    text-shadow: $weight 0 $background,
+                 -$weight 0 $background,
+                 ($weight / 2) 0 $background,
+                 -($weight / 2) 0 $background;
+
+    &:focus,
+    &:hover {
+        background-image: linear-gradient($hover, $hover);
+    }
+}
+
+@mixin display-type {
+    line-height: 1.25;
+    font-family: font(display);
+    font-feature-settings: 'liga', 'kern', 'swsh', 'calt';
+}
+
+
+/* Flow control
+   ========================================================================== */
+
+// Alter the default vertical spacing.
+@mixin v-spacing($lines, $propagate: false) {
+    $selector: '* + *';
+
+    @if not $propagate {
+        $selector: selector_nest('>', $selector);
+    }
+
+    #{$selector} {
+        margin-top: lines($lines);
+    }
+}
+
+// Spread items horizontally.
+@mixin h-spacing($distance) {
+
+    > * {
+        margin-right: $distance;
+
+        @if $distance > 0 {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// Removes the horizontal spacing.
+@mixin no-spacing($propagate: false) {
+    @include v-spacing(0, $propagate);
+}
+
+@mixin out-of-flow {
+    margin-top: 0;
+
+    &:first-child + * {
+        margin-top: 0 !important;
+    }
+}
+
+// Somebody is an island.
+@mixin island($leading: 1, $trailing: $leading) {
+
+    @if $leading > 0 {
+        margin-top: lines($leading);
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    @if $trailing > 0 {
+        margin-bottom: lines($trailing);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin aloof($distance) {
+    @include island($distance, 0);
+}
+
+
+/* Definitions
+   ========================================================================== */
+
+html {
+    color: color(text);
+    font-family: font(body);
+    font-size: const(BASE) * 1em;
+    line-height: const(LINE_HEIGHT);
+}
+
+body * + * {
+    margin-top: lines(1);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([class]) {
+    color: color(highlight);
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+em {
+    color: color(highlight);
+}
+
+strong {
+    font-weight: 700;
+}
+
+q {
+    font-style: italic;
+
+    &:before,
+    &:after {
+        display: none;
+    }
+}
+
+br {
+    margin-top: 0;
+}

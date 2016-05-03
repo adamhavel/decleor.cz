@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Icons
+   ========================================================================== */
+
+.e-icon {
+    $gap: .5em;
+    @include size(1em);
+
+    display: inline-block;
+    margin-top: 0;
+    fill: currentcolor;
+    vertical-align: -.175em;
+
+    &:first-child {
+        margin-right: $gap;
+    }
+
+    &:last-child {
+        margin-left: $gap;
+    }
+
+    &:first-child:last-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

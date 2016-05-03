@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.o-layout {
+    @include no-spacing;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include media('<layout') {
+        @include v-spacing(1);
+
+        flex-direction: column;
+    }
+
+    @mixin no-flexbox {
+        @include clearfix;
+    }
+}
+
+    .o-layout__item {
+        $gutter: const(GUTTER) * 2;
+
+        width: scale-to-percentage(0, 0 1, $gutter);
+
+        &:first-child {
+            width: scale-to-percentage(1, 0 1, $gutter);
+        }
+
+        @include media('<layout') {
+            width: auto !important;
+        }
+
+        .o-layout--equal > & {
+            width: 50% - ($gutter / 2);
+        }
+
+        @mixin no-flexbox {
+            float: right;
+
+            &:first-child {
+                float: left;
+            }
+
+            @include media('<layout') {
+                float: none;
+                display: block;
+            }
+        }
+    }

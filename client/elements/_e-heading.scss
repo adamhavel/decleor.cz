@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Heading
+   ========================================================================== */
+
+.e-heading,
+%e-heading {
+    @include display-type;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    > a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
