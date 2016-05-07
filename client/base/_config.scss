@@ -29,7 +29,7 @@ $constants: () !global;
 
 @include const('BASE', 1);
 @include const('LINE_HEIGHT', 1.5);
-@include const('LINE_LENGTH', 50em);
+@include const('LINE_LENGTH', 55em);
 
 
 /* Layout
@@ -45,7 +45,9 @@ $constants: () !global;
 @include const('COLORS', (
     background: #fff,
     text: #706259,
+    text--dark: #000,
     shade: #f7f7f7,
+    shade--dark: #dedede,
     highlight: #ab8249
 ));
 
@@ -58,8 +60,8 @@ $constants: () !global;
    ========================================================================== */
 
 @include const('FONTS', (
-    body: ('Helvetica Neue', Helvetica, 'Segoe UI', Roboto, Arial, sans-serif),
-    display: ('Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif)
+    serif: ('Playfair Display', 'Helvetica Neue', Helvetica, 'Segoe UI', Roboto, Arial, sans-serif),
+    sans-serif: ('Montserrat', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif)
 ));
 
 @function font($name) {

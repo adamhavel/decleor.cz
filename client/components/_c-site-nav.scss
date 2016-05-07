@@ -3,20 +3,39 @@
    ========================================================================== */
 
 .c-site-nav {
-    @include display-type;
+
 }
 
     .c-site-nav__list {
-        @include h-spacing(1.5em);
+        @include h-spacing(1.25em);
     }
 
         .c-site-nav__item {
 
-            &:hover {
-                color: color(highlight);
+            &:before {
+                @include size(.25em);
+
+                content: '';
+                display: inline-block;
+                border-radius: 50%;
+                background: currentColor;
+                vertical-align: middle;
+                margin-right: 1.25em;
+            }
+
+            &:first-child:before {
+                display: none;
             }
         }
 
             .c-site-nav__link {
-                display: block;
+                @include display-type;
+
+                font-family: font(sans-serif);
+                text-transform: uppercase;
+                transition: color .3s;
+
+                &:hover {
+                    color: color(highlight);
+                }
             }

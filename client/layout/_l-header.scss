@@ -6,18 +6,27 @@
     @include no-spacing;
 }
 
-    .l-header__logo {
+    .l-header__wrapper {
+        @include no-spacing;
 
+        display: flex;
+        align-items: flex-end;
     }
 
-    .l-header__nav {
+        .l-header__logo {
+            display: inline-block;
+            min-width: 12em;
+        }
 
-    }
+        .l-header__nav {
+            display: inline-block;
+            margin-left: auto;
+        }
 
-    .l-header__search {
+        .l-header__search {
 
-    }
+        }
 
-    .l-header__language {
+        .l-header__language {
 
-    }
+        }

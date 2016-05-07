@@ -36,7 +36,6 @@
 
 @mixin display-type {
     line-height: 1.25;
-    font-family: font(display);
     font-feature-settings: 'liga', 'kern', 'swsh', 'calt';
 }
 
@@ -114,7 +113,7 @@
 
 html {
     color: color(text);
-    font-family: font(body);
+    font-family: font(serif);
     font-size: const(BASE) * 1em;
     line-height: const(LINE_HEIGHT);
 }

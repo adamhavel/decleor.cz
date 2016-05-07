@@ -3,35 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0">
-    <link href="assets/site/css/default.min.css" rel="stylesheet">
+    <link href="assets/site/css/default.css" rel="stylesheet">
     <script>!function(){"use strict";function e(e){return e.match(/\.([^\.\?]+)(?:\?.*)?$/)[1]}function n(e,n){if("css"===n){var t=document.createElement("style");document.head.appendChild(t),t.textContent=e}else document.head.insertAdjacentHTML("beforeend",e)}window.loadFile=function(t){if(!window.localStorage||!window.addEventListener)return!1;var o=localStorage[t];if(o)n(o,e(t));else{var a=new XMLHttpRequest;a.addEventListener("load",function(){localStorage[t]=a.responseText,n(a.responseText,e(t))}),a.open("GET",t),a.send()}}}();</script>
     <script>
-        loadFile('assets/site/css/non-critical.min.css');
-        loadFile('assets/site/img/icons.min.svg');
+        loadFile('assets/site/css/non-critical.css');
+        loadFile('assets/site/img/icons.svg');
     </script>
-    <script src="assets/site/js/lib/modernizr.min.js"></script>
+    <script src="assets/site/js/lib/modernizr.js"></script>
     <title></title>
     <meta name="description" content="">
     <noscript>
-        <link href="assets/site/css/non-critical.min.css" rel="stylesheet">
+        <link href="assets/site/css/non-critical.css" rel="stylesheet">
     </noscript>
 </head>
 <body class="l-body">
 
     <header class="l-header" role="banner">
-        <div class="o-wrapper">
+        <div class="o-wrapper l-header__wrapper">
 
             <h1 class="l-header__logo c-site-logo">
-                <a href=""><img class="c-site-logo__image" src="" alt=""></a>
+                <a href=""><img class="c-site-logo__image" src="assets/site/img/site-logo.svg" alt="Decléor"></a>
             </h1>
 
-            <nav class="l-header__nav c-site-nav j-site-nav u-delta" role="navigation">
+            <nav class="l-header__nav c-site-nav" role="navigation">
                 <ul class="c-site-nav__list o-inline-list">
-                    <li class="c-site-nav__item"><a class="c-site-nav__link" href=""><svg class="e-icon" aria-hidden="true"><use xlink:href="#close"></use></svg> Item 1</a></li>
-                    <li class="c-site-nav__item"><a class="c-site-nav__link" href=""><svg class="e-icon" aria-hidden="true"><use xlink:href="#menu"></use></svg> Item 2</a></li>
-                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Item 3</a></li>
-                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Item 4</a></li>
-                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Item 5</a></li>
+                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Best sellers</a></li>
+                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Face</a></li>
+                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Body</a></li>
+                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Treatments</a></li>
+                    <li class="c-site-nav__item"><a class="c-site-nav__link" href="">Offer</a></li>
                 </ul>
             </nav>
 
@@ -62,6 +62,6 @@
 
     </footer>
 
-<script src="assets/site/js/app.min.js" async></script>
+<script src="assets/site/js/scout.js" async></script>
 </body>
 </html>
