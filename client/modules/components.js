@@ -1,6 +1,10 @@
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
 export default [
     {
-        selector: '.j-promo-carousel',
-        src: 'promo-carousel.js'
+        selector: '.j-gallery',
+        src: 'gallery.js'
     }
 ];

@@ -6,6 +6,7 @@
     $gap: .5em;
     @include size(1em);
 
+    color: color(highlight);
     display: inline-block;
     margin-top: 0;
     fill: currentcolor;

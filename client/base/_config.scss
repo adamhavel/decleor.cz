@@ -29,7 +29,7 @@ $constants: () !global;
 
 @include const('BASE', 1);
 @include const('LINE_HEIGHT', 1.5);
-@include const('LINE_LENGTH', 55em);
+@include const('LINE_LENGTH', 65em);
 
 
 /* Layout
@@ -48,7 +48,8 @@ $constants: () !global;
     text--dark: #000,
     shade: #f7f7f7,
     shade--dark: #dedede,
-    highlight: #ab8249
+    highlight: #ab8249,
+    highlight--light: #d8c5a8
 ));
 
 @function color($name) {

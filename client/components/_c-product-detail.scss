@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Product detail
+   ========================================================================== */
+
+.c-product-detail {
+
+}
+
+    .c-product-detail__header {
+        @include island(2);
+        @include v-spacing(.75);
+    }
+
+        .c-product-detail__title {
+            color: color(highlight);
+            text-transform: uppercase;
+        }
+
+        .c-product-detail__info {
+            font-family: font(sans-serif);
+            text-transform: uppercase;
+        }
+
+            .c-product-detail__type {
+                color: color(text--dark);
+            }
+
+    .c-product-detail__gallery {
+        @include island(3);
+    }
+
+    .c-product-detail__rating {
+        @include island(2);
+        @include v-spacing(.25);
+
+        text-align: center;
+    }
+
+    .c-product-detail__perks {
+        @include island(1.5);
+        @include no-spacing;
+
+        columns: 2;
+        column-gap: 2em;
+        padding: 0 2em;
+
+        @include media('<line') {
+            columns: initial;
+        }
+
+        > li {
+            display: block;
+            padding: lines(.5) 0;
+            text-align: center;
+            border: solid color(shade--dark);
+            border-width: 1px 0;
+            margin-top: -1px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .c-product-detail__disclaimer {
+        text-align: center;
+        font-style: italic;
+    }

@@ -3,13 +3,85 @@
    ========================================================================== */
 
 .c-gallery {
+    @include no-spacing;
 
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        display: block;
+        padding-bottom: 66%;
+    }
 }
 
-    .c-gallery__item {
-        display: block;
+    .c-gallery__thumbnails {
+        @include v-spacing(.5);
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) translateZ(0);
+        z-index: 10;
     }
 
-        .c-gallery__media {
+        .c-gallery__thumbnail {
+            @include size(5em);
+
+            display: block;
+            position: relative;
+            border: 1px solid color(shade--dark);
+            opacity: .6;
+            transition: opacity .3s, border-color .3s;
+            background: color(background);
+
+            &:before {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+
+            &.is-active {
+                border-color: color(highlight--light);
+                opacity: 1;
+            }
+        }
+
+    .c-gallery__list {
+        @include no-spacing;
+
+        z-index: 1;
+        background: color(background);
+    }
+
+        .c-gallery__image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
             width: 100%;
+            object-fit: scale-down;
+            background: red;
+
+            &--stacked {
+                opacity: 0;
+                z-index: -1;
+                transition: opacity .3s;
+                transform: translate(-50%, -50%) translateZ(0);
+
+                &.is-active {
+                    opacity: 1;
+                    z-index: 1;
+                }
+
+                &.is-manipulated {
+                    max-height: none;
+                }
+            }
         }

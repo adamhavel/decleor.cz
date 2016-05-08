@@ -5,3 +5,10 @@
 .l-main-content {
 
 }
+
+    .l-main-content__bar {
+        @include island(1.5);
+
+        padding: lines(1) 0;
+        background: color(shade);
+    }

@@ -4,6 +4,8 @@
 
 .l-header {
     @include no-spacing;
+
+    padding: lines(1) 0;
 }
 
     .l-header__wrapper {
@@ -15,11 +17,14 @@
 
         .l-header__logo {
             display: inline-block;
-            min-width: 12em;
+            min-width: 15em;
+            margin-top: lines(.5);
+            margin-bottom: lines(.5);
         }
 
         .l-header__nav {
             display: inline-block;
+            margin-right: 1vw;
             margin-left: auto;
         }
 

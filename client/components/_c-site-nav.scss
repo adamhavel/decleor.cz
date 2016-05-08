@@ -3,23 +3,38 @@
    ========================================================================== */
 
 .c-site-nav {
-
+    @include clearfix;
+    @include no-spacing;
+    @include h-spacing(3em);
 }
 
     .c-site-nav__list {
+        @include no-spacing;
         @include h-spacing(1.25em);
+
+        float: left;
+        display: flex;
+        padding: .75em 0;
+        padding-left: 3em;
+        border-left: 1px solid color(shade--dark);
+
+        &:first-child {
+            padding-left: 0;
+            border-left: 0;
+        }
     }
 
         .c-site-nav__item {
+            display: inline-block;
 
             &:before {
-                @include size(.25em);
+                @include size(4px);
 
                 content: '';
                 display: inline-block;
                 border-radius: 50%;
                 background: currentColor;
-                vertical-align: middle;
+                vertical-align: .2em;
                 margin-right: 1.25em;
             }
 
@@ -33,7 +48,8 @@
 
                 font-family: font(sans-serif);
                 text-transform: uppercase;
-                transition: color .3s;
+                //font-weight: 700;
+                letter-spacing: .05em;
 
                 &:hover {
                     color: color(highlight);
