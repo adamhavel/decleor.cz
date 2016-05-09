@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include media('<layout') {
+    @include media('<line') {
         @include v-spacing(1);
 
         flex-direction: column;
@@ -28,7 +28,7 @@
             width: scale-to-percentage(1, 0 1, $gutter);
         }
 
-        @include media('<layout') {
+        @include media('<line') {
             width: auto !important;
         }
 
@@ -43,7 +43,7 @@
                 float: left;
             }
 
-            @include media('<layout') {
+            @include media('<line') {
                 float: none;
                 display: block;
             }
