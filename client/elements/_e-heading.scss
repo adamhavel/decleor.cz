@@ -8,6 +8,41 @@
 
     font-size: 1rem;
 
+    &--division {
+        display: flex;
+        align-items: center;
+        font-family: font(sans-serif);
+        text-transform: uppercase;
+        letter-spacing: .2em;
+
+        &:before,
+        &:after {
+            flex: 1;
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 1px;
+            background: color(highlight);
+        }
+
+        &:before {
+            margin-right: 3rem;
+        }
+
+        &:after {
+            margin-left: 3rem;
+        }
+
+        @mixin no-flexbox {
+            text-align: center;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
+
     > a {
         color: inherit;
         text-decoration: none;

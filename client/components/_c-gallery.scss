@@ -14,7 +14,7 @@
         padding-bottom: 66%;
     }
 
-    &:after {
+    &.is-manipulated:after {
         content: '';
         position: absolute;
         top: 0;
@@ -69,7 +69,7 @@
             }
         }
 
-    .c-gallery__list {
+    .c-gallery__images {
         @include no-spacing;
 
         z-index: 1;
@@ -97,20 +97,7 @@
                 }
 
                 &.is-manipulated {
-                    @keyframes fade {
-                        0% {
-                            opacity: 1;
-                        },
-                        50% {
-                            opacity: 0;
-                        },
-                        100% {
-                            opacity: 1;
-                        }
-                    }
-
                     max-height: none;
-                    //animation: fade .5s;
                 }
             }
         }

@@ -16,81 +16,56 @@ export default function(node, selector) {
             name: 'self',
             handlers: {
                 mouseenter: function() {
-                    console.log('on');
+                    this.classList.add('is-manipulated');
                     boundingRect = this.getBoundingClientRect();
                     offsetTop = this.offsetTop;
-                    self.element('images').get(currentIndex).classList.add('is-manipulated');
+                    self.element('image').get(currentIndex).classList.add('is-manipulated');
                 },
                 mousemove: function(ev) {
-                    var deltaX = (50 - Math.round(100 * (ev.pageX - boundingRect.left) / boundingRect.width)) * .4;
-                    var deltaY = (50 - Math.round(100 * (ev.pageY - offsetTop) / boundingRect.height)) * .4;
-                    //console.log(`x: ${deltaX}, y: ${deltaY}`);
-                    self.element('images').get(currentIndex).style.transform = `translate(${-50 + deltaX}%, ${-50 + deltaY}%)`
+                    positionImage(self.element('image').get(currentIndex), ev.pageX, ev.pageY);
                 },
                 mouseleave: function() {
-                    console.log('off');
-                    self.element('images').get(currentIndex).classList.remove('is-manipulated');
-                    self.element('images').get(currentIndex).style.transform = `translate(-50%, -50%)`;
+                    this.classList.remove('is-manipulated');
+                    resetImage(self.element('image').get(currentIndex));
                 }
             }
         },
         {
-            name: 'images',
-            isCollection: true,
-            handlers: {
-                // mouseover: function() {
-                //     //console.log('on');
-                //     boundingRect = self.container.getBoundingClientRect();
-                //     offsetTop = self.container.offsetTop;
-                //     this.classList.add('is-manipulated');
-                // },
-                // mousemove: function(ev) {
-                //     var deltaX = (50 - Math.round(100 * (ev.pageX - boundingRect.left) / boundingRect.width)) * .4;
-                //     var deltaY = (50 - Math.round(100 * (ev.pageY - offsetTop) / boundingRect.height)) * .2;
-                //     //console.log(`x: ${deltaX}, y: ${deltaY}`);
-                //     this.style.transform = `translate(${-50 + deltaX}%, ${-50 + deltaY}%)`
-                // },
-                // mouseout: function() {
-                //     this.classList.remove('is-manipulated');
-                //     this.style.transform = `translate(-50%, -50%)`
-                //     //console.log('off');
-                // }
-            }
+            name: 'image',
+            isCollection: true
         },
         {
-            name: 'thumbnails',
+            name: 'thumbnail',
             isCollection: true,
             handlers: {
                 click: function(ev, index) {
-                    self.element('images').get(currentIndex).classList.remove('is-manipulated');
-                    self.element('images').get(currentIndex).style.transform = `translate(-50%, -50%)`;
-
-                    setActive(index);
-
-                    self.element('images').get(currentIndex).classList.add('is-manipulated');
-                    var deltaX = (50 - Math.round(100 * (ev.pageX - boundingRect.left) / boundingRect.width)) * .4;
-                    var deltaY = (50 - Math.round(100 * (ev.pageY - offsetTop) / boundingRect.height)) * .4;
-                    //console.log(`x: ${deltaX}, y: ${deltaY}`);
-                    self.element('images').get(currentIndex).style.transform = `translate(${-50 + deltaX}%, ${-50 + deltaY}%)`
-                },
-                // mouseover: function(ev) {
-                //     console.log('yay');
-                //     self.element('images').get(currentIndex).classList.remove('is-manipulated');
-                //     self.element('images').get(currentIndex).style.transform = `translate(-50%, -50%)`;
-                // },
-                // mousemove: function(ev) {
-                //     ev.stopPropagation();
-                // }
+                    setActiveImage(index);
+                    resetImage(self.element('image').get(currentIndex));
+                    self.element('image').get(index).classList.add('is-manipulated');
+                    positionImage(self.element('image').get(index), ev.pageX, ev.pageY);
+                }
             }
         }
     );
 
-    function setActive(index) {
-        self.element('thumbnails').get(currentIndex).classList.remove('is-active');
-        self.element('images').get(currentIndex).classList.remove('is-active');
+    function positionImage(image, x, y) {
+        var deltaX = (50 - Math.round(100 * (x - boundingRect.left) / boundingRect.width)) * .4;
+        var deltaY = (50 - Math.round(100 * (y - offsetTop) / boundingRect.height)) * .4;
 
-        self.element('thumbnails').get(index).classList.add('is-active');
-        self.element('images').get(index).classList.add('is-active');
+        image.style.transform = `translate(${-50 + deltaX}%, ${-50 + deltaY}%)`;
+    }
+
+    function resetImage(image) {
+        image.classList.remove('is-manipulated');
+        image.style.transform = `translate(-50%, -50%)`;
+    }
+
+    function setActiveImage(index) {
+        self.element('thumbnail').get(currentIndex).classList.remove('is-active');
+        self.element('image').get(currentIndex).classList.remove('is-active');
+
+        self.element('thumbnail').get(index).classList.add('is-active');
+        self.element('image').get(index).classList.add('is-active');
 
         currentIndex = index;
     }
@@ -99,7 +74,7 @@ export default function(node, selector) {
 
         currentIndex = 0;
 
-        setActive(currentIndex);
+        setActiveImage(currentIndex);
 
     })();
 

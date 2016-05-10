@@ -42,10 +42,7 @@ export default function(node, selector) {
                         element.node = self.container;
                     } else {
                         // Create a default selector by using the element's name and container selector.
-                        let defaultSelector = self.selector + '__' + element.name;
-
-                        // Strip the last 's' when generating a selector for collections ('items' becomes 'container__item').
-                        element.selector = element.isCollection ? defaultSelector.slice(0, -1) : defaultSelector;
+                        element.selector = self.selector + '__' + element.name;;
                     }
                 }
 

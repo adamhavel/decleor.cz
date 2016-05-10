@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Social list
+   ========================================================================== */
+
+.c-social-list {
+    @include h-spacing(3rem);
+
+    text-align: center;
+}
+
+    .c-social-list__item {
+        color: color(text);
+
+        &:hover,
+        &:focus {
+            color: color(highlight);
+        }
+    }

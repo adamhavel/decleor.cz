@@ -3,30 +3,32 @@
    ========================================================================== */
 
 .e-button {
-    background: color(highlight);
-    box-shadow: 0 1px 0 0 rgba(black, .5);
+    $backgroundColor: color(highlight);
+
+    background: $backgroundColor;
     color: color(background);
     cursor: pointer;
-    display: inline-block;
-    font-weight: 600;
-    max-width: 100%;
+    display: block;
+    line-height: 1.25;
     min-width: 10em;
-    padding: const(LINE_HEIGHT) 1em;
+    font-weight: 400;
+    padding: 1.5em 2em;
     text-align: center;
+    font-style: italic;
     text-decoration: none;
-    text-transform: uppercase;
-    transform: translateY(-1px);
     transition: background-color .3s;
 
     &:hover,
     &:focus {
-        background: tint(color(highlight), .2);
-        color: color(background);
+        background: lighten($backgroundColor, 5%);
     }
 
     &:active,
     &[aria-pressed="true"] {
-        transform: none;
-        box-shadow: none;
+        background: darken($backgroundColor, 5%);
+    }
+
+    &__icon:first-child {
+        margin-right: 1rem;
     }
 }

@@ -3,25 +3,16 @@
    ========================================================================== */
 
 .e-icon {
+    $size: 1em;
     $gap: .5em;
-    @include size(1em);
+    @include size($size);
 
-    color: color(highlight);
     display: inline-block;
     margin-top: 0;
     fill: currentcolor;
-    vertical-align: -.175em;
+    vertical-align: middle;
 
-    &:first-child {
-        margin-right: $gap;
-    }
-
-    &:last-child {
-        margin-left: $gap;
-    }
-
-    &:first-child:last-child {
-        margin-left: 0;
-        margin-right: 0;
+    &--wide {
+        width: $size * 2;
     }
 }

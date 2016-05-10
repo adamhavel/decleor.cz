@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Rating
+   ========================================================================== */
+
+.c-rating {
+    @include no-spacing;
+    @include h-spacing(.25rem);
+
+    color: color(highlight);
+}
+
+    .c-rating__icon {
+        display: inline-block;
+    }
