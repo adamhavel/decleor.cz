@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Section
+   ========================================================================== */
+
+.c-section {
+    position: relative;
+    border: solid color(highlight);
+    border-width: 1px 0;
+    padding: lines(1.5) 1em;
+    position: relative;
+
+    &--open {
+        border-bottom: 0;
+    }
+}
+
+    .c-section__heading {
+        @include out-of-flow;
+
+        font-family: font(sans-serif);
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        background: color(background);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 3rem;
+    }

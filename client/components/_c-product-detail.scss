@@ -67,13 +67,18 @@
     }
 
     .c-product-detail__desc {
-        @include island(1.5);
+        @include island(2);
 
         text-align: center;
         color: color(text--dark);
     }
 
-    .c-product-detail__results {
+    .c-product-detail__cta {
+        @include center;
 
+        display: block;
+        width: scale-to-percentage(2, 0 2, 0);
+        min-width: 15em;
     }
+
 
