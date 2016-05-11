@@ -42,7 +42,7 @@ export default function(node, selector) {
                         element.node = self.container;
                     } else {
                         // Create a default selector by using the element's name and container selector.
-                        element.selector = self.selector + '__' + element.name;;
+                        element.selector = self.selector + '__' + element.name;
                     }
                 }
 

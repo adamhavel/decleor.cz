@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Container
+   ========================================================================== */
+
+.c-container {
+    @include v-spacing(.5);
+
+    border: 1px solid color(highlight);
+    padding: lines(2) 2em;
+}
+
+    .c-container__heading {
+        text-transform: uppercase;
+        color: color(highlight);
+        text-align: center;
+    }
+
+    .c-container__headline {
+        text-transform: uppercase;
+        font-family: font(sans-serif);
+        text-align: center;
+    }
