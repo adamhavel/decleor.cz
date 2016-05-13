@@ -4,7 +4,20 @@
 
 .c-product-detail {
 
+    @include media('<layout') {
+        display: block;
+    }
 }
+
+    .c-product-detail__pane {
+
+        @include media('<layout') {
+
+            &:first-child {
+                margin-right: 0 !important;
+            }
+        }
+    }
 
     .c-product-detail__header {
         @include island(2);

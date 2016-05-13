@@ -11,7 +11,7 @@
     @include media('<line') {
         @include v-spacing(1);
 
-        flex-direction: column;
+        display: block;
     }
 
     @mixin no-flexbox {
@@ -20,32 +20,49 @@
 }
 
     .o-layout__item {
-        $gutter: const(GUTTER) * 2;
+        $gutter: 2em;
 
-        width: scale-to-percentage(0, 0 1, $gutter);
+        flex: 1;
 
         &:first-child {
-            width: scale-to-percentage(1, 0 1, $gutter);
+            flex: macro-scale(2);
+            margin-right: $gutter;
+        }
+
+        @include media('<layout') {
+
+            &:first-child {
+                flex: macro-scale(1);
+            }
         }
 
         @include media('<line') {
-            width: auto !important;
+
+            &:first-child {
+                margin-right: 0 !important;
+            }
         }
 
         .o-layout--equal > & {
-            width: 50% - ($gutter / 2);
+
+            &:first-child {
+                flex: 1;
+            }
+        }
+
+        .o-layout--loose > & {
+
+            &:first-child {
+                margin-right: $gutter * 2;
+            }
         }
 
         @mixin no-flexbox {
             float: right;
+            width: calc(50% - #{($gutter / 2)});
 
             &:first-child {
                 float: left;
-            }
-
-            @include media('<line') {
-                float: none;
-                display: block;
             }
         }
     }

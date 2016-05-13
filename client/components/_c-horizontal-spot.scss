@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Horizontal spot
+   ========================================================================== */
+
+.c-horizontal-spot {
+    @include clearfix;
+    @include no-spacing;
+
+    @include media('<layout') {
+        @include v-spacing(1);
+    }
+}
+
+    .c-horizontal-spot__media {
+        float: left;
+        margin-right: 2em;
+
+        @include media('<layout') {
+            @include center;
+
+            float: none;
+        }
+    }
+
+    .c-horizontal-spot__content {
+        overflow: hidden;
+    }

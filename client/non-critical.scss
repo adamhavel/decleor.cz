@@ -36,3 +36,10 @@
 @include define-font('Playfair Display', 'playfairdisplay-italic', 400, italic);
 @include define-font('Montserrat', 'montserrat-regular', 400);
 @include define-font('Montserrat', 'montserrat-bold', 700);
+
+
+.c-more-link {
+    padding-left: 3em;
+    background: asset('icon/arrow.svg') left no-repeat;
+    background-size: auto 1em;
+}
