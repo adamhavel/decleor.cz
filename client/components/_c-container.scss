@@ -5,8 +5,8 @@
 .c-container {
     @include v-spacing(.5);
 
-    border: 1px solid color(highlight);
-    padding: lines(2) 3em;
+    border: 1px solid color(highlight--light);
+    padding: lines(2) 5em;
 }
 
     .c-container__heading {
@@ -19,4 +19,5 @@
         text-transform: uppercase;
         font-family: font(sans-serif);
         text-align: center;
+        color: color(text--dark);
     }

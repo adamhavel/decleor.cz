@@ -4,5 +4,6 @@
 
 .l-body {
     @include no-spacing;
-    //padding-top: lines(1);
+
+    padding-bottom: lines(5);
 }

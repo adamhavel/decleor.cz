@@ -54,7 +54,7 @@
         @include no-spacing;
 
         columns: 2;
-        column-gap: 2em;
+        column-gap: 3em;
         padding: 0 2em;
 
         @include media('<line') {

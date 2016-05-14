@@ -3,17 +3,22 @@
    ========================================================================== */
 
 .c-horizontal-spot {
-    @include clearfix;
     @include no-spacing;
+
+    display: flex;
 
     @include media('<layout') {
         @include v-spacing(1);
+    }
+
+    @mixin no-flexbox {
+        @include clearfix;
     }
 }
 
     .c-horizontal-spot__media {
         float: left;
-        margin-right: 2em;
+        margin-right: 3em;
 
         @include media('<layout') {
             @include center;
@@ -23,5 +28,26 @@
     }
 
     .c-horizontal-spot__content {
+        @include v-spacing(.25);
+
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
+
+        .c-horizontal-spot__title {
+            font-style: italic;
+        }
+
+        .c-horizontal-spot__subtitle {
+            font-family: font(sans-serif);
+            text-transform: uppercase;
+            color: color(text--dark);
+            margin-bottom: auto;
+        }
+
+        .c-horizontal-spot__link {
+            @include aloof(1);
+
+            align-self: flex-start;
+        }

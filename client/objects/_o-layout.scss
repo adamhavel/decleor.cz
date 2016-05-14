@@ -25,7 +25,7 @@
         flex: 1;
 
         &:first-child {
-            flex: macro-scale(2);
+            flex: macro-scale(1);
             margin-right: $gutter;
         }
 

@@ -20,4 +20,8 @@
     &--full {
         padding: 0;
     }
+
+    &--medium {
+        max-width: const(LAYOUT_WIDTH) * .75;
+    }
 }
