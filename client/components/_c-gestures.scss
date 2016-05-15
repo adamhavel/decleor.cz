@@ -3,8 +3,10 @@
    ========================================================================== */
 
 .c-gestures {
+    @include island(5);
+
     border: 1px solid color(highlight--light);
-    padding: lines(2) 5em;
+    padding: lines(3) 5em;
     position: relative;
 }
 
@@ -45,26 +47,58 @@
 
             display: flex;
             flex-direction: column;
+            align-items: center;
             counter-increment: gestures;
-            position: relative;
             flex: 1;
             text-align: center;
             font-style: italic;
             color: color(text--dark);
-            padding: lines(3) 0;
-
-            &:before {
-                content: counter(gestures);
-                display: block;
-                color: color(shade--dark);
-                font-size: 11em;
-                line-height: 1;
-                position: absolute;
-                z-index: -1;
-                top: 50%;
-                width: 100%;
-                transform: translateY(-50%);
-                user-select: none;
-                font-feature-settings: 'lnum';
-            }
+            //padding: lines(3) 0;
         }
+
+            .c-gestures__media {
+                @include size(9em);
+
+                background: color(shade);
+                border-radius: 50%;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: .4em;
+                    left: .4em;
+                    bottom: .4em;
+                    right: .4em;
+                    border-radius: 50%;
+                    border: 1px solid color(background);
+                }
+
+                > * {
+                    @include size(100%);
+
+                    display: block;
+                    mix-blend-mode: multiply;
+                }
+            }
+
+            .c-gestures__desc {
+                margin: auto 0;
+                padding: lines(2) 0;
+                position: relative;
+
+                &:before {
+                    content: counter(gestures);
+                    display: block;
+                    color: color(shade--dark);
+                    font-size: 11em;
+                    line-height: 1;
+                    position: absolute;
+                    z-index: -1;
+                    top: 50%;
+                    width: 100%;
+                    transform: translateY(-50%);
+                    user-select: none;
+                    font-feature-settings: 'lnum';
+                }
+            }
