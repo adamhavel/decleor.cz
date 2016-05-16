@@ -224,7 +224,7 @@ module.exports = function(grunt) {
         watch: {
             options: {
                 livereload: true,
-                spawn: false
+                spawn: true
             },
             css: {
                 files: ['client/**/*.scss', '!client/non-critical.scss'],
@@ -269,7 +269,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-svgstore');
 
     grunt.registerTask('build-js', ['babel', 'uglify:default']);
-    grunt.registerTask('build-css', ['sass_globbing', 'sass:default', 'postcss:default']);
+    grunt.registerTask('build-css', ['sass_globbing', 'exec:sass', 'postcss:default']);
     grunt.registerTask('build-non-critical-css', ['exec:sassnoncritical', 'postcss:noncritical']);
     grunt.registerTask('build-icons', ['svgstore', 'imagemin:icons']);
     grunt.registerTask('init', ['build-css', 'build-non-critical-css', 'modernizr', 'uglify:smoothscroll', 'uglify:systemjs', 'uglify:bluebird', 'build-js', 'build-icons']);

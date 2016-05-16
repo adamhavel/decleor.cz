@@ -11,7 +11,7 @@ $grid-columns: (
     '<line': 1
 );
 $grid-hgap: const(GUTTER) * 2;
-$grid-vgap: 1;
+$grid-vgap: 3;
 
 
 /* Mixins
@@ -20,6 +20,7 @@ $grid-vgap: 1;
 @mixin grid($items-per-row: $grid-columns, $hgap: $grid-hgap, $vgap: $grid-vgap) {
     display: flex !important;
     flex-wrap: wrap;
+    justify-content: center;
 
     .no-flexwrap & {
         display: block;
