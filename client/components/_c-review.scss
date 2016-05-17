@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Review
+   ========================================================================== */
+
+.c-review {
+    @include v-spacing(.5);
+
+    padding: lines(1.5) 0;
+    border: solid color(highlight--light);
+    border-width: 0 0 1px 0;
+
+    &:first-of-type {
+        border-width: 1px 0;
+    }
+
+    & + & {
+        margin-top: 0;
+    }
+}
+
+    .c-review__header {
+        @include no-spacing;
+        @include h-spacing(2rem);
+
+        display: flex;
+        align-items: center;
+
+        @mixin no-flexbox {
+            > * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+        .c-review__heading {
+            font-style: italic;
+            color: color(text--dark);
+        }
+
+        .c-review__rating {
+
+        }
+
+    .c-review__text {
+
+    }

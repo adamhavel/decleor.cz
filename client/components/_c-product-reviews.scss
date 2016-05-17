@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Product reviews
+   ========================================================================== */
+
+.c-product-reviews {
+    background: color(shade);
+    padding: lines(4) const(GUTTER) * 4;
+}
+
+    .c-product-reviews__heading {
+        @include island(2);
+
+        font-family: font(sans-serif);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+
+        &:after {
+            display: inline-block;
+            content: '(' attr(data-count) ')';
+            color: color(highlight);
+            margin-left: .5em;
+        }
+    }
+
+    .c-product-reviews__spot {
+
+    }
+
+    .c-product-reviews__form {
+        @include island(5);
+
+        padding: lines(3) const(GUTTER) * 4;
+        background: color(background);
+    }

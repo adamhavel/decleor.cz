@@ -4,11 +4,16 @@
 
 .c-rating {
     @include no-spacing;
-    @include h-spacing(.25rem);
 
     color: color(highlight);
+    display: flex;
 }
 
     .c-rating__icon {
         display: inline-block;
+        transition: opacity .3s;
+
+        &--limit ~ & {
+            opacity: .5;
+        }
     }
