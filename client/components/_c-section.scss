@@ -21,9 +21,7 @@
     .c-section__heading {
         @include out-of-flow;
 
-        font-family: font(sans-serif);
-        text-transform: uppercase;
-        letter-spacing: .2em;
+        letter-spacing: .125em;
         background: color(background);
         position: absolute;
         top: 0;

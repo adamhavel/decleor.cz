@@ -22,15 +22,13 @@
         background: color(background);
     }
 
-        .c-gestures__title {
+        .c-gestures__heading {
             color: color(highlight);
             text-transform: uppercase;
         }
 
         .c-gestures__subtitle {
-            font-family: font(sans-serif);
-            text-transform: uppercase;
-            letter-spacing: .1em;
+
         }
 
     .c-gestures__list {

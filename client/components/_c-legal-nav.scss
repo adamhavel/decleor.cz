@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Legal nav
+   ========================================================================== */
+
+.c-legal-nav {
+    max-width: 34em;
+    margin-bottom: lines(-.5);
+    overflow: hidden;
+}
+
+    .c-legal-nav__list {
+        @include no-spacing;
+        @include h-spacing(1.25em);
+        @include clearfix;
+
+        margin-left: -1.25em;
+        margin-left: calc(-1.25em - 4px);
+    }
+
+        .c-legal-nav__item {
+            float: left;
+            margin-bottom: lines(.5);
+
+            &:before {
+                @include size(4px);
+
+                content: '';
+                display: inline-block;
+                border-radius: 50%;
+                background: currentColor;
+                vertical-align: .2em;
+                margin-right: 1.25em;
+            }
+        }
+
+            .c-legal-nav__link {
+                font-family: font(sans-serif);
+                text-transform: uppercase;
+                letter-spacing: .075em;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }

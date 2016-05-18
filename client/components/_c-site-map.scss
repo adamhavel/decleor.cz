@@ -4,6 +4,7 @@
 
 .c-site-map {
     @include no-spacing;
+    @include h-spacing(3rem);
 
     display: flex;
     justify-content: space-between;
@@ -13,6 +14,7 @@
         @include v-spacing(2);
 
         display: flex;
+        flex: 1;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -24,9 +26,6 @@
         }
 
             .c-site-map__section {
-                font-family: font(sans-serif);
-                text-transform: uppercase;
-                letter-spacing: .075em;
 
                 &:hover,
                 &:focus {
