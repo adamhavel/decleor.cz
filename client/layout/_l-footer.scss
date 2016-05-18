@@ -3,9 +3,11 @@
    ========================================================================== */
 
 .l-footer {
-
+    @include aloof(3);
 }
 
-    .l-footer__copyright {
-
+    .l-footer__panel {
+        background: color(highlight);
+        color: color(background);
+        padding: lines(3) 0;
     }

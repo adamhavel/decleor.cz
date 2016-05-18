@@ -93,6 +93,11 @@
         display: block;
         width: scale-to-percentage(2, 0 2, 0);
         min-width: 15em;
+        font-style: italic;
+        text-transform: none;
+        font-weight: 400;
+        font-family: font(serif);
+        letter-spacing: normal;
     }
 
 

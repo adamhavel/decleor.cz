@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Interactive rating
+   ========================================================================== */
+
+.c-interactive-rating {
+    @include no-spacing;
+    @include h-spacing(.25rem);
+    @include clearfix;
+
+    font-size: 2rem;
+
+    @include media('<line') {
+        @include h-spacing(.5rem);
+
+        font-size: 2.5rem;
+    }
+}
+
+    .c-interactive-rating__input {
+        @include hide;
+    }
+
+    .c-interactive-rating__label {
+        float: left;
+        transition: opacity .3s;
+
+        .c-interactive-rating__input:checked ~ & {
+            opacity: .5;
+        }
+    }
+
+        .c-interactive-rating__icon {
+            display: block;
+            color: color(highlight);
+        }

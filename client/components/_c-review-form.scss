@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Review form
+   ========================================================================== */
+
+.c-review-form {
+
+}
+
+    .c-review-form__heading {
+        font-family: font(sans-serif);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .c-review-form__fieldset {
+        @include island(3);
+        @include v-spacing(.5);
+
+        @include media('<line') {
+            @include island(2);
+            @include v-spacing(1);
+        }
+    }
+
+        .c-review-form__footer {
+            @include clearfix;
+            @include no-spacing;
+        }
+
+            .c-review-form__info {
+                float: left;
+                font-style: italic;
+            }
+
+            .c-review-form__submit {
+                float: right;
+                min-width: 12em;
+            }

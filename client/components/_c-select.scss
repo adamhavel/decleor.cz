@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Select
+   ========================================================================== */
+
+.c-select {
+    @include no-spacing;
+
+    width: 100%;
+    max-width: 25em;
+    overflow: hidden;
+    position: relative;
+
+    @include media('<line') {
+        max-width: none;
+    }
+}
+
+    .c-select__input {
+        display: block;
+        width: 100%;
+        background: red;
+        padding: lines(.75) 1em;
+        padding-right: 3em;
+        border-radius: 0;
+        color: color(text);
+        background: color(background);
+        border: 1px solid color(highlight);
+        transition: background-color .3s, color .3s;
+        cursor: pointer;
+
+        &:focus,
+        &:hover {
+           background: color(highlight);
+           color: color(background);
+        }
+    }
+
+    .c-select__label {
+        @include size(0);
+
+        position: absolute;
+        top: 50%;
+        right: 1.25em;
+        border: .4em solid transparent;
+        border-bottom: 0;
+        border-top-color: color(highlight);
+        transform: translateY(-50%);
+        pointer-events: none;
+        will-change: transform;
+
+        .c-select__input:hover + &,
+        .c-select__input:focus + & {
+
+            @keyframes hover {
+                0% {
+                    transform: translateY(-50%);
+                },
+                49% {
+                    opacity: 0;
+                    transform: translateY(-1em);
+                },
+                50% {
+                    transform: translateY(1em);
+                },
+                100% {
+                    transform: translateY(-50%);
+                    border-top-color: color(background);
+                    opacity: 1;
+                }
+            }
+
+            animation: hover .4s;
+            animation-fill-mode: forwards;
+        }
+    }

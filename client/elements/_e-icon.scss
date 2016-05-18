@@ -15,4 +15,26 @@
     &--wide {
         width: $size * 2;
     }
+
+    &--bordered {
+        border: 1px solid currentcolor;
+        border-radius: 50%;
+        padding: .125em;
+    }
+
+    &--aloof {
+
+        &:first-child {
+            margin-right: .75rem;
+        }
+
+        &:last-child {
+            margin-left: .75rem;
+        }
+
+        &:only-child {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 }

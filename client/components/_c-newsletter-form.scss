@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Newsletter form
+   ========================================================================== */
+
+.c-newsletter-form {
+    @include island(3);
+    @include v-spacing(.5);
+
+    text-align: center;
+}
+
+    .c-newsletter-form__heading {
+        text-transform: uppercase;
+        letter-spacing: .2em;
+    }
+
+    .c-newsletter-form__info {
+        font-family: font(sans-serif);
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .c-newsletter-form__fieldset {
+        @include island(2, 1);
+        @include center;
+        @include no-spacing;
+
+        display: flex;
+        max-width: 35em;
+        border: 1px solid color(text);
+
+        @mixin no-flexbox {
+            @include clearfix;
+        }
+    }
+
+        .c-newsletter-form__input {
+            padding: lines(1) 1.25em;
+            flex: 1;
+            font-style: italic;
+
+            @mixin no-flexbox {
+                float: left;
+                width: 70%;
+            }
+        }
+
+        .c-newsletter-form__submit {
+            padding: lines(1) 2em;
+            min-width: 10em;
+            background: color(text);
+            color: color(background);
+            font-style: italic;
+            transition: background-color .2s, color .2s;
+
+            &:hover,
+            &:focus {
+                background: none;
+                color: color(text);
+            }
+
+            @mixin no-flexbox {
+                float: left;
+                width: 30%;
+            }
+        }

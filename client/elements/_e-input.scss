@@ -5,68 +5,89 @@
 .e-input {
     display: block;
     width: 100%;
-    padding: lines(.25) .75em;
+    max-width: 25em;
+    padding: lines(.75) 1em;
     background: color(background);
-    border: 1px solid color(text);
-    color: color(highlight);
-    transition: border-color .3s;
+    border: 1px solid color(highlight);
+    color: color(text);
+    transition: background-color .3s;
 
     &[cols] {
         height: auto;
     }
 
     &:focus {
-       border-color: color(highlight);
+       background: tint(color(highlight--light), .85);
     }
 
-    &.is-invalid {
-        background: tint(color(highlight), .9);
+    @include media('<line') {
+        max-width: none;
     }
 
     &[type="checkbox"] {
         @include hide;
 
-        & + .b-input--faux {
-            @include size(lines(.85));
+        & + .e-input--faux {
+            @include size(1.5em);
 
             padding: 0;
-            position: relative;
             overflow: hidden;
+            transition: background-color .3s;
+            position: relative;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:before {
                 @include size(100%);
 
                 content: '';
-                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: color(background);
+                transition: opacity .2s;
             }
         }
 
         &:checked + .e-input--faux:before {
-            display: none;
+            opacity: 0;
+        }
+
+        &:focus + .e-input--faux {
+           background: tint(color(highlight--light), .75);
         }
     }
 
-    &[type="radio"] {
-        @include hide;
+    // &[type="radio"] {
+    //     @include hide;
 
-        & + .e-input--faux {
-            @include size(lines(.85));
+    //     & + .e-input--faux {
+    //         @include size(lines(.85));
 
-            padding: 0;
-            border-radius: 50%;
-            position: relative;
-        }
+    //         padding: 0;
+    //         border-radius: 50%;
+    //         position: relative;
+    //     }
 
-        &:checked + .e-input--faux:before {
-            @include size(50%);
+    //     &:checked + .e-input--faux:before {
+    //         @include size(50%);
 
-            content: '';
-            position: absolute;
-            top: 25%;
-            left: 25%;
-            border-radius: 50%;
-            background: color(highlight);
-        }
+    //         content: '';
+    //         position: absolute;
+    //         top: 25%;
+    //         left: 25%;
+    //         border-radius: 50%;
+    //         background: color(highlight);
+    //     }
+    // }
+
+    &--full-width {
+        max-width: none;
     }
 }
+
+    .e-input__icon {
+        @include size(80%);
+    }

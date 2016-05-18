@@ -5,6 +5,10 @@
 .c-product-reviews {
     background: color(shade);
     padding: lines(4) const(GUTTER) * 4;
+
+    @include media('<line') {
+        padding: lines(2) const(GUTTER) * 2;
+    }
 }
 
     .c-product-reviews__heading {
@@ -22,6 +26,10 @@
             color: color(highlight);
             margin-left: .5em;
         }
+
+        @include media('<line') {
+            @include island(1);
+        }
     }
 
     .c-product-reviews__spot {
@@ -33,4 +41,8 @@
 
         padding: lines(3) const(GUTTER) * 4;
         background: color(background);
+
+        @include media('<line') {
+            padding: lines(2) const(GUTTER) * 2;
+        }
     }

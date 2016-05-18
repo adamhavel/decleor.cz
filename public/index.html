@@ -307,9 +307,81 @@
                     <p class="c-review__text">Voluptate eveniet fugit, cupiditate maiores asperiores quod, eaque quis facere dolorum pariatur officiis quae sunt dicta eius quam expedita quisquam impedit temporibus dolore est voluptatum minima! Praesentium alias, eius maiores.</p>
                 </section>
 
-                <form action="" class="c-product-reviews__form">
+                <form action="" class="c-product-reviews__form c-review-form">
 
-                    a
+                    <h3 class="e-heading u-delta c-review-form__heading">Zanechat svůj názor</h3>
+
+                    <fieldset class="c-review-form__fieldset">
+
+                        <div class="c-form-cell c-form-cell--inline">
+                            <label for="c-review-form__skin-type" class="c-form-cell__label u-milli">Vaše pleť</label>
+                            <div class="c-form-cell__input c-select u-delta">
+                                <select id="c-review-form__skin-type" name="skin-type" class="c-select__input" required>
+                                    <option value="1">Placeat, esse.</option>
+                                    <option value="2">Quis, neque!</option>
+                                </select>
+                                <label for="c-review-form__skin-type" class="c-select__label" aria-hidden="true"></label>
+                            </div>
+                        </div>
+
+                        <div class="c-form-cell c-form-cell--inline">
+                            <label for="c-review-form__position" class="c-form-cell__label u-milli">Jste</label>
+                            <div class="c-form-cell__input c-select u-delta">
+                                <select id="c-review-form__position" name="position" class="c-select__input" required>
+                                    <option value="1">Quia, numquam!</option>
+                                    <option value="2">Ducimus, illum?</option>
+                                </select>
+                                <label for="c-review-form__position" class="c-select__label" aria-hidden="true"></label>
+                            </div>
+                        </div>
+
+                        <div class="c-form-cell c-form-cell--inline">
+                            <label for="c-review-form__email" class="c-form-cell__label u-milli">Váš e-mail</label>
+                            <input id="c-review-form__email" name="email" type="email" class="c-form-cell__input e-input u-delta" required>
+                        </div>
+
+                        <div class="c-form-cell c-form-cell--inline u-island">
+                            <label for="c-review-form__review" class="c-form-cell__label c-form-cell__label--push-up u-milli">Váš názor</label>
+                            <textarea rows="4" id="c-review-form__review" name="email" class="c-form-cell__input e-input e-input--full-width u-delta"></textarea>
+                        </div>
+
+                        <div class="c-form-cell c-form-cell--inline u-island">
+                            <label class="c-form-cell__label u-milli">Hodnocení</label>
+                            <div class="c-form-cell__input c-interactive-rating">
+
+                                <label for="c-review-form__rating-1" class="c-interactive-rating__label"><svg class="c-interactive-rating__icon e-icon" role="image" aria-label="1 star"><use xlink:href="#leaf"></use></svg></label>
+                                <input type="radio" name="c-review-form__rating" id="c-review-form__rating-1" value="1" class="c-interactive-rating__input" checked>
+
+                                <label for="c-review-form__rating-2" class="c-interactive-rating__label"><svg class="c-interactive-rating__icon e-icon" role="image" aria-label="2 stars"><use xlink:href="#leaf"></use></svg></label>
+                                <input type="radio" name="c-review-form__rating" id="c-review-form__rating-2" value="2" class="c-interactive-rating__input">
+
+                                <label for="c-review-form__rating-3" class="c-interactive-rating__label"><svg class="c-interactive-rating__icon e-icon" role="image" aria-label="3 stars"><use xlink:href="#leaf"></use></svg></label>
+                                <input type="radio" name="c-review-form__rating" id="c-review-form__rating-3" value="3" class="c-interactive-rating__input">
+
+                                <label for="c-review-form__rating-4" class="c-interactive-rating__label"><svg class="c-interactive-rating__icon e-icon" role="image" aria-label="4 stars"><use xlink:href="#leaf"></use></svg></label>
+                                <input type="radio" name="c-review-form__rating" id="c-review-form__rating-4" value="4" class="c-interactive-rating__input">
+
+                                <label for="c-review-form__rating-5" class="c-interactive-rating__label"><svg class="c-interactive-rating__icon e-icon" role="image" aria-label="5 stars"><use xlink:href="#leaf"></use></svg></label>
+                                <input type="radio" name="c-review-form__rating" id="c-review-form__rating-5" value="5" class="c-interactive-rating__input">
+
+                            </div>
+                        </div>
+
+                        <div class="c-form-cell c-form-cell--inline u-island">
+                            <label for="c-review-form__newsletter" class="c-form-cell__label u-milli">Odebírat</label>
+                            <input id="c-review-form__newsletter" name="newsletter" type="checkbox" class="e-input">
+                            <label for="c-review-form__newsletter" class="e-input e-input--faux c-form-cell__input u-delta"><svg class="e-icon e-input__icon" aria-hidden="true"><use xlink:href="#check"></use></svg></label>
+                        </div>
+
+                        <footer class="c-review-form__footer u-island-2">
+
+                            <p class="c-review-form__info u-delta">* Všechna pole jsou povinná</p>
+
+                            <button class="e-button c-review-form__submit">Odeslat</button>
+
+                        </footer>
+
+                    </fieldset>
 
                 </form>
 
@@ -321,7 +393,114 @@
 
     <footer class="l-footer" role="contentinfo">
 
-        <small class="l-footer__copyright"></small>
+        <div class="c-grid-nav">
+            <div class="o-wrapper c-grid-nav__wrapper">
+                <ul class="c-grid-nav__list">
+                    <li class="c-grid-nav__item c-grid-nav__item--fill"><a href="" class="c-grid-nav__link"><svg class="e-icon e-icon--bordered e-icon--aloof u-alpha" aria-hidden="true"><use xlink:href="#phone"></use></svg><span>Kontaktujte nás</span></a></li>
+                    <li class="c-grid-nav__item c-grid-nav__item--fill"><a href="" class="c-grid-nav__link"><svg class="e-icon e-icon--bordered e-icon--aloof u-alpha" aria-hidden="true"><use xlink:href="#handshake"></use></svg><span>Staňte se partnerem</span></a></li>
+                    <li class="c-grid-nav__item"><a href="" class="c-grid-nav__link"><svg class="e-icon u-gamma" role="image" aria-label="Facebook"><use xlink:href="#facebook"></use></svg></a></li>
+                    <li class="c-grid-nav__item"><a href="" class="c-grid-nav__link"><svg class="e-icon u-gamma" role="image" aria-label="Instagram"><use xlink:href="#instagram"></use></svg></a></li>
+                    <li class="c-grid-nav__item"><a href="" class="c-grid-nav__link"><svg class="e-icon e-icon--wide u-gamma" role="image" aria-label="YouTube"><use xlink:href="#youtube"></use></svg></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <form action="" class="c-newsletter-form">
+
+            <h3 class="e-heading u-beta c-newsletter-form__heading">Newsletter</h3>
+
+            <p class="c-newsletter-form__info">Dostávejte vždy aktuální novinky o ze světa Decleoru</p>
+
+            <div class="c-newsletter-form__fieldset u-delta">
+                <input id="c-newsletter-form__email" name="email" type="email" class="c-newsletter-form__input" placeholder="Zadejte Vaší e-mailovou adresu..." required>
+                <button class="c-newsletter-form__submit">Odeslat</button>
+            </div>
+
+            <p class="c-newsletter-form__info">Pokud jste profesionál, kliknete pro <a href="">obsáhlejší formulář</a></p>
+
+        </form>
+
+        <div class="l-footer__panel">
+            <div class="o-wrapper">
+
+                <div class="c-site-map">
+
+                    <section class="c-site-map__item">
+                        <h4><a href="" class="c-site-map__section">Best sellers</a></h4>
+                        <ul class="c-site-map__list">
+                            <li><a href="" class="c-site-map__subsection">Nam, vel.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Sunt, blanditiis!</a></li>
+                            <li><a href="" class="c-site-map__subsection">Voluptatum, beatae.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Doloremque, nemo.</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="c-site-map__item">
+                        <a href="" class="c-site-map__section">Best sellers</a>
+                        <ul class="c-site-map__list">
+                            <li><a href="" class="c-site-map__subsection">Nam, vel.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Sunt, blanditiis!</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="c-site-map__item">
+                        <a href="" class="c-site-map__section">Best sellers</a>
+                        <ul class="c-site-map__list">
+                            <li><a href="" class="c-site-map__subsection">Nam, vel.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Sunt, blanditiis!</a></li>
+                            <li><a href="" class="c-site-map__subsection">Voluptatum, beatae.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Doloremque, nemo.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Vitae, ea!</a></li>
+                            <li><a href="" class="c-site-map__subsection">Pariatur, consequuntur.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Aut, praesentium.</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="c-site-map__item">
+                        <a href="" class="c-site-map__section">Best sellers</a>
+                        <ul class="c-site-map__list">
+                            <li><a href="" class="c-site-map__subsection">Nam, vel.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Sunt, blanditiis!</a></li>
+                            <li><a href="" class="c-site-map__subsection">Voluptatum, beatae.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Doloremque, nemo.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Vitae, ea!</a></li>
+                            <li><a href="" class="c-site-map__subsection">Pariatur, consequuntur.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Aut, praesentium.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Id, ratione.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Modi, velit?</a></li>
+                            <li><a href="" class="c-site-map__subsection">Architecto, recusandae.</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="c-site-map__item">
+                        <a href="" class="c-site-map__section">Best sellers</a>
+                        <ul class="c-site-map__list">
+                            <li><a href="" class="c-site-map__subsection">Modi, velit?</a></li>
+                            <li><a href="" class="c-site-map__subsection">Architecto, recusandae.</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="c-site-map__item">
+                        <a href="" class="c-site-map__section">Best sellers</a>
+                    </section>
+
+                    <section class="c-site-map__item">
+                        <a href="" class="c-site-map__section">Best sellers</a>
+                        <ul class="c-site-map__list">
+                            <li><a href="" class="c-site-map__subsection">Nam, vel.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Sunt, blanditiis!</a></li>
+                            <li><a href="" class="c-site-map__subsection">Voluptatum, beatae.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Doloremque, nemo.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Vitae, ea!</a></li>
+                            <li><a href="" class="c-site-map__subsection">Pariatur, consequuntur.</a></li>
+                            <li><a href="" class="c-site-map__subsection">Aut, praesentium.</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
 
     </footer>
 

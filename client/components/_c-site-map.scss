@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Site map
+   ========================================================================== */
+
+.c-site-map {
+    @include v-spacing(2);
+}
+
+    .c-site-map__column {
+
+    }
+
+        .c-site-map__item {
+            @include v-spacing(.5);
+
+            break-inside: avoid;
+        }
+
+            .c-site-map__section {
+                font-family: font(sans-serif);
+                text-transform: uppercase;
+                letter-spacing: .075em;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+
+            .c-site-map__list {
+                @include v-spacing(.5);
+            }
+
+                .c-site-map__subsection {
+                    font-family: font(sans-serif);
+                    color: color(highlight--light);
+
+                    &:hover,
+                    &:focus {
+                        color: inherit;
+                    }
+                }

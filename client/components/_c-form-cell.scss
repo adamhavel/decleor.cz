@@ -4,14 +4,39 @@
 
 .c-form-cell {
     @include no-spacing;
-    @include clearfix;
+
+    &--inline {
+        display: flex;
+        align-items: center;
+
+        @include media('<line') {
+            @include v-spacing(.25);
+
+            display: block;
+        }
+    }
 }
 
     .c-form-cell__label {
         display: block;
+        text-transform: uppercase;
+        font-family: font(sans-serif);
+        font-weight: 700;
+        letter-spacing: .1em;
 
-        &:after {
-            content: ':';
+        &--push-up {
+            align-self: flex-start;
+            margin-top: lines(1);
+        }
+
+        .c-form-cell--inline > & {
+            min-width: 10em;
+            margin-right: 1rem;
+
+            @include media('<line') {
+                min-width: 0;
+                margin-right: 0;
+            }
         }
     }
 

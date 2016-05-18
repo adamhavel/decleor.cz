@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Grid nav
+   ========================================================================== */
+
+.c-grid-nav {
+    @include island(2);
+
+    border: solid color(highlight--light);
+    border-width: 1px 0;
+}
+
+    .c-grid-nav__wrapper {}
+
+        .c-grid-nav__list {
+            @include no-spacing;
+
+            display: flex;
+
+            @mixin no-flexbox {
+                display: table;
+                width: 100%;
+            }
+        }
+
+            .c-grid-nav__item {
+                display: flex;
+                align-items: center;
+                border-left: 1px solid color(highlight--light);
+
+                &:first-child {
+                    border-left: 0;
+                }
+
+                &--fill {
+                    flex: 1;
+                }
+
+                @mixin no-flexbox {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+
+                .c-grid-nav__link {
+                    display: block;
+                    padding: lines(1) 2em;
+                    font-family: font(sans-serif);
+                    text-transform: uppercase;
+                    text-align: center;
+                    flex: 1;
+
+                    &:hover,
+                    &:focus {
+                        color: color(text--dark);
+                    }
+                }
