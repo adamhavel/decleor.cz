@@ -43,6 +43,7 @@
 
                 .c-grid-nav__link {
                     display: block;
+                    display: flex;
                     padding: lines(1) 2em;
                     font-family: font(sans-serif);
                     text-transform: uppercase;
@@ -52,5 +53,9 @@
                     &:hover,
                     &:focus {
                         color: color(text--dark);
+                    }
+
+                    @mixin no-flexbox {
+                        display: block;
                     }
                 }
