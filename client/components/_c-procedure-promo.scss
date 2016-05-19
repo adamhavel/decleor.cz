@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Procedure promo
+   ========================================================================== */
+
+.c-procedure-promo {
+    @include island(2);
+    @include clearfix;
+    @include no-spacing;
+
+    display: flex;
+}
+
+    .c-procedure-promo__content {
+        @include v-spacing(.25);
+
+        background: url('../img/c-procedure-promo-bg.jpg') center no-repeat color(highlight);
+        background-size: cover;
+        color: color(background);
+        float: left;
+        width: 50%;
+        padding: lines(1) 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .c-procedure-promo__heading {
+            @include island(.5);
+
+            font-weight: 700;
+        }
+
+        .c-procedure-promo__subheading {
+            font-style: italic;
+        }
+
+        .c-procedure-promo__info {
+
+        }
+
+        .c-procedure-promo__link {
+            @include aloof(1.5);
+        }
+
+    .c-procedure-promo__media {
+        float: left;
+        width: 50%;
+    }

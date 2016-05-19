@@ -10,4 +10,13 @@
     &:focus {
         color: color(highlight);
     }
+
+    &--inverse {
+        color: color(background) !important;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
 }

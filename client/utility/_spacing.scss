@@ -14,6 +14,14 @@
     @include island(3);
 }
 
+.u-island-4 {
+    @include island(4);
+}
+
+.u-island-5 {
+    @include island(5);
+}
+
 .u-no-spacing {
     @include no-spacing;
 }

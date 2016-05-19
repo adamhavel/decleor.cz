@@ -39,7 +39,21 @@
 
 
 .c-more-link {
-    padding-left: 3em;
-    background: asset('icon/arrow.svg') left no-repeat;
-    background-size: auto 1em;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 3em;
+        height: 1em;
+        background: asset('icon/arrow.svg') left no-repeat;
+        background-size: contain;
+        vertical-align: -.2em;
+    }
+
+    &--inverse {
+
+        &:before {
+            filter: invert(1);
+        }
+    }
 }

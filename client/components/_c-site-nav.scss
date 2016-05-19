@@ -48,10 +48,27 @@
 
                 font-family: font(sans-serif);
                 text-transform: uppercase;
-                //font-weight: 700;
                 letter-spacing: .05em;
 
                 &:hover {
                     color: color(highlight);
+                }
+            }
+
+            .c-site-nav__subnav {
+                @include out-of-flow;
+
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                //opacity: 0;
+                //pointer-events: none;
+                transition: opacity .3s;
+
+                .c-site-nav__link:hover + & {
+                    opacity: 1;
+                    pointer-events: initial;
                 }
             }

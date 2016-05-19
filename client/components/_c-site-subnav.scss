@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Site subnav
+   ========================================================================== */
+
+.c-site-subnav {
+    background: color(background);
+    padding: lines(2) 0 lines(3);
+    border: solid color(highlight);
+    border-width: 1px 0;
+}
+
+    .c-site-subnav__wrapper {
+        @include no-spacing;
+        @include h-spacing(4vw);
+
+        display: flex;
+    }
+
+        .c-site-subnav__section {
+
+        }
+
+            .c-site-subnav__heading {
+                text-transform: uppercase;
+                color: color(highlight);
+            }
+
+            .c-site-subnav__columns {
+                @include no-spacing;
+                @include h-spacing(2vw);
+
+                display: flex;
+            }
+
+                .c-site-subnav__column {
+                    @include v-spacing(.5);
+
+                    width: 16em;
+                }
+
+                    .c-site-subnav__subheading {
+                        color: color(text--dark);
+                        font-weight: 700;
+                    }
+
+                    .c-site-subnav__list {
+                        @include no-spacing;
+                    }
+
+                        .c-site-subnav__item {
+                            display: block;
+                            padding: lines(.3) 0;
+                            border-top: 1px solid color(shade--dark);
+
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
+                        }
+
+                            .c-site-subnav__link {
+                                font-family: font(sans-serif);
+
+                                &:hover,
+                                &:focus {
+                                    color: color(text--dark);
+                                }
+                            }

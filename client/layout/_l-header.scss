@@ -5,7 +5,8 @@
 .l-header {
     @include no-spacing;
 
-    padding: lines(1) 0;
+    padding: lines(1) 0 lines(.5);
+    position: relative;
 }
 
     .l-header__wrapper {
@@ -24,14 +25,12 @@
 
         .l-header__nav {
             display: inline-block;
-            margin-right: 1vw;
+            margin-right: 2vw;
             margin-left: auto;
         }
 
-        .l-header__search {
-
-        }
-
-        .l-header__language {
-
+        .l-header__secondary-nav {
+            position: absolute;
+            top: lines(1);
+            right: 2vw;
         }

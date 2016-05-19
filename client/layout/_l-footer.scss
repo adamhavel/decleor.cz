@@ -11,25 +11,3 @@
         color: color(background);
         padding-top: lines(3);
     }
-
-        .l-footer__grid {
-            @include no-spacing;
-            @include aloof(3);
-
-            border-top: 1px solid color(highlight--light);
-            display: flex;
-        }
-
-            .l-footer__grid__item {
-                padding: lines(2) const(GUTTER) * 3;
-                border-right: 1px solid color(highlight--light);
-
-                &:first-child {
-                    padding-left: 0;
-                }
-
-                &:last-child {
-                    padding-right: 0;
-                    border-right: 0;
-                }
-            }
