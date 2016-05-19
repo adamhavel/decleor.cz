@@ -61,14 +61,19 @@
                 position: absolute;
                 top: 100%;
                 left: 0;
-                right: 0;
+                right: 100%;
                 z-index: 1000;
-                //opacity: 0;
-                //pointer-events: none;
-                transition: opacity .3s;
+                opacity: 0;
+                pointer-events: none;
+                overflow: hidden;
+                transition: opacity .3s, transform .3s, right 0s .2s;
+                transform: translateY(lines(-1)) translateZ(0);
 
-                .c-site-nav__link:hover + & {
+                &.is-active {
                     opacity: 1;
+                    right: 0;
                     pointer-events: initial;
+                    transition: right 0s, opacity .4s, transform .6s;
+                    transform: translateZ(0);
                 }
             }
