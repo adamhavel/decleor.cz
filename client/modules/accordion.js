@@ -17,11 +17,12 @@ export default function(node, selector) {
             handlers: {
                 click: function() {
                     let content = self.element('content').get();
+
                     utils.toggleAttribute(this, 'aria-pressed');
                     utils.toggleAttribute(content, 'aria-expanded');
 
                     if (content.getAttribute('aria-expanded') === 'true') {
-                        content.style.maxHeight = `${contentHeight}px`;
+                        content.style.maxHeight = contentHeight + 'px';
                     } else {
                         content.style.maxHeight = '0px';
                     }
@@ -35,10 +36,12 @@ export default function(node, selector) {
 
     (function init() {
 
-        contentHeight = self.element('content').get().scrollHeight;
+        let content = self.element('content').get();
 
-        if (self.element('content').get().getAttribute('aria-expanded') === 'true') {
-            self.element('content').get().style.maxHeight = `${contentHeight}px`;
+        contentHeight = content.scrollHeight;
+
+        if (content.getAttribute('aria-expanded') === 'true') {
+            content.style.maxHeight = contentHeight + 'px';
         }
 
     })();

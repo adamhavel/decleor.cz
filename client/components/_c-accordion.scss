@@ -6,10 +6,11 @@
     @include no-spacing;
 }
 
-    .c-accordion__header {
+    .c-accordion__button {
         @include no-spacing;
 
         display: flex;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid color(shade--dark);
@@ -20,10 +21,10 @@
             text-transform: uppercase;
         }
 
-        .c-accordion__button {
+        .c-accordion__icon {
             transition: transform .3s;
 
-            &[aria-pressed="true"] {
+            .c-accordion__button[aria-pressed="true"] & {
                 transform: rotateX(180deg);
             }
 
