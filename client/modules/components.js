@@ -10,5 +10,13 @@ export default [
     {
         selector: '.j-site-nav',
         src: 'site-nav.js'
+    },
+    {
+        selector: '.j-sidebar',
+        src: 'sidebar.js'
+    },
+    {
+        selector: '.j-accordion',
+        src: 'accordion.js'
     }
 ];

@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Site nav
+   ========================================================================== */
+
 import component from 'component.js';
 
 export default function(node, selector) {
@@ -11,9 +15,11 @@ export default function(node, selector) {
             handlers: {
                 mouseleave: function() {
                     timer = setTimeout(function() {
-                        disableActiveSubNav();
+                        let activeSubNav = self.element('subnav').query('.is-active');
+
+                        activeSubNav && activeSubNav.classList.remove('is-active');
                         timer = null;
-                    }, 500);
+                    }, 300);
                 }
             }
         },
@@ -23,13 +29,14 @@ export default function(node, selector) {
             handlers: {
                 mouseover: function(ev, index) {
                     let subNav = self.element('subnav').get(index);
+                    let activeSubNav = self.element('subnav').query('.is-active');
 
                     if (timer) {
                         clearTimeout(timer);
                         timer = null;
                     }
 
-                    disableActiveSubNav();
+                    activeSubNav && activeSubNav.classList.remove('is-active');
                     subNav && subNav.classList.add('is-active');
                 }
             }
@@ -39,19 +46,6 @@ export default function(node, selector) {
             isCollection: true
         }
     );
-
-    function disableActiveSubNav() {
-        let activeSubNav = null;
-
-        self.element('subnav').get().some(subNav => {
-            if (subNav.classList.contains('is-active')) {
-                activeSubNav = subNav;
-                return true;
-            }
-        });
-
-        activeSubNav && activeSubNav.classList.remove('is-active');
-    }
 
     return self;
 }

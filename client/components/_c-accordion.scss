@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Accordion
+   ========================================================================== */
+
+.c-accordion {
+    @include no-spacing;
+}
+
+    .c-accordion__header {
+        @include no-spacing;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid color(shade--dark);
+        padding-bottom: lines(.5);
+    }
+
+        .c-accordion__heading {
+            text-transform: uppercase;
+        }
+
+        .c-accordion__button {
+            transition: transform .3s;
+
+            &[aria-pressed="true"] {
+                transform: rotateX(180deg);
+            }
+
+            .no-js & {
+                display: none;
+            }
+        }
+
+    .c-accordion__content {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: opacity .1s, max-height .3s;
+        padding-top: lines(1);
+
+        &[aria-expanded="true"],
+        .no-js & {
+            max-height: none;
+            opacity: 1;
+            transition: opacity .3s .2s, max-height .3s;
+        }
+    }

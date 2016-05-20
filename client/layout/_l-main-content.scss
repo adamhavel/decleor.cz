@@ -7,8 +7,25 @@
 }
 
     .l-main-content__bar {
-        @include island(1.5);
-
         padding: lines(1) 0;
         background: color(shade);
     }
+
+    .l-main-content__wrapper {
+        @include no-spacing;
+
+        margin-top: 0;
+        display: flex;
+    }
+
+        .l-main-content__sidebar {
+            float: left;
+            flex: none;
+            width: 30%;
+        }
+
+        .l-main-content__column {
+            float: left;
+            flex: none;
+            width: 70%;
+        }

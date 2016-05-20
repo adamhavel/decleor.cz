@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.c-sidebar {
+    background: color(shade);
+    border: 1px solid color(shade--dark);
+    border-bottom: 0;
+    padding-bottom: lines(2);
+}
+
+    .c-sidebar__header {
+        @include island(1.5);
+    }
+
+        .c-sidebar__tab {
+            background: color(shade--dark);
+            transition: background-color .2s;
+
+            &:hover,
+            &:focus {
+                color: color(text--dark);
+            }
+
+            &[aria-pressed="true"] {
+                background: none;
+            }
+        }
+
+    .c-sidebar__pane {
+        padding: 0 1vw;
+
+        &[aria-expanded="false"],
+        &:not([aria-expanded="true"]) {
+            @include hide;
+        }
+    }
+
+        .c-sidebar__heading {
+            font-style: italic;
+        }
+
+        .c-sidebar__accordion {
+            @include island(2);
+        }

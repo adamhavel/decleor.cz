@@ -4,14 +4,18 @@
 
 .o-block-list,
 %o-block-list {
-    @include v-spacing(.25);
+    @include v-spacing(.5);
 
     &--loose {
-        @include v-spacing(.5);
+        @include v-spacing(1);
     }
 
     &--tight {
-        @include no-spacing;
+        @include v-spacing(.5);
+    }
+
+    &--snug {
+        @include v-spacing(.25);
     }
 
     > * {

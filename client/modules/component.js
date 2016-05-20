@@ -36,6 +36,10 @@ export default function(node, selector) {
                     return result;
                 };
 
+                element.query = function(selector) {
+                    return self.container.querySelector(element.selector + selector);
+                };
+
                 if (!element.selector) {
                     if (element.name === 'self') {
                         element.selector = self.selector;
