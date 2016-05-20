@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Treatment spot
+   ========================================================================== */
+
+.c-treatment-spot {
+    $gutter: lines(1);
+
+    @include v-spacing(.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eee6db;
+    text-align: center;
+    padding: ($gutter * 2) $gutter;
+    position: relative;
+
+    &:before {
+
+        content: '';
+        position: absolute;
+        top: $gutter;
+        left: $gutter;
+        bottom: $gutter;
+        right: $gutter;
+        border: 1px solid color(highlight--light);
+        pointer-events: none;
+    }
+}
+
+    .c-treatment-spot__heading {
+        color: color(highlight);
+        text-transform: uppercase;
+    }
+
+    .c-treatment-spot__subtitle {
+        color: color(text--dark);
+    }
+
+    .c-treatment-spot__skin-type {
+
+    }
+
+    .c-treatment-spot__rating {
+        @include aloof(1);
+
+        margin-bottom: auto;
+    }
+
+    .c-treatment-spot__link {
+        @include out-of-flow;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 0;
+    }

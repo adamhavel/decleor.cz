@@ -24,4 +24,8 @@
     &--medium {
         max-width: const(LAYOUT_WIDTH) * .75;
     }
+
+    &--small {
+        max-width: const(LAYOUT_WIDTH) * .6;
+    }
 }

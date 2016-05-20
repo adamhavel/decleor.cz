@@ -74,5 +74,8 @@ $grid-vgap: 3;
 
 .o-grid {
     @include grid;
-}
 
+    &--fill {
+        @include grid($hgap: 1px);
+    }
+}

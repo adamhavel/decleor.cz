@@ -10,6 +10,14 @@ export default function(node, selector) {
 
     self.define(
         {
+            name: 'self',
+            handlers: {
+                change: function() {
+                    self.element('loader').get().classList.add('is-active');
+                }
+            }
+        },
+        {
             name: 'tab',
             isCollection: true,
             handlers: {
@@ -33,6 +41,28 @@ export default function(node, selector) {
         {
             name: 'pane',
             isCollection: true
+        },
+        {
+            name: 'input',
+            isCollection: true,
+            handlers: {
+                change: function() {
+                    let subsetId = this.getAttribute('aria-controls');
+                    let subset = self.element('subset').query(`[id="${subsetId}"]`);
+                    let activeSubset = self.element('subset').query('[aria-expanded="true"]');
+
+                    activeSubset && activeSubset.setAttribute('aria-expanded', 'false');
+                    subset && subset.setAttribute('aria-expanded', 'true');
+                    self.element('loader').get().classList.add('is-active');
+                }
+            }
+        },
+        {
+            name: 'subset',
+            isCollection: true
+        },
+        {
+            name: 'loader'
         }
     );
 

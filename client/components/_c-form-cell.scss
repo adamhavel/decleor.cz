@@ -6,7 +6,7 @@
     @include no-spacing;
 
     &--inline {
-        @include h-spacing(1rem);
+        @include h-spacing(1.5rem);
 
         display: flex;
         align-items: center;

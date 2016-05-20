@@ -21,11 +21,36 @@
         .l-main-content__sidebar {
             float: left;
             flex: none;
-            width: 30%;
+            width: 25%;
         }
 
         .l-main-content__column {
             float: left;
             flex: none;
-            width: 70%;
+            width: 75%;
+            padding: lines(2) 0 lines(3);
         }
+
+            .l-main-content__section {
+                @include island(3);
+
+                padding-bottom: lines(1);
+                border-bottom: 1px solid color(shade--dark);
+
+                &:last-child {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
+
+                &--intro {
+                    min-height: lines(7.5);
+                }
+            }
+
+                .l-main-content__heading {
+                    @include snug(.5);
+
+                    color: color(highlight);
+                    text-transform: uppercase;
+                    text-align: center;
+                }

@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
     .c-spot__media {
@@ -20,20 +21,34 @@
     }
 
     .c-spot__title {
-        @include aloof(2);
+        @include aloof(1.5);
 
         text-transform: uppercase;
         color: color(highlight);
     }
 
     .c-spot__subtitle {
+        font-weight: 700;
+    }
 
+    .c-rating {
     }
 
     .c-spot__link {
-        @include aloof(2);
+        @include island(2);
 
         @include media('<line') {
             @include aloof(1);
+        }
+
+        &--overlay {
+            @include out-of-flow;
+
+            font-size: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
     }

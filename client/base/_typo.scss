@@ -103,8 +103,15 @@
     }
 }
 
-@mixin aloof($distance) {
-    @include island($distance, 0);
+@mixin aloof($lines) {
+    @include island($lines, 0);
+}
+
+@mixin snug($lines) {
+
+    & + * {
+        margin-top: lines($lines);
+    }
 }
 
 

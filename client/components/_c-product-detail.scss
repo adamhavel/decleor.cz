@@ -86,6 +86,10 @@
         color: color(text--dark);
     }
 
+    .c-product-detail__results {
+        padding: lines(1.5) 0 !important;
+    }
+
     .c-product-detail__cta {
         @include island(2);
         @include center;

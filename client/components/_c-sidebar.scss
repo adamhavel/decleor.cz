@@ -27,19 +27,51 @@
             }
         }
 
-    .c-sidebar__pane {
+    .c-sidebar__content {
         padding: 0 1vw;
-
-        &[aria-expanded="false"],
-        &:not([aria-expanded="true"]) {
-            @include hide;
-        }
     }
 
-        .c-sidebar__heading {
-            font-style: italic;
+        .c-sidebar__pane {
+
+            &[aria-expanded="false"],
+            &:not([aria-expanded="true"]) {
+                @include hide;
+            }
         }
 
-        .c-sidebar__accordion {
+            .c-sidebar__heading {
+                font-style: italic;
+            }
+
+            .c-sidebar__accordion {
+                @include island(2);
+            }
+
+            .c-sidebar__subset {
+
+                &[aria-expanded="false"],
+                &:not([aria-expanded="true"]) {
+                    @include hide;
+                }
+            }
+
+        .c-sidebar__loader {
             @include island(2);
+
+            display: block;
+            width: 100%;
+            text-align: center;
+            border: 1px solid currentColor;
+            padding: 1em 2em;
+            transition: border-color .3s, background-color .3s;
+
+            &:hover,
+            &:focus {
+                background: color(background);
+                color: color(text--dark);
+            }
+
+            &.is-active {
+                color: color(text--dark);
+            }
         }
