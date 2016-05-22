@@ -6,6 +6,7 @@
     @include no-spacing;
 
     display: flex;
+    border-bottom: 1px solid color(shade--dark);
 }
 
     .c-tabs__item {

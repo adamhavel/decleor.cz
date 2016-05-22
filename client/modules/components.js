@@ -18,5 +18,9 @@ export default [
     {
         selector: '.j-accordion',
         src: 'accordion.js'
+    },
+    {
+        selector: '.j-header',
+        src: 'header.js'
     }
 ];

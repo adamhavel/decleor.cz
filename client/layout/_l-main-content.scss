@@ -4,6 +4,9 @@
 
 .l-main-content {
 
+    &--aloof {
+        padding-bottom: lines(3);
+    }
 }
 
     .l-main-content__bar {
@@ -45,6 +48,11 @@
                 &--intro {
                     min-height: lines(7.5);
                 }
+
+                &--open {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
             }
 
                 .l-main-content__heading {
@@ -54,3 +62,19 @@
                     text-transform: uppercase;
                     text-align: center;
                 }
+
+                .l-main-content__tabs {
+                }
+
+                    .l-main-content__tab {
+                        border: 1px solid color(shade--dark);
+                        background: color(highlight);
+                        color: color(background);
+                        min-width: 15em;
+
+                        &[aria-pressed="true"] {
+                            color: color(text--dark);
+                            background: color(background);
+                        }
+
+                    }

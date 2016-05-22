@@ -127,7 +127,6 @@ module.exports = function(grunt) {
                     src: [
                         '**',
                         '!**/*.map',
-                        '!assets/site/img/icon/**',
                         '!assets/site/font/**'
                     ],
                     dest: 'build/public'

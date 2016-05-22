@@ -22,7 +22,7 @@ export default function(node, selector) {
                     utils.toggleAttribute(content, 'aria-expanded');
 
                     if (content.getAttribute('aria-expanded') === 'true') {
-                        content.style.maxHeight = contentHeight + 'px';
+                        content.style.maxHeight = contentHeight;
                     } else {
                         content.style.maxHeight = '0px';
                     }
@@ -38,10 +38,10 @@ export default function(node, selector) {
 
         let content = self.element('content').get();
 
-        contentHeight = content.scrollHeight;
+        contentHeight = (content.scrollHeight + 10) + 'px';
 
         if (content.getAttribute('aria-expanded') === 'true') {
-            content.style.maxHeight = contentHeight + 'px';
+            content.style.maxHeight = contentHeight;
         }
 
     })();
