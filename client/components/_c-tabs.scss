@@ -3,32 +3,47 @@
    ========================================================================== */
 
 .c-tabs {
-    @include no-spacing;
 
-    display: flex;
-    border-bottom: 1px solid color(shade--dark);
+    &--bordered {
+        border-bottom: 1px solid color(shade--dark);
+    }
 }
 
-    .c-tabs__item {
-        flex: 1;
+    .c-tabs__list {
+        @include no-spacing;
+
         display: flex;
     }
 
-        .c-tabs__link {
+        .c-tabs__item {
             flex: 1;
             display: flex;
-            padding: lines(1) 1em;
-            line-height: 1.375;
-            text-transform: uppercase;
-            font-family: font(sans-serif);
-            font-weight: 700;
-            letter-spacing: .075em;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
 
-            &:hover,
-            &:focus {
-                color: color(text--dark);
+            .c-tabs--bordered & {
+                border: solid color(shade--dark);
+                border-width: 1px 1px 0 0;
+
+                &:first-child {
+                    border-left-width: 1px;
+                }
             }
         }
+
+            .c-tabs__link {
+                flex: 1;
+                display: flex;
+                padding: lines(1) 1em;
+                line-height: 1.375;
+                text-transform: uppercase;
+                font-family: font(sans-serif);
+                font-weight: 700;
+                letter-spacing: .075em;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+
+                .c-tabs--bordered &[aria-pressed="true"] {
+                    border-bottom: 1px solid color(background);
+                    margin-bottom: -1px;
+                }
+            }

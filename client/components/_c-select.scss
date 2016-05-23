@@ -36,17 +36,13 @@
     }
 
     .c-select__label {
-        @include size(0);
-
         position: absolute;
         top: 50%;
         right: 1.25em;
-        border: .4em solid transparent;
-        border-bottom: 0;
-        border-top-color: color(highlight);
         transform: translateY(-50%);
         pointer-events: none;
         will-change: transform;
+        color: color(highlight);
 
         .c-select__input:hover + &,
         .c-select__input:focus + & {
@@ -64,12 +60,12 @@
                 },
                 100% {
                     transform: translateY(-50%);
-                    border-top-color: color(background);
+                    color: color(background);
                     opacity: 1;
                 }
             }
 
-            animation: hover .4s;
+            animation: hover .5s;
             animation-fill-mode: forwards;
         }
     }

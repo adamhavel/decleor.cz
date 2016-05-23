@@ -19,8 +19,6 @@ export default function(node, selector) {
 
     (function init() {
 
-        console.log('yay');
-
     })();
 
     return self;

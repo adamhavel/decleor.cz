@@ -22,5 +22,9 @@ export default [
     {
         selector: '.j-header',
         src: 'header.js'
+    },
+    {
+        selector: '.j-main-content',
+        src: 'main-content.js'
     }
 ];

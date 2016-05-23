@@ -64,17 +64,30 @@
                 }
 
                 .l-main-content__tabs {
+                    @include island(2);
                 }
 
                     .l-main-content__tab {
-                        border: 1px solid color(shade--dark);
                         background: color(highlight);
                         color: color(background);
                         min-width: 15em;
+
+                        &:hover,
+                        &:focus {
+                            background-color: tint(color(highlight), .2);
+                            color: color(background);
+                        }
 
                         &[aria-pressed="true"] {
                             color: color(text--dark);
                             background: color(background);
                         }
-
                     }
+
+        .l-main-content__pane {
+
+            .js &:not([aria-expanded="true"]) {
+                display: none;
+            }
+        }
+
