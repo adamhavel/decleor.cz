@@ -5,6 +5,8 @@
 .c-secondary-nav {
     @include no-spacing;
     @include h-spacing(1em);
+
+    color: color(highlight);
 }
 
     .c-secondary-nav__item {
@@ -21,11 +23,12 @@
         .c-secondary-nav__link {
             text-transform: uppercase;
             font-family: font(sans-serif);
-            color: color(highlight);
+            color: inherit;
+            letter-spacing: .05em;
 
             &:hover,
             &:focus {
-                color: color(text);
+                text-decoration: underline;
             }
         }
 

@@ -6,6 +6,11 @@
     @include clearfix;
     @include no-spacing;
     @include h-spacing(3em);
+
+    &--centered {
+        display: flex;
+        justify-content: center;
+    }
 }
 
     .c-site-nav__list {
@@ -74,5 +79,11 @@
                     right: 0;
                     pointer-events: initial;
                     transition: right 0s, opacity .4s;
+                }
+
+                .c-site-nav--reversed & {
+                    top: auto;
+                    bottom: 100%;
+                    bottom: calc(100% + #{lines(1)});
                 }
             }

@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Hero header
+   ========================================================================== */
+
+.l-hero-header {
+    @include no-spacing;
+
+    position: relative;
+    background: color(text--dark);
+    overflow: hidden;
+}
+
+    .l-hero-header__content {
+        position: relative;
+        padding: lines(2) 0 lines(3);
+        z-index: 2;
+    }
+
+        .l-hero-header__wrapper {
+
+        }
+
+            .l-hero-header__secondary-nav {
+                float: right;
+                color: color(background) !important;
+            }
+
+        .l-hero-header__logo {
+            @include center;
+            @include island(10, 8);
+
+            width: 35em;
+        }
+
+        .l-hero-header__headline {
+            @include display-type;
+
+            color: color(background);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .4em;
+        }
+
+        .l-hero-header__icon {
+            @include island(2);
+            @include center;
+
+            display: block;
+            color: color(background);
+            transform: rotate(90deg);
+        }
+
+        .l-hero-header__nav {
+            @include island(3);
+
+            color: color(background);
+            position: relative;
+        }
+
+    .l-hero-header__video {
+        @include no-spacing;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-50%);
+        object-fit: cover;
+    }

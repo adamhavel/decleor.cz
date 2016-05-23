@@ -1,4 +1,5 @@
 node_modules
+*.mp4
 public/assets/site/lib
 public/assets/site/js
 public/assets/site/css

@@ -74,8 +74,8 @@ module.exports = function(grunt) {
             default: {
                 src: [
                     'client/objects/**/*.scss',
-                    'client/layout/**/*.scss',
                     'client/elements/**/*.scss',
+                    'client/layout/**/*.scss',
                     'client/components/**/*.scss',
                     'client/utility/**/*.scss'
                 ],
@@ -223,7 +223,7 @@ module.exports = function(grunt) {
         watch: {
             options: {
                 livereload: true,
-                spawn: true
+                spawn: false
             },
             css: {
                 files: ['client/**/*.scss', '!client/non-critical.scss'],

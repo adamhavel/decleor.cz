@@ -9,7 +9,6 @@
     .c-search__input {
         width: 8em;
         display: inline-block;
-        color: color(highlight);
         text-transform: uppercase;
         font-family: font(sans-serif);
         vertical-align: middle;
@@ -20,6 +19,5 @@
         display: inline-flex;
         align-items: center;
         margin-left: .5rem;
-        color: color(highlight);
         vertical-align: top;
     }
