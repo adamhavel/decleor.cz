@@ -2,10 +2,10 @@
    Utils
    ========================================================================== */
 
-var utils = {};
-
+const utils = {};
 const loadedScripts = [];
 const loadingScripts = [];
+var media;
 
 utils.query = function(selector, parent = document) {
     return parent.querySelector(selector);
@@ -43,13 +43,19 @@ utils.debounce = function(func, delay, immediate) {
 };
 
 utils.toggleAttribute = function(item, attr) {
-    item.setAttribute(attr, item.getAttribute(attr) === 'true' ? 'false' : 'true');
+    let value = item.getAttribute(attr);
+    let reversedValue = value === null || value === 'false' ? 'true' : 'false';
+
+    item.setAttribute(attr, reversedValue);
+
+    return (reversedValue === 'true');
 };
 
 utils.mediaQuery = function() {
     if (!media && window.getComputedStyle) {
         media = window.getComputedStyle(document.body, ':after').getPropertyValue('content').replace(/['"]/g, '');
     }
+
     return media;
 };
 

@@ -17,8 +17,19 @@
     }
 
         .l-hero-header__wrapper {
-
+            @include no-spacing;
         }
+
+            .l-hero-header__audio-control {
+                float: left;
+                color: color(background);
+                transition: color .3s;
+
+                &:hover,
+                &:focus {
+                    color: color(highlight--light);
+                }
+            }
 
             .l-hero-header__secondary-nav {
                 float: right;
