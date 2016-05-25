@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Experts promo
+   ========================================================================== */
+
+.c-experts-promo {
+    $gutter: 5%;
+    @include no-spacing;
+
+    border: 1px solid color(shade--dark);
+    padding: lines(3);
+    display: flex;
+    justify-content: space-between;
+
+    > * {
+        width: 50% - ($gutter / 2);
+    }
+
+    @mixin no-flexbox {
+        @include clearfix;
+    }
+}
+
+    .c-experts-promo__media {
+        align-self: center;
+
+        @mixin no-flexbox {
+            float: left;
+        }
+    }
+
+    .c-experts-promo__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: solid color(shade--dark);
+        border-width: 1px 0;
+        padding: lines(2) 0;
+
+        @mixin no-flexbox {
+            float: right;
+        }
+    }
+
+        .c-experts-promo__heading {
+            color: color(text--dark);
+            text-transform: uppercase;
+            letter-spacing: .125em;
+        }
+
+        .c-experts-promo__subtitle {
+            @include aloof(2);
+            @include snug(.5);
+
+            text-transform: uppercase;
+            color: color(highlight);
+            font-size: 6.5rem;
+            line-height: 1;
+        }
+
+        .c-experts-promo__description {
+            color: color(text--dark);
+        }
+
+        .c-experts-promo__link {
+            @include island(3);
+
+            align-self: flex-start;
+            border: 1px solid currentColor;
+            display: inline-block;
+            padding: .875em 4em;
+            transition: color .3s;
+            color: color(text--dark);
+
+            &:hover,
+            &:focus {
+                color: color(highlight);
+            }
+        }

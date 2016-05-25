@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Magazine promo
+   ========================================================================== */
+
+.c-magazine-promo {
+    padding: lines(4) 0;
+    background: color(shade);
+}
+
+    .c-magazine-promo__heading {
+        @include island(4);
+
+        color: color(text--dark);
+        text-transform: uppercase;
+        letter-spacing: .125em;
+        text-align: center;
+
+        &:before,
+        &:after {
+            content: '';
+            display: inline-block;
+            height: 1px;
+            width: 8em;
+            background: color(shade--dark);
+            vertical-align: middle;
+            margin: 0 3em;
+
+            @include media('<line') {
+                display: none;
+            }
+        }
+    }

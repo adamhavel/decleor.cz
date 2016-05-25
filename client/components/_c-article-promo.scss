@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Article promo
+   ========================================================================== */
+
+.c-article-promo {
+    @include v-spacing(1.5);
+
+    display: flex;
+    flex-direction: column;
+    background: color(background);
+    text-align: center;
+    padding-bottom: lines(3);
+    position: relative;
+
+    > :nth-child(2) {
+        margin-bottom: auto;
+    }
+}
+
+    .c-article-promo__media {
+        display: block;
+        width: 100%;
+    }
+
+    .c-article-promo__heading {
+        margin-left: 10%;
+        margin-right: 10%;
+        line-height: 1.25;
+        text-transform: uppercase;
+        color: color(highlight);
+    }
+
+    .c-article-promo__lede {
+        color: color(text--dark);
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .c-article-promo__link {
+        @include out-of-flow;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 0;
+    }
+

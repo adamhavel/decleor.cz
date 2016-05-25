@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Section promo
+   ========================================================================== */
+
+.c-section-promo {
+    @include v-spacing(.375);
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    > :nth-last-child(2) {
+        margin-bottom: auto;
+    }
+}
+
+    .c-section-promo__media {
+        @include island(1.5);
+        @include center;
+
+        display: block;
+    }
+
+    .c-section-promo__heading {
+        text-transform: uppercase;
+        color: color(highlight);
+    }
+
+    .c-section-promo__subtitle {
+        color: color(text--dark);
+    }
+
+    .c-section-promo__description {
+        color: color(text--dark);
+    }
+
+    .c-section-promo__link {
+        @include island(1.5);
+        @include no-spacing;
+
+        display: inline-flex;
+        align-self: center;
+        align-items: center;
+        border: 1px solid color(shade--dark);
+        padding: .75em 2em;
+        transition: border-color .3s;
+        color: color(text--dark);
+
+        &:hover,
+        &:focus {
+            border-color: currentColor;
+        }
+
+        @mixin no-flexbox {
+            display: inline-block;
+        }
+    }

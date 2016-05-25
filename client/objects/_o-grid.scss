@@ -78,4 +78,10 @@ $grid-vgap: 3;
     &--fill {
         @include grid($hgap: 1px);
     }
+
+    &--2 {
+        @include grid((
+            '>=layout': 2,
+        ));
+    }
 }

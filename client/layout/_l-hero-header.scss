@@ -4,6 +4,7 @@
 
 .l-hero-header {
     @include no-spacing;
+    @include island(3);
 
     position: relative;
     background: color(text--dark);
