@@ -13,7 +13,7 @@ export default function(node, selector) {
         {
             name: 'self',
             handlers: {
-                mouseleave: function() {
+                mouseleave() {
                     timer = setTimeout(function() {
                         let activeSubNav = self.element('subnav').query('.is-active');
 
@@ -27,8 +27,8 @@ export default function(node, selector) {
             name: 'item',
             isCollection: true,
             handlers: {
-                mouseover: function(ev, index) {
-                    let subNav = self.element('subnav').get(index);
+                mouseover() {
+                    let subNav = this.querySelector(self.element('subnav').selector);
                     let activeSubNav = self.element('subnav').query('.is-active');
 
                     if (timer) {

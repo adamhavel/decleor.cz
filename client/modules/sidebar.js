@@ -53,7 +53,6 @@ export default function(node, selector) {
 
                     activeSubset && activeSubset.setAttribute('aria-expanded', 'false');
                     subset && subset.setAttribute('aria-expanded', 'true');
-                    self.element('loader').get().classList.add('is-active');
                 }
             }
         },

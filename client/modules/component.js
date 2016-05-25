@@ -24,20 +24,12 @@ const Component = {
                 }
             };
 
-            element.get = (index = -1) => {
-                if (!element.node || element.isTransient) {
-                    if (element.isCollection) {
-                        element.node = utils.queryAll(element.selector, this.container);
-                    } else {
-                        element.node = utils.query(element.selector, this.container);
-                    }
+            element.get = (index = 0) => {
+                if (!element.nodes || element.isTransient) {
+                    element.nodes = utils.queryAll(element.selector, this.container);
                 }
 
-                if (element.isCollection && index > -1) {
-                    return element.node[index];
-                }
-
-                return element.node;
+                return element.nodes[index];
             };
 
             element.query = selector => {
@@ -51,7 +43,7 @@ const Component = {
             if (!element.selector) {
                 if (element.name === 'self') {
                     element.selector = this.selector;
-                    element.node = this.container;
+                    element.nodes = [this.container];
                 } else {
                     // Create a default selector by using the element's name and container selector.
                     element.selector = this.selector + '__' + element.name;
@@ -95,27 +87,17 @@ const Component = {
         let result = {};
 
         elements.some(element => {
-            let node = element.get();
 
-            if (element.isCollection) {
+            return element.nodes.some((item, index) => {
+                if (item === target) {
+                    result = { element, index };
 
-                return node.some((item, index) => {
-                    if (item === target) {
-                        result = { element, index };
+                    return true;
+                }
 
-                        return true;
-                    }
+                return false;
+            });
 
-                    return false;
-                });
-
-            } else if (node === target) {
-                result = { element };
-
-                return true;
-            }
-
-            return false;
         });
 
         return result;
@@ -141,13 +123,7 @@ const Component = {
             let { element = null, index = null } = this.findElement(currentTarget);
 
             if (element && element.handlers && element.handlers[eventType]) {
-
-                if (element.isCollection) {
-                    element.handlers[eventType].call(element.get(index), ev, index);
-                } else {
-                    element.handlers[eventType].call(element.get(), ev);
-                }
-
+                element.handlers[eventType].call(element.get(index), ev, index);
             }
 
             if (currentTarget === this.container) {
