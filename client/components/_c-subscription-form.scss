@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Subscription form
+   ========================================================================== */
+
+.c-subscription-form {
+
+}
+
+    .c-subscription-form__fieldset {
+        @include island(2);
+
+        padding: lines(3) 0;
+        border: solid color(shade--dark);
+        border-width: 1px 0;
+    }
+
+        .c-subscription-form__submit {
+            @include island();
+
+            font-family: font(serif);
+            text-transform: none;
+            font-weight: 400;
+            min-width: 21em;
+        }
+
+    .c-subscription-form__disclaimer {
+        font-style: italic;
+    }

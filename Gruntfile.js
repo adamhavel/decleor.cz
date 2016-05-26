@@ -223,7 +223,7 @@ module.exports = function(grunt) {
         watch: {
             options: {
                 livereload: true,
-                spawn: false
+                spawn: true
             },
             css: {
                 files: ['client/**/*.scss', '!client/non-critical.scss'],

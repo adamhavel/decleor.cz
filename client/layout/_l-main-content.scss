@@ -63,6 +63,10 @@
                     text-align: center;
                 }
 
+                .l-main-content__lede {
+                    font-style: italic;
+                }
+
                 .l-main-content__tabs {
                     @include island(2);
                 }

@@ -5,6 +5,8 @@
 .c-form-cell {
     @include no-spacing;
 
+    position: relative;
+
     &--inline {
         @include h-spacing(1.5rem);
 
@@ -16,6 +18,14 @@
 
             display: block;
         }
+
+        &--align-top {
+            align-items: flex-start;
+        }
+    }
+
+    &--squashed {
+        padding-left: calc(10em + 1.5rem);
     }
 }
 
@@ -25,7 +35,7 @@
         &--stern {
             text-transform: uppercase;
             font-family: font(sans-serif);
-            font-weight: 700;
+            //font-weight: 700;
             letter-spacing: .1em;
         }
 
@@ -45,4 +55,21 @@
 
     .c-form-cell__input {
         display: block;
+        flex: none;
+    }
+
+    .c-form-cell__error {
+        @include out-of-flow;
+
+        position: absolute;
+        color: color(error);
+        text-align: right;
+        bottom: 0;
+        right: 0;
+        margin-right: 0;
+        font-family: font(sans-serif);
+
+        & ~ * {
+            margin-bottom: lines(1.5);
+        }
     }

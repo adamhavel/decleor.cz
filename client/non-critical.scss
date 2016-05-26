@@ -57,3 +57,27 @@
         }
     }
 }
+
+.e-input {
+
+    &:required:valid {
+        background: {
+            image: asset('icon/check.svg');
+            repeat: no-repeat;
+            position: right 1em center;
+            size: 1.5em;
+        }
+        padding-right: 3em;
+    }
+
+    &.is-invalid:not(:focus) {
+        background: {
+            image: asset('icon/error.svg');
+            repeat: no-repeat;
+            position: right .5em center;
+            size: 2em;
+        }
+        padding-right: 3em;
+    }
+}
+

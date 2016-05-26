@@ -4,89 +4,84 @@
 
 import utils from 'utils.js';
 
+const Element = {
+    init(component) {
+        let defaultSelector = this.name === 'self' ? component.selector : component.selector + '__' + this.name;
+
+        this.component = component;
+        this.selector = this.selector || defaultSelector;
+        this.handlers = this.handlers || Object.create(null);
+        this.resolveNodes();
+    },
+    resolveNodes() {
+        this.nodes = utils.queryAll(this.selector, this.component.container);
+
+        return this.nodes;
+    },
+    get(index = 0) {
+        if (!this.nodes || this.isTransient) {
+            this.resolveNodes();
+        }
+
+        return this.nodes[index];
+    },
+    query(selector) {
+        return utils.query(this.selector + selector, this.component.container);
+    },
+    queryAll(selector) {
+        return utils.queryAll(this.selector + selector, this.component.container);
+    },
+    render() {
+        return this.template && utils.createNode(this.template());
+    }
+};
+
 const Component = {
-    init: function(node, selector) {
+    init(node, selector) {
         this.container = node;
         this.selector = selector;
-        this.elements = {};
-        this.registeredHandlers = {};
+        this.elements = new Map();
+        this.registeredHandlers = Object.create(null);
     },
-    // Define an element and register any event handler neccessary.
-    define: function(...elements) {
+    define(...elements) {
         for (let element of elements) {
-            this.elements[element.name] = element;
+            let emptyElement = Object.create(Element);
 
-            element.render = () => {
-                if (element.template) {
-                    return utils.createNode(element.template());
-                } else {
-                    return null;
-                }
-            };
+            element = Object.assign(emptyElement, element);
+            element.init(this);
 
-            element.get = (index = 0) => {
-                if (!element.nodes || element.isTransient) {
-                    element.nodes = utils.queryAll(element.selector, this.container);
-                }
+            this.elements.set(element.name, element);
 
-                return element.nodes[index];
-            };
+            for (let eventType of Object.keys(element.handlers)) {
 
-            element.query = selector => {
-                return this.container.querySelector(element.selector + selector);
-            };
+                if (!this.registeredHandlers[eventType]) {
+                    let capturingTypes = ['blur', 'focus'];
+                    let isCapturing = capturingTypes.indexOf(eventType) > -1;
+                    let handler = this.handler.bind(this);
 
-            element.queryAll = selector => {
-                return this.container.querySelectorAll(element.selector + selector);
-            };
+                    this.container.addEventListener(eventType, handler, isCapturing);
+                    this.registeredHandlers[eventType] = handler;
 
-            if (!element.selector) {
-                if (element.name === 'self') {
-                    element.selector = this.selector;
-                    element.nodes = [this.container];
-                } else {
-                    // Create a default selector by using the element's name and container selector.
-                    element.selector = this.selector + '__' + element.name;
-                }
-            }
-
-            if (!element.isTransient && !element.get()) {
-                // throw an error
-            }
-
-            if (element.handlers) {
-                for (let eventType of Object.keys(element.handlers)) {
-
-                    if (!this.registeredHandlers[eventType]) {
-                        let capturingTypes = ['blur', 'focus'];
-                        let isCapturing = capturingTypes.indexOf(eventType) > -1;
-                        let handler = this.handler.bind(this);
-
-                        this.container.addEventListener(eventType, handler, isCapturing);
-                        this.registeredHandlers[eventType] = handler;
-
-                        if (eventType === 'touchmove' && !this.touches) {
-                            this.touches = {};
-                            this.container.addEventListener('touchstart', function(ev) {
-                                this.touches.x = ev.touches[0].clientX;
-                                this.touches.y = ev.touches[0].clientY;
-                            });
-                        }
+                    if (eventType === 'touchmove' && !this.touches) {
+                        this.touches = {};
+                        this.container.addEventListener('touchstart', function(ev) {
+                            this.touches.x = ev.touches[0].clientX;
+                            this.touches.y = ev.touches[0].clientY;
+                        });
                     }
-
                 }
+
             }
         }
     },
-    // Returns an element for a given element name.
-    element: function(name) {
-        return this.elements[name];
+    element(name) {
+        return this.elements.get(name);
     },
-    findElement: function(target) {
-        let elements = Object.keys(this.elements).map(name => this.elements[name]);
+    findElement(target) {
+        let elements = this.elements.values();
         let result = {};
 
-        elements.some(element => {
+        [...elements].some(element => {
 
             return element.nodes.some((item, index) => {
                 if (item === target) {
@@ -94,16 +89,13 @@ const Component = {
 
                     return true;
                 }
-
-                return false;
             });
 
         });
 
         return result;
     },
-    // Generic event handler.
-    handler: function(ev) {
+    handler(ev) {
         let currentTarget = ev.target;
         let eventType = ev.type;
         let stopPropagation = false;
@@ -122,7 +114,7 @@ const Component = {
         while (!stopPropagation) {
             let { element = null, index = null } = this.findElement(currentTarget);
 
-            if (element && element.handlers && element.handlers[eventType]) {
+            if (element && element.handlers[eventType]) {
                 element.handlers[eventType].call(element.get(index), ev, index);
             }
 

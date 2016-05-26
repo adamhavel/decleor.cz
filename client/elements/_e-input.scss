@@ -6,18 +6,22 @@
     display: block;
     width: 100%;
     max-width: 25em;
-    padding: lines(.75) 1em;
+    padding: lines(.5) 1em;
     background: color(background);
     border: 1px solid color(highlight);
     color: color(text);
-    transition: background-color .3s;
+    transition: background-color .3s, border-color .3s;
 
     &[cols] {
         height: auto;
     }
 
     &:focus {
-       background: tint(color(highlight--light), .85);
+       background-color: tint(color(highlight--light), .85);
+    }
+
+    &.is-invalid:not(:focus) {
+        border-color: color(error);
     }
 
     @include media('<line') {
@@ -32,7 +36,7 @@
             @include size(1.5em);
 
             padding: 0;
-            transition: background-color .3s;
+            transition: background-color .3s, border-color .3s;
             position: relative;
             background: none;
 
@@ -48,19 +52,35 @@
                 background-size: 85%;
                 transition: opacity .2s;
             }
+
+
         }
 
         &:checked + .e-input--faux:before {
-            opacity: .65;
+            opacity: 1;
         }
 
         &:focus + .e-input--faux {
-           background: tint(color(highlight--light), .75);
+           background-color: tint(color(highlight--light), .75);
+
+           &.e-input--subtle {
+                border-color: color(text--dark);
+                background-color: inherit;
+           }
         }
     }
 
     &--full-width {
         max-width: none;
+    }
+
+    &--subtle {
+        border-color: color(shade--dark);
+
+        &:focus {
+            border-color: color(text--dark);
+            background: inherit;
+        }
     }
 }
 
