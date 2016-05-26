@@ -35,7 +35,6 @@
         &--stern {
             text-transform: uppercase;
             font-family: font(sans-serif);
-            //font-weight: 700;
             letter-spacing: .1em;
         }
 
@@ -49,13 +48,12 @@
 
         &--push-up {
             align-self: flex-start;
-            margin-top: lines(1);
+            margin-top: lines(.675);
         }
     }
 
     .c-form-cell__input {
         display: block;
-        flex: none;
     }
 
     .c-form-cell__error {

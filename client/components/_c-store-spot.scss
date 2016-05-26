@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Store spot
+   ========================================================================== */
+
+.c-store-spot {
+    $gutter: lines(1);
+
+    @include v-spacing(.75);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eee6db;
+    text-align: center;
+    padding: $gutter * 2;
+    position: relative;
+
+    &:before {
+
+        content: '';
+        position: absolute;
+        top: $gutter;
+        left: $gutter;
+        bottom: $gutter;
+        right: $gutter;
+        border: 1px solid color(highlight--light);
+        pointer-events: none;
+    }
+}
+
+    .c-store-spot__heading {
+        color: color(highlight);
+        text-transform: uppercase;
+    }
+
+    .c-store-spot__info {
+        color: color(text--dark);
+        text-transform: uppercase;
+        font-family: font(sans-serif);
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .c-store-spot__perks {
+        color: color(text--dark);
+    }

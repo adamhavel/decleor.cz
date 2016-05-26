@@ -9,8 +9,8 @@
     max-width: const(LAYOUT_WIDTH);
     padding: 0 2vw;
 
-    @include media('<layout') {
-        padding: 0 4vw;
+    &--expanded {
+        padding: 0 1vw;
     }
 
     &--reduced {

@@ -25,6 +25,8 @@
             float: left;
             flex: none;
             width: 25%;
+            border-right: 1px solid color(shade--dark);
+            padding: lines(1.5) 0;
         }
 
         .l-main-content__column {
@@ -37,7 +39,7 @@
             .l-main-content__section {
                 @include island(3);
 
-                padding-bottom: lines(1);
+                padding-bottom: lines(3);
                 border-bottom: 1px solid color(shade--dark);
 
                 &:last-child {

@@ -12,16 +12,16 @@
     color: color(text);
     transition: background-color .3s, border-color .3s;
 
-    &[cols] {
-        height: auto;
-    }
-
     &:focus {
        background-color: tint(color(highlight--light), .85);
     }
 
     &.is-invalid:not(:focus) {
         border-color: color(error);
+    }
+
+    &[cols] {
+        height: auto;
     }
 
     @include media('<line') {
@@ -39,6 +39,7 @@
             transition: background-color .3s, border-color .3s;
             position: relative;
             background: none;
+            flex: none;
 
             &:before {
                 @include size(100%);

@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Tag
+   ========================================================================== */
+
+.e-tag {
+    display: inline-block;
+    border: 1px solid color(highlight);
+    padding: .25em 1.25em;
+    transition: background-color .3s, color .3s;
+
+    &:hover,
+    &:focus {
+        background: color(highlight);
+        color: color(background);
+    }
+}

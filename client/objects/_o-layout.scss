@@ -57,6 +57,13 @@
             }
         }
 
+         .o-layout--airy > & {
+
+            &:first-child {
+                margin-right: $gutter * 4;
+            }
+        }
+
         @mixin no-flexbox {
             float: right;
             width: calc(50% - #{($gutter / 2)});

@@ -25,7 +25,6 @@ export default function(node, selector) {
         },
         {
             name: 'item',
-            isCollection: true,
             handlers: {
                 mouseover() {
                     let subNav = this.querySelector(self.element('subnav').selector);

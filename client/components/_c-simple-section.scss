@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Simple section
+   ========================================================================== */
+
+.c-simple-section {
+
+}
+
+    .c-simple-section__heading {
+        @include island(.75);
+
+        padding-bottom: lines(.75);
+        border-bottom: 1px solid color(shade--dark);
+        text-transform: uppercase;
+    }

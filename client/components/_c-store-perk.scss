@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Store perk
+   ========================================================================== */
+
+.c-store-perk {
+    @include v-spacing(.25);
+
+    display: block;
+    text-align: center;
+}
+
+    .c-store-perk__icon {
+        @include center;
+
+        display: block;
+        color: color(highlight);
+        transition: color .3s;
+
+        .c-store-perk:hover &,
+        .c-store-perk:focus & {
+            color: color(highlight--light);
+        }
+    }
+
+    .c-store-perk__description {
+        display: block;
+        font-family: font(sans-serif);
+        line-height: 1.125;
+    }

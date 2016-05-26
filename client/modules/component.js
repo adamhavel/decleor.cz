@@ -14,7 +14,11 @@ const Element = {
         this.resolveNodes();
     },
     resolveNodes() {
-        this.nodes = utils.queryAll(this.selector, this.component.container);
+        if (this.name === 'self') {
+            this.nodes = [this.component.container];
+        } else {
+            this.nodes = utils.queryAll(this.selector, this.component.container);
+        }
 
         return this.nodes;
     },

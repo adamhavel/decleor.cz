@@ -57,9 +57,9 @@ module.exports = function(grunt) {
                 src: 'node_modules/systemjs/dist/system-csp-production.src.js',
                 dest: 'public/assets/site/js/lib/system.js'
             },
-            bluebird: {
-                src: 'node_modules/bluebird/js/browser/bluebird.js',
-                dest: 'public/assets/site/js/lib/bluebird.js'
+            corejs: {
+                src: 'node_modules/core-js/client/shim.js',
+                dest: 'public/assets/site/js/lib/shim.js'
             }
         },
 
@@ -223,7 +223,7 @@ module.exports = function(grunt) {
         watch: {
             options: {
                 livereload: true,
-                spawn: true
+                spawn: false
             },
             css: {
                 files: ['client/**/*.scss', '!client/non-critical.scss'],
@@ -271,8 +271,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build-css', ['sass_globbing', 'sass:default', 'postcss:default']);
     grunt.registerTask('build-non-critical-css', ['exec:sassnoncritical', 'postcss:noncritical']);
     grunt.registerTask('build-icons', ['svgstore', 'imagemin:icons']);
-    grunt.registerTask('init', ['build-css', 'build-non-critical-css', 'modernizr', 'uglify:smoothscroll', 'uglify:systemjs', 'uglify:bluebird', 'build-js', 'build-icons']);
-    grunt.registerTask('build', ['init', 'clean:build', 'copy:build', 'imagemin:default', 'inliner', 'hashres']);
+    grunt.registerTask('init', ['build-css', 'build-non-critical-css', 'modernizr', 'uglify:smoothscroll', 'uglify:systemjs', 'uglify:corejs', 'build-js', 'build-icons']);
+    grunt.registerTask('build', ['init', 'clean:build', 'copy:build', 'imagemin:default', 'inliner:modernizr', 'hashres']);
     grunt.registerTask('develop', ['init', 'concurrent']);
 
 };

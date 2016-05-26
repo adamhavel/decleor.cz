@@ -8,6 +8,11 @@
     border: 1px solid color(highlight--light);
     padding: lines(3) 5em;
     position: relative;
+
+    &--simple {
+        border: 0;
+        padding: 0;
+    }
 }
 
     .c-gestures__header {
@@ -38,6 +43,10 @@
         display: flex;
         justify-content: space-between;
         counter-reset: gestures;
+
+        .c-gestures--simple & {
+            @include h-spacing(2em);
+        }
     }
 
         .c-gestures__item {
@@ -51,6 +60,25 @@
             text-align: center;
             font-style: italic;
             color: color(text--dark);
+
+            .c-gestures--simple & {
+                background: #f9f6f1;
+                padding: lines(1) 1em;
+                position: relative;
+
+                &:before {
+                    $gutter: .25em;
+
+                    content: '';
+                    position: absolute;
+                    top: $gutter;
+                    left: $gutter;
+                    bottom: $gutter;
+                    right: $gutter;
+                    z-index: 1;
+                    border: 1px solid color(background);
+                }
+            }
         }
 
             .c-gestures__media {
@@ -82,8 +110,9 @@
 
             .c-gestures__desc {
                 margin: auto 0;
-                padding: lines(2) 0;
+                padding: lines(2) 1em;
                 position: relative;
+                z-index: 2;
 
                 &:before {
                     content: counter(gestures);
@@ -94,9 +123,17 @@
                     position: absolute;
                     z-index: -1;
                     top: 50%;
+                    left: -.025em;
                     width: 100%;
                     transform: translateY(-50%);
                     user-select: none;
                     font-feature-settings: 'lnum';
+                }
+
+                .c-gestures--simple & {
+
+                    &:before {
+                        color: #eee6da;
+                    }
                 }
             }

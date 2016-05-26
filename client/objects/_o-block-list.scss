@@ -11,11 +11,11 @@
     }
 
     &--tight {
-        @include v-spacing(.5);
+        @include v-spacing(.25);
     }
 
     &--snug {
-        @include v-spacing(.25);
+        @include no-spacing;
     }
 
     > * {

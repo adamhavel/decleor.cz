@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Contact form
+   ========================================================================== */
+
+.c-contact-form {
+
+}
+
+    .c-contact-form__fieldset {
+        @include island(2);
+
+        padding: lines(3) 0;
+        border: solid color(shade--dark);
+        border-width: 1px 0;
+    }
+
+        .c-contact-form__footer {
+            @include no-spacing;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .c-contact-form__submit {
+            @include island();
+
+            font-family: font(serif);
+            text-transform: none;
+            font-weight: 400;
+            min-width: 18em;
+        }
+
+    .c-contact-form__disclaimer {
+        font-style: italic;
+    }

@@ -19,7 +19,6 @@ export default function(node, selector) {
         },
         {
             name: 'tab',
-            isCollection: true,
             handlers: {
                 click: function(ev) {
                     ev.preventDefault();
@@ -39,12 +38,10 @@ export default function(node, selector) {
             }
         },
         {
-            name: 'pane',
-            isCollection: true
+            name: 'pane'
         },
         {
             name: 'input',
-            isCollection: true,
             handlers: {
                 change: function() {
                     let subsetId = this.getAttribute('aria-controls');
@@ -57,8 +54,7 @@ export default function(node, selector) {
             }
         },
         {
-            name: 'subset',
-            isCollection: true
+            name: 'subset'
         },
         {
             name: 'loader'

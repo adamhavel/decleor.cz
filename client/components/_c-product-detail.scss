@@ -21,7 +21,7 @@
 
     .c-product-detail__header {
         @include island(2);
-        @include v-spacing(.75);
+        @include v-spacing(.5);
     }
 
         .c-product-detail__title {
@@ -51,11 +51,13 @@
 
     .c-product-detail__perks {
         @include island(1.5);
+        @include center;
         @include no-spacing;
 
         columns: 2;
         column-gap: 3em;
         padding: 0 2em;
+        max-width: 36em;
 
         @include media('<line') {
             columns: initial;

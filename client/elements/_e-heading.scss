@@ -18,4 +18,9 @@
         text-transform: uppercase;
         letter-spacing: .075em;
     }
+
+    &--grand {
+        text-transform: uppercase;
+        color: color(highlight);
+    }
 }

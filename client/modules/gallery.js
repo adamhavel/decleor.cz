@@ -31,8 +31,7 @@ export default function(node, selector) {
             }
         },
         {
-            name: 'image',
-            isCollection: true
+            name: 'image'
         },
         {
             name: 'thumbnail',
