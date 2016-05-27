@@ -15,22 +15,40 @@
     }
 }
 
-    .c-pagination__button {
-        min-width: 12em;
+    .c-pagination__link {
+        @include no-spacing;
+
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        padding: .5em 1.25em;
+        border: 1px solid color(highlight--light);
+        transition: background-color, color, border-color;
+        transition-duration: .3s;
+
+        &:hover,
+        &:focus {
+            background: color(highlight);
+            color: color(background);
+            border-color: color(highlight);
+        }
 
         &[rel="prev"] {
             float: left;
-            order: 0;
         }
 
         &[rel="next"] {
-            order: 2;
             float: right;
+        }
+
+        @mixin no-flexbox {
+            display: block;
         }
     }
 
-    .c-pagination__count {
-        display: block;
-        text-align: center;
-        order: 1;
-    }
+        .c-pagination__icon {
+
+            .c-pagination__link[rel="prev"] & {
+                transform: scaleX(-1);
+            }
+        }

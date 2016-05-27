@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Tags widget
+   ========================================================================== */
+
+.c-tags-widget {
+    @include no-spacing;
+    @include h-spacing(.5rem);
+
+    display: flex;
+    align-items: center;
+
+    @mixin no-flexbox {
+
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+    .c-tags-widget__heading {
+        text-transform: uppercase;
+    }
+
+    .c-tags-widget__list {
+        @include no-spacing;
+    }
+
+        .c-tags-widget__item {
+            display: inline-block;
+
+            &:after {
+                content: ', ';
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+
+            .c-tags-widget__link {
+                text-decoration: underline;
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }

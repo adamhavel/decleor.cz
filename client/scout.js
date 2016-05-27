@@ -53,7 +53,8 @@
     let tests = [
         'Promise' in window,
         'Symbol' in window,
-        'Map' in window
+        'Map' in window,
+        false
     ];
 
     // Check feature support and load shims if needed.

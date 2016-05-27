@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Share widget
+   ========================================================================== */
+
+.c-share-widget {
+    @include no-spacing;
+    @include h-spacing(.5rem);
+
+    display: flex;
+    align-items: center;
+
+    @mixin no-flexbox {
+
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+    .c-share-widget__heading {
+
+    }
+
+    .c-share-widget__list {
+
+    }
+
+        .c-share-widget__item {
+            color: color(text);
+
+            &:hover,
+            &:focus {
+                color: color(highlight);
+            }
+        }

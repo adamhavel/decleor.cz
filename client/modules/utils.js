@@ -77,7 +77,12 @@ const utils = {
      * @param {string} attr Atribute to be toggled.
      */
     toggleAttribute(item, attr) {
-        item.setAttribute(attr, item.getAttribute(attr) === 'true' ? 'false' : 'true');
+        let value = item.getAttribute(attr);
+        let negatedValue = value === 'true' ? 'false' : 'true';
+
+        item.setAttribute(attr, negatedValue);
+
+        return negatedValue === 'true';
     },
     /**
      * Query the current media query label as defined in the stylesheet.
