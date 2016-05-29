@@ -28,8 +28,31 @@
             }
         }
 
+    .c-sidebar__switch {
+        background: red;
+
+        @include media('>=line') {
+            display: none;
+        }
+    }
+
     .c-sidebar__content {
         padding: 0 1vw;
+
+        @include media('<line') {
+            padding: 0 4vw;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: opacity .1s, max-height .3s;
+
+            &[aria-expanded="true"],
+            .no-js & {
+                max-height: none;
+                opacity: 1;
+                transition: opacity .3s .2s, max-height .3s;
+            }
+        }
     }
 
         .c-sidebar__pane {

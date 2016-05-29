@@ -15,7 +15,7 @@ export default function(node, selector) {
         {
             name: 'button',
             handlers: {
-                click: function() {
+                click() {
                     let content = self.element('content').get();
 
                     utils.toggleAttribute(this, 'aria-pressed');

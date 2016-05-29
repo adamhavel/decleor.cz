@@ -19,6 +19,10 @@
 
         margin-top: 0;
         display: flex;
+
+        @include media('<line') {
+            display: block;
+        }
     }
 
         .l-main-content__sidebar {
@@ -27,6 +31,12 @@
             width: 25%;
             border-right: 1px solid color(shade--dark);
             padding: lines(1.5) 0;
+
+            @include media('<line') {
+                float: none;
+                border: 0;
+                width: auto;
+            }
         }
 
         .l-main-content__column {
@@ -34,6 +44,11 @@
             flex: none;
             width: 75%;
             padding: lines(2) 0 lines(3);
+
+            @include media('<line') {
+                float: none;
+                width: 100%;
+            }
         }
 
             .l-main-content__section {

@@ -13,12 +13,6 @@
         display: flex;
         align-items: center;
 
-        @include media('<line') {
-            @include v-spacing(.25);
-
-            display: block;
-        }
-
         &--align-top {
             align-items: flex-start;
         }

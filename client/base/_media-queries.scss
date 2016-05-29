@@ -232,16 +232,23 @@ $media-unit-intervals: (
  * Expose media query breakpoints to JavaScript.
  * Use: window.getComputedStyle(document.body, ':after').getPropertyValue('content');
  */
-body {
+html {
     &:after {
+        content: '>=layout';
         display: none;
     }
 
-    @each $type in map-keys($media-breakpoints) {
-        @include media('>=' + $type) {
-            &:after {
-                content: quote($type);
-            }
+    @include media('<layout') {
+
+        &:after {
+            content: '<layout';
+        }
+    }
+
+    @include media('<line') {
+
+        &:after {
+            content: '<line';
         }
     }
 }

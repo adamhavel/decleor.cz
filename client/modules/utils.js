@@ -88,12 +88,10 @@ const utils = {
      * Query the current media query label as defined in the stylesheet.
      * @return {string} A media query label.
      */
-    mediaQuery() {
-        if (!this.mediaQuery && window.getComputedStyle) {
-            this.mediaQuery = window.getComputedStyle(document.body, ':after').getPropertyValue('content').replace(/['"]/g, '');
-        }
+    mediaQuery(query) {
+        this.media = this.media || window.getComputedStyle(document.documentElement, ':after').getPropertyValue('content').replace(/['"]/g, '');
 
-        return this.mediaQuery;
+        return this.media === query;
     },
     /**
      * Asynchronously load and inject a script.
@@ -185,5 +183,9 @@ const utils = {
         }
     }
 };
+
+window.addEventListener('resize', utils.debounce(function() {
+    utils.media = null;
+}, 300));
 
 export default utils;
