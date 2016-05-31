@@ -24,17 +24,20 @@ export default function(node, selector) {
                 transitionend() {
                     this.style.maxHeight = '';
                 }
+            },
+            actions: {
+                toggle() {
+                    this.style.maxHeight = (this.scrollHeight + 10) + 'px';
+                    utils.toggleAttribute(this, 'aria-expanded');
+                }
             }
         },
         {
             name: 'switch',
             handlers: {
                 click() {
-                    let content = self.element('content').get();
-
                     utils.toggleAttribute(this, 'aria-pressed');
-                    content.style.maxHeight = (content.scrollHeight + 10) + 'px';
-                    utils.toggleAttribute(content, 'aria-expanded');
+                    self.element('content').actions.toggle();
                 }
             }
         },
@@ -89,8 +92,7 @@ export default function(node, selector) {
         window.addEventListener('resize', utils.debounce(function() {
             if (utils.mediaQuery('<line')) {
                 if (content.getAttribute('aria-expanded') === 'true') {
-                    content.style.maxHeight = (content.scrollHeight + 10) + 'px';
-                    utils.toggleAttribute(content, 'aria-expanded');
+                    self.element('content').actions.toggle();
                 }
             } else {
                 content.setAttribute('aria-expanded', 'true');

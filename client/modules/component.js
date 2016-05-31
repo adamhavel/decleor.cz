@@ -11,7 +11,20 @@ const Element = {
         this.component = component;
         this.selector = this.selector || defaultSelector;
         this.handlers = this.handlers || Object.create(null);
+        this.actions = this.actions || Object.create(null);
         this.resolveNodes();
+
+        for (let actionName in this.actions) {
+            let action = this.actions[actionName];
+
+            this.actions[actionName] = function(index = 0, ...args) {
+                let target = this.nodes[index];
+
+                if (target) {
+                    action.call(this.nodes[index], index, ...args);
+                }
+            }.bind(this);
+        }
     },
     resolveNodes() {
         if (this.name === 'self') {
@@ -56,7 +69,7 @@ const Component = {
 
             this.elements.set(element.name, element);
 
-            for (let eventType of Object.keys(element.handlers)) {
+            for (let eventType in element.handlers) {
 
                 if (!this.registeredHandlers[eventType]) {
                     let capturingTypes = ['blur', 'focus'];
