@@ -8,8 +8,6 @@
     @include no-spacing;
 
     padding: lines(1) 0 lines(.5);
-    position: relative;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -20,11 +18,15 @@
     height: $height;
 
     @include media('<line') {
-        display: none;
+        height: lines(4);
     }
 
     & + * {
         margin-top: $height !important;
+
+        @include media('<line') {
+            margin-top: lines(4) !important;
+        }
     }
 }
 
@@ -33,6 +35,13 @@
 
         display: flex;
         align-items: flex-end;
+
+        @include media('<line') {
+            @include v-spacing(1);
+
+            display: block;
+            padding: 0;
+        }
     }
 
         .l-header__logo {
@@ -40,15 +49,41 @@
             min-width: 15em;
             margin-top: lines(.5);
             margin-bottom: lines(.5);
+
+            @include media('<line') {
+                @include center;
+
+                display: block;
+                margin-top: 0;
+                margin-bottom: 0;
+                height: lines(2);
+            }
         }
 
         .l-header__nav {
             display: inline-block;
             margin-right: 2vw;
             margin-left: auto;
+
+            @include media('<line') {
+                @include out-of-flow;
+
+                display: block;
+                margin-right: 0;
+                margin-left: 0;
+                position: fixed;
+                top: lines(5);
+                left: 0;
+                bottom: 0;
+                width: 80%;
+            }
         }
 
     .l-header__secondary-nav {
         text-align: right;
         margin-bottom: lines(-1);
+
+        @include media('<line') {
+            display: none;
+        }
     }

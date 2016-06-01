@@ -7,8 +7,10 @@
 
     display: flex;
 
-    @include media('<layout') {
+    @include media('<line') {
         @include v-spacing(1);
+
+        display: block;
     }
 
     @mixin no-flexbox {
@@ -20,7 +22,7 @@
         float: left;
         margin-right: 3em;
 
-        @include media('<layout') {
+        @include media('<line') {
             @include center;
 
             float: none;

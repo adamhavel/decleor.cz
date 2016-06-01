@@ -15,12 +15,22 @@
     &:last-child {
         border-bottom: 0;
     }
+
+    @include media('<line') {
+        padding: lines(2) 0;
+    }
 }
 
     .c-footer-layout__wrapper {
         @include no-spacing;
 
         display: flex;
+
+        @include media('<line') {
+            @include v-spacing(2);
+
+            display: block;
+        }
     }
 
         .c-footer-layout__item {
@@ -36,5 +46,11 @@
                 padding-right: 0;
                 border-right: 0;
                 flex: 1;
+            }
+
+            @include media('<line') {
+                border: 0;
+                padding: 0;
+                text-align: center;
             }
         }

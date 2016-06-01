@@ -9,42 +9,31 @@ export default function(node, selector) {
 
     const self = component(node, selector);
 
-    var contentHeight;
-
     self.define(
         {
             name: 'button',
             handlers: {
                 click() {
-                    let content = self.element('content').get();
-
                     utils.toggleAttribute(this, 'aria-pressed');
-                    utils.toggleAttribute(content, 'aria-expanded');
-
-                    if (content.getAttribute('aria-expanded') === 'true') {
-                        content.style.maxHeight = contentHeight;
-                    } else {
-                        content.style.maxHeight = '0px';
-                    }
+                    self.element('content').actions.toggle();
                 }
             }
         },
         {
-            name: 'content'
+            name: 'content',
+            handlers: {
+                transitionend() {
+                    this.style.maxHeight = '';
+                }
+            },
+            actions: {
+                toggle() {
+                    this.style.maxHeight = (this.scrollHeight + 10) + 'px';
+                    utils.toggleAttribute(this, 'aria-expanded');
+                }
+            }
         }
     );
-
-    (function init() {
-
-        let content = self.element('content').get();
-
-        contentHeight = (content.scrollHeight + 10) + 'px';
-
-        if (content.getAttribute('aria-expanded') === 'true') {
-            content.style.maxHeight = contentHeight;
-        }
-
-    })();
 
     return self;
 }

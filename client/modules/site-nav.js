@@ -3,6 +3,7 @@
    ========================================================================== */
 
 import component from 'component.js';
+import utils from 'utils.js';
 
 export default function(node, selector) {
 
@@ -14,12 +15,14 @@ export default function(node, selector) {
             name: 'self',
             handlers: {
                 mouseleave() {
-                    timer = setTimeout(function() {
-                        let activeSubNav = self.element('subnav').query('.is-active');
+                    if (!utils.mediaQuery('<line')) {
+                        timer = setTimeout(function() {
+                            let activeSubNav = self.element('subnav').query('.is-active');
 
-                        activeSubNav && activeSubNav.classList.remove('is-active');
-                        timer = null;
-                    }, 300);
+                            activeSubNav && activeSubNav.classList.remove('is-active');
+                            timer = null;
+                        }, 300);
+                    }
                 }
             }
         },
@@ -27,16 +30,18 @@ export default function(node, selector) {
             name: 'item',
             handlers: {
                 mouseover() {
-                    let subNav = this.querySelector(self.element('subnav').selector);
-                    let activeSubNav = self.element('subnav').query('.is-active');
+                    if (!utils.mediaQuery('<line')) {
+                        let subNav = this.querySelector(self.element('subnav').selector);
+                        let activeSubNav = self.element('subnav').query('.is-active');
 
-                    if (timer) {
-                        clearTimeout(timer);
-                        timer = null;
+                        if (timer) {
+                            clearTimeout(timer);
+                            timer = null;
+                        }
+
+                        activeSubNav && activeSubNav.classList.remove('is-active');
+                        subNav && subNav.classList.add('is-active');
                     }
-
-                    activeSubNav && activeSubNav.classList.remove('is-active');
-                    subNav && subNav.classList.add('is-active');
                 }
             }
         },

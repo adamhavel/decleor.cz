@@ -8,6 +8,10 @@
     @include no-spacing;
 
     display: flex;
+
+    @include media('<line') {
+        display: block;
+    }
 }
 
     .c-procedure-promo__content {
@@ -22,6 +26,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include media('<line') {
+            float: none;
+            width: auto;
+            display: block;
+        }
     }
 
         .c-procedure-promo__heading {
@@ -45,4 +55,9 @@
     .c-procedure-promo__media {
         float: left;
         width: 50%;
+
+        @include media('<line') {
+            float: none;
+            width: auto;
+        }
     }

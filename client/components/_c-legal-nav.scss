@@ -6,6 +6,10 @@
     max-width: 34em;
     margin-bottom: lines(-.5);
     overflow: hidden;
+
+    @include media('<line') {
+        @include center;
+    }
 }
 
     .c-legal-nav__list {

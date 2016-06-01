@@ -42,7 +42,7 @@
             <nav class="l-header__nav c-site-nav j-site-nav" role="navigation">
                 <ul class="c-site-nav__list">
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Best sellers</a>
+                        <a class="c-site-nav__link" href=""><span>Best sellers</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -114,7 +114,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Obličej</a>
+                        <a class="c-site-nav__link" href=""><span>Obličej</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -165,7 +165,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Tělo</a>
+                        <a class="c-site-nav__link" href=""><span>Tělo</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -216,7 +216,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Služby</a>
+                        <a class="c-site-nav__link" href=""><span>Služby</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -267,12 +267,12 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Nabídky</a>
+                        <a class="c-site-nav__link" href=""><span>Nabídky</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                     </li>
                 </ul>
                 <ul class="c-site-nav__list c-site-nav__list--secondary">
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Inside Decleor</a>
+                        <a class="c-site-nav__link" href=""><span>Inside Decleor</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -323,7 +323,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Decleor&amp;Já</a>
+                        <a class="c-site-nav__link" href=""><span>Decleor&amp;já</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -374,7 +374,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Instituty</a>
+                        <a class="c-site-nav__link" href=""><span>Instituty</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -461,7 +461,10 @@
 
                 </header>
 
-                <button class="c-sidebar__switch j-sidebar__switch u-gamma" aria-controls="c-sidebar__content">Filtry</button>
+                <button class="c-sidebar__switch c-accordion__button c-accordion__button--simple j-sidebar__switch" aria-controls="c-sidebar__content">
+                    <h3 class="c-accordion__heading u-gamma">Filtry</h3>
+                    <svg class="c-accordion__icon e-icon e-icon--aloof u-gamma" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg>
+                </button>
 
                 <div class="c-sidebar__content j-sidebar__content" id="c-sidebar__content">
 
@@ -1054,20 +1057,24 @@
             </div>
         </div>
 
-        <form action="" class="c-newsletter-form">
+        <div class="o-wrapper">
 
-            <h3 class="e-heading u-beta c-newsletter-form__heading">Newsletter</h3>
+            <form action="" class="c-newsletter-form">
 
-            <p class="c-newsletter-form__info">Dostávejte vždy aktuální novinky o ze světa Decleoru</p>
+                <h3 class="e-heading u-beta c-newsletter-form__heading">Newsletter</h3>
 
-            <div class="c-newsletter-form__fieldset u-delta">
-                <input id="c-newsletter-form__email" name="email" type="email" class="c-newsletter-form__input" placeholder="Zadejte Vaší e-mailovou adresu..." required>
-                <button class="c-newsletter-form__submit">Odeslat</button>
-            </div>
+                <p class="c-newsletter-form__info">Dostávejte vždy aktuální novinky o ze světa Decleoru</p>
 
-            <p class="c-newsletter-form__info">Pokud jste profesionál, kliknete pro <a href="">obsáhlejší formulář</a></p>
+                <div class="c-newsletter-form__fieldset u-delta">
+                    <input id="c-newsletter-form__email" name="email" type="email" class="c-newsletter-form__input" placeholder="Zadejte Vaší e-mailovou adresu..." required>
+                    <button class="c-newsletter-form__submit">Odeslat</button>
+                </div>
 
-        </form>
+                <p class="c-newsletter-form__info">Pokud jste profesionál, kliknete pro <a href="">obsáhlejší formulář</a></p>
+
+            </form>
+
+        </div>
 
         <div class="l-footer__panel">
 

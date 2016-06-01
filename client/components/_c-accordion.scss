@@ -15,6 +15,11 @@
         align-items: center;
         border-bottom: 1px solid color(shade--dark);
         padding-bottom: lines(.5);
+
+        &--simple {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
     }
 
         .c-accordion__heading {

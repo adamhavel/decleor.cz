@@ -8,6 +8,13 @@
 
     display: flex;
     justify-content: space-between;
+
+    @include media('<line') {
+        @include h-spacing(0);
+        @include v-spacing(2);
+
+        display: block;
+    }
 }
 
     .c-site-map__column {
@@ -17,12 +24,19 @@
         flex: 1;
         flex-direction: column;
         justify-content: space-between;
+
+        @include media('<line') {
+            display: block;
+            text-align: center;
+        }
     }
 
         .c-site-map__item {
             @include v-spacing(.5);
 
-            break-inside: avoid;
+            @include media('<line') {
+                @include v-spacing(.25);
+            }
         }
 
             .c-site-map__section {

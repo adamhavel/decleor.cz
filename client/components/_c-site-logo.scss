@@ -3,9 +3,14 @@
    ========================================================================== */
 
 .c-site-logo {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
     .c-site-logo__image {
+        @include center;
+
         width: 100%;
+        display: block;
     }

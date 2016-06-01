@@ -29,11 +29,8 @@
         }
 
     .c-sidebar__switch {
-        display: block;
-        width: 100%;
         font-family: font(sans-serif);
-        text-transform: uppercase;
-        text-align: center;
+        justify-content: center !important;
 
         @include media('>=line') {
             display: none;
@@ -49,17 +46,22 @@
         @include media('<line') {
             padding-left: 4vw;
             padding-right: 4vw;
-            padding-bottom: lines(1);
+            padding-bottom: 0;
             overflow: hidden;
             max-height: 0;
             opacity: 0;
-            transition: opacity .1s, max-height .3s;
+            transition: opacity .1s, max-height .3s, padding .1s .2s;
 
             &[aria-expanded="true"],
             .no-js & {
                 max-height: none;
+                padding-bottom: lines(1);
                 opacity: 1;
-                transition: opacity .3s .2s, max-height .3s;
+                transition: opacity .3s .2s, max-height .3s, padding .2s .2s;
+            }
+
+            &:last-child {
+                margin-bottom: lines(1);
             }
         }
     }

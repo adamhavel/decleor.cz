@@ -7,6 +7,15 @@
     @include no-spacing;
     @include h-spacing(3em);
 
+    @include media('<line') {
+        @include h-spacing(0);
+
+        background: color(shade);
+
+        //max-height: 0;
+        //overflow: hidden;
+    }
+
     &--centered {
         display: flex;
         justify-content: center;
@@ -27,6 +36,20 @@
             padding-left: 0;
             border-left: 0;
         }
+
+        @include media('<line') {
+            @include h-spacing(0);
+
+            float: none;
+            display: block;
+            padding: 0 const(GUTTER) * 2 !important;
+            border: 0;
+            background: color(background);
+
+            &:last-child {
+                 background: color(shade);
+            }
+        }
     }
 
         .c-site-nav__item {
@@ -46,6 +69,20 @@
             &:first-child:before {
                 display: none;
             }
+
+            @include media('<line') {
+                display: block;
+                border-top: 1px solid color(shade--dark);
+
+                &:first-child {
+                    border-top: 0;
+                    padding-top: 0;
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
         }
 
             .c-site-nav__link {
@@ -58,7 +95,29 @@
                 &:hover {
                     color: color(highlight);
                 }
+
+                @include media('<line') {
+                    @include no-spacing;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: lines(.875) 0;
+                    color: color(highlight);
+
+                    .c-site-nav__list:last-child & {
+                        color: color(text);
+                    }
+                }
             }
+
+                .c-site-nav__icon {
+                    margin-right: 1em;
+
+                    @include media('>=line') {
+                        display: none;
+                    }
+                }
 
             .c-site-nav__subnav {
                 @include out-of-flow;

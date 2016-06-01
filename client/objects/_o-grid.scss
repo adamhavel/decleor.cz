@@ -11,7 +11,7 @@ $grid-columns: (
     '<line': 1
 );
 $grid-hgap: const(GUTTER) * 2;
-$grid-vgap: 2;
+$grid-vgap: lines(2);
 
 
 /* Mixins
@@ -31,7 +31,7 @@ $grid-vgap: 2;
 
     > * {
         margin-left: $hgap !important;
-        margin-top: lines($vgap) !important;
+        margin-top: $vgap !important;
         margin-bottom: 0 !important;
 
         @each $breakpoint, $columns in $items-per-row {
@@ -76,11 +76,11 @@ $grid-vgap: 2;
     @include grid;
 
     &--fill {
-        @include grid($hgap: 1px);
+        @include grid($hgap: 1px, $vgap: 1px);
     }
 
     &--airy {
-        @include grid($vgap: 3);
+        @include grid($vgap: lines(3));
     }
 
     &--2 {

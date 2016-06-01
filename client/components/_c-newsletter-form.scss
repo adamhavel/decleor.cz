@@ -36,6 +36,11 @@
         max-width: 35em;
         border: 1px solid color(text);
 
+        @include media('<line') {
+            display: block;
+            max-width: none;
+        }
+
         @mixin no-flexbox {
             @include clearfix;
         }
@@ -45,6 +50,11 @@
             padding: lines(1) 1.25em;
             flex: 1;
             font-style: italic;
+
+            @include media('<line') {
+                display: block;
+                width: 100%;
+            }
 
             @mixin no-flexbox {
                 float: left;
@@ -64,6 +74,11 @@
             &:focus {
                 background: none;
                 color: color(text);
+            }
+
+            @include media('<line') {
+                display: block;
+                width: 100%;
             }
 
             @mixin no-flexbox {

@@ -9,12 +9,22 @@
     border-width: 1px 0;
 }
 
-    .c-grid-nav__wrapper {}
+    .c-grid-nav__wrapper {
+
+        @include media('<line') {
+            padding: lines(1) 0;
+        }
+    }
 
         .c-grid-nav__list {
             @include no-spacing;
 
             display: flex;
+
+            @include media('<line') {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
             @mixin no-flexbox {
                 display: table;
@@ -31,8 +41,16 @@
                     border-left: 0;
                 }
 
+                @include media('<line') {
+                    border: 0;
+                }
+
                 &--fill {
                     flex: 1;
+
+                    @include media('<line') {
+                        min-width: 100%;
+                    }
                 }
 
                 @mixin no-flexbox {
@@ -52,5 +70,9 @@
                     &:hover,
                     &:focus {
                         color: color(text--dark);
+                    }
+
+                    @include media('<line') {
+                        padding: lines(.5) 1em;
                     }
                 }
