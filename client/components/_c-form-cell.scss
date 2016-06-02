@@ -13,6 +13,16 @@
         display: flex;
         align-items: center;
 
+        &:not(&--rigid) {
+
+            @include media('<line') {
+                @include h-spacing(0);
+                @include v-spacing(.25);
+
+                flex-direction: column;
+            }
+        }
+
         &--align-top {
             align-items: flex-start;
         }
@@ -20,6 +30,10 @@
 
     &--squashed {
         padding-left: calc(10em + 1.5rem);
+
+        @include media('<line') {
+            padding-left: 0;
+        }
     }
 }
 
@@ -61,7 +75,7 @@
         margin-right: 0;
         font-family: font(sans-serif);
 
-        & ~ * {
+        & ~ .c-form-cell__input {
             margin-bottom: lines(1.5);
         }
     }

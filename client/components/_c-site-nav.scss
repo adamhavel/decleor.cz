@@ -7,13 +7,14 @@
     @include no-spacing;
     @include h-spacing(3em);
 
+    @include media('<layout') {
+        @include h-spacing(1em);
+    }
+
     @include media('<line') {
         @include h-spacing(0);
 
         background: color(shade);
-
-        //max-height: 0;
-        //overflow: hidden;
     }
 
     &--centered {
@@ -32,7 +33,9 @@
         padding-left: 3em;
         border-left: 1px solid color(shade--dark);
 
-        &:first-child {
+        @include media('<layout') {
+            @include h-spacing(1em);
+
             padding-left: 0;
             border-left: 0;
         }
@@ -42,13 +45,18 @@
 
             float: none;
             display: block;
-            padding: 0 const(GUTTER) * 2 !important;
+            padding: 0 const(GUTTER) * 3 !important;
             border: 0;
             background: color(background);
 
             &:last-child {
                  background: color(shade);
             }
+        }
+
+        &:first-child {
+            padding-left: 0;
+            border-left: 0;
         }
     }
 
@@ -68,6 +76,13 @@
 
             &:first-child:before {
                 display: none;
+            }
+
+            @include media('<layout') {
+
+                &:before {
+                    display: none;
+                }
             }
 
             @include media('<line') {
@@ -94,6 +109,10 @@
 
                 &:hover {
                     color: color(highlight);
+                }
+
+                @include media('<layout') {
+                    letter-spacing: 0;
                 }
 
                 @include media('<line') {

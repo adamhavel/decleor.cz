@@ -120,6 +120,7 @@
                 padding: lines(2) 1em;
                 position: relative;
                 z-index: 2;
+                width: 100%;
 
                 &:before {
                     content: counter(gestures);

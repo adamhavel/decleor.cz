@@ -11,8 +11,20 @@
     display: flex;
     justify-content: space-between;
 
+    @include media('<line') {
+        @include v-spacing(2);
+
+        flex-direction: column;
+        padding: lines(2);
+    }
+
     > * {
         width: 50% - ($gutter / 2);
+
+        @include media('<line') {
+            float: none;
+            width: auto;
+        }
     }
 
     @mixin no-flexbox {
@@ -36,6 +48,13 @@
         border-width: 1px 0;
         padding: lines(2) 0;
 
+        @include media('<line') {
+            padding: 0;
+            border: 0;
+            display: block;
+            text-align: center;
+        }
+
         @mixin no-flexbox {
             float: right;
         }
@@ -55,6 +74,12 @@
             color: color(highlight);
             font-size: 6.5rem;
             line-height: 1;
+
+            @include media('<line') {
+                @include aloof(1);
+
+                font-size: 4.5rem;
+            }
         }
 
         .c-experts-promo__description {
@@ -70,6 +95,10 @@
             padding: .875em 4em;
             transition: color .3s;
             color: color(text--dark);
+
+            @include media('<line') {
+                @include island(2);
+            }
 
             &:hover,
             &:focus {

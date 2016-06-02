@@ -5,6 +5,10 @@
 .c-magazine-promo {
     padding: lines(4) 0;
     background: color(shade);
+
+    @include media('<line') {
+        padding: lines(2) 0;
+    }
 }
 
     .c-magazine-promo__heading {
@@ -14,6 +18,10 @@
         text-transform: uppercase;
         letter-spacing: .125em;
         text-align: center;
+
+        @include media('<line') {
+            @include island(2);
+        }
 
         &:before,
         &:after {

@@ -20,6 +20,10 @@ export default [
         src: 'accordion.js'
     },
     {
+        selector: '.j-header',
+        src: 'header.js'
+    },
+    {
         selector: '.j-hero-header',
         src: 'hero-header.js'
     },

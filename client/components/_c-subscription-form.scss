@@ -12,6 +12,10 @@
         padding: lines(3) 0;
         border: solid color(shade--dark);
         border-width: 1px 0;
+
+        @include media('<line') {
+            padding: lines(2) 0;
+        }
     }
 
         .c-subscription-form__submit {
@@ -21,6 +25,10 @@
             text-transform: none;
             font-weight: 400;
             min-width: 21em;
+
+            @include media('<line') {
+                min-width: 0;
+            }
         }
 
     .c-subscription-form__disclaimer {

@@ -25,14 +25,29 @@
         .c-review-form__footer {
             @include clearfix;
             @include no-spacing;
+
+            @include media('<line') {
+                @include v-spacing(1);
+
+                text-align: center;
+            }
         }
 
             .c-review-form__info {
                 float: left;
                 font-style: italic;
+
+                @include media('<line') {
+                    float: none;
+                }
             }
 
             .c-review-form__submit {
                 float: right;
                 min-width: 12em;
+
+                @include media('<line') {
+                    float: none;
+                    min-width: 0;
+                }
             }

@@ -1,0 +1,5 @@
+footer
+inline--rigid
+sidebar switch
+header switch
+site nav icon

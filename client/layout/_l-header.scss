@@ -14,18 +14,19 @@
     right: 0;
     background: color(background);
     z-index: 10000;
-    box-shadow: 0 1px 0 0 rgba(black, .075);
+    border-bottom: 1px solid rgba(black, .075);
     height: $height;
 
     @include media('<line') {
-        height: lines(4);
+        height: lines(3);
+        padding: lines(.5) 0;
     }
 
     & + * {
         margin-top: $height !important;
 
         @include media('<line') {
-            margin-top: lines(4) !important;
+            margin-top: lines(3) !important;
         }
     }
 }
@@ -37,26 +38,45 @@
         align-items: flex-end;
 
         @include media('<line') {
-            @include v-spacing(1);
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 const(GUTTER) * 2;
 
-            display: block;
-            padding: 0;
+            &:after {
+                display: none;
+            }
         }
     }
 
         .l-header__logo {
             display: inline-block;
-            min-width: 15em;
+            height: lines(2.5);
             margin-top: lines(.5);
             margin-bottom: lines(.5);
 
             @include media('<line') {
-                @include center;
-
                 display: block;
+                flex: none;
                 margin-top: 0;
                 margin-bottom: 0;
                 height: lines(2);
+            }
+        }
+
+        .l-header__switch {
+            display: flex;
+            align-items: center;
+            font-family: font(sans-serif);
+            text-transform: uppercase;
+            letter-spacing: .05em;
+
+            &:hover,
+            &:focus {
+                color: color(highlight);
+            }
+
+            @include media('>=line') {
+                display: none;
             }
         }
 
@@ -65,6 +85,10 @@
             margin-right: 2vw;
             margin-left: auto;
 
+            @include media('<layout') {
+                margin-right: 0;
+            }
+
             @include media('<line') {
                 @include out-of-flow;
 
@@ -72,10 +96,20 @@
                 margin-right: 0;
                 margin-left: 0;
                 position: fixed;
-                top: lines(5);
+                top: lines(3);
                 left: 0;
                 bottom: 0;
                 width: 80%;
+                box-shadow: 1px 0 0 0 rgba(black, .075);
+                transform: translateZ(0) translateX(-100%);
+                will-change: transform;
+                transition: transform .3s ease-in;
+
+                &[aria-expanded="true"],
+                &:target {
+                    transform: translateZ(0);
+                    transition-timing-function: ease-out;
+                }
             }
         }
 

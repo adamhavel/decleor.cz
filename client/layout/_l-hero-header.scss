@@ -9,12 +9,25 @@
     position: relative;
     background: color(text--dark);
     overflow: hidden;
+
+    @include media('<line') {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: red;
+        z-index: 10000;
+    }
 }
 
     .l-hero-header__content {
         position: relative;
         padding: lines(2) 0 lines(3);
         z-index: 2;
+
+        @include media('<line') {
+            padding: 0;
+        }
     }
 
         .l-hero-header__wrapper {
@@ -26,6 +39,10 @@
                 color: color(background);
                 transition: color .3s;
 
+                @include media('<line') {
+                    display: none;
+                }
+
                 &:hover,
                 &:focus {
                     color: color(highlight--light);
@@ -35,6 +52,10 @@
             .l-hero-header__secondary-nav {
                 float: right;
                 color: color(background) !important;
+
+                @include media('<line') {
+                    display: none;
+                }
             }
 
         .l-hero-header__logo {
@@ -42,6 +63,10 @@
             @include island(10, 8);
 
             width: 35em;
+
+            @include media('<line') {
+                display: none;
+            }
         }
 
         .l-hero-header__headline {
@@ -51,6 +76,10 @@
             text-align: center;
             text-transform: uppercase;
             letter-spacing: .4em;
+
+            @include media('<line') {
+                display: none;
+            }
         }
 
         .l-hero-header__icon {
@@ -60,6 +89,10 @@
             display: block;
             color: color(background);
             transform: rotate(90deg);
+
+            @include media('<line') {
+                display: none;
+            }
         }
 
         .l-hero-header__nav {
@@ -67,6 +100,10 @@
 
             color: color(background);
             position: relative;
+
+            @include media('<line') {
+                display: none;
+            }
         }
 
     .l-hero-header__video {
@@ -81,4 +118,8 @@
         height: 100%;
         transform: translateY(-50%);
         object-fit: cover;
+
+        @include media('<line') {
+            display: none;
+        }
     }

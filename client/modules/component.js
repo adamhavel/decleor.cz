@@ -81,7 +81,7 @@ const Component = {
 
                     if (eventType === 'touchmove' && !this.touches) {
                         this.touches = {};
-                        this.container.addEventListener('touchstart', function(ev) {
+                        this.container.addEventListener('touchstart', ev => {
                             this.touches.x = ev.touches[0].clientX;
                             this.touches.y = ev.touches[0].clientY;
                         });
@@ -116,6 +116,10 @@ const Component = {
         let currentTarget = ev.target;
         let eventType = ev.type;
         let stopPropagation = false;
+
+        ev.stopInnerPropagation = function() {
+            stopPropagation = true;
+        };
 
         if (eventType === 'touchmove') {
             let delta = {

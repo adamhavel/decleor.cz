@@ -12,6 +12,10 @@
         padding: lines(3) 0;
         border: solid color(shade--dark);
         border-width: 1px 0;
+
+        @include media('<line') {
+            padding: lines(2) 0;
+        }
     }
 
         .c-contact-form__footer {

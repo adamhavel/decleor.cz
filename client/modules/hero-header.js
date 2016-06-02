@@ -30,6 +30,16 @@ export default function(node, selector) {
 
     (function init() {
 
+        let mediaQuery = function() {
+            if (!utils.mediaQuery('<line')) {
+                self.element('video').get().play();
+            }
+        };
+
+        mediaQuery();
+
+        window.addEventListener('resize', utils.debounce(mediaQuery, 300));
+
     })();
 
     return self;
