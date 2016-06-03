@@ -9,12 +9,24 @@
     max-width: const(LAYOUT_WIDTH);
     padding: 0 2vw;
 
+    @include media('<line') {
+        padding: 0 4vw;
+    }
+
     &--expanded {
         padding: 0 1vw;
+
+        @include media('<line') {
+            padding: 0 4vw;
+        }
     }
 
     &--reduced {
         padding: 0 3vw;
+
+        @include media('<line') {
+            padding: 0 6vw;
+        }
     }
 
     &--full {

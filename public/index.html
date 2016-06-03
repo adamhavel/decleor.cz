@@ -18,10 +18,14 @@
 </head>
 <body class="l-body">
 
-    <header class="l-hero-header j-hero-header" role="banner">
+    <header class="l-hero-header j-hero-header j-header" role="banner">
 
         <div class="l-hero-header__content">
             <div class="o-wrapper l-hero-header__wrapper">
+
+                <h1 class="l-hero-header__logo c-site-logo">
+                    <a href=""><img class="c-site-logo__image" src="assets/site/img/site-logo.svg" alt="Decléor"></a>
+                </h1>
 
                 <button class="l-hero-header__audio-control j-hero-header__audio-control"><svg class="e-icon u-beta" role="image" aria-label="Zapnout zvuk" aria-hidden="true"><use xlink:href="#sound--off"></use></svg></button>
 
@@ -36,22 +40,28 @@
                     </li>
                 </ul>
 
+                <a href="#navigace" class="l-hero-header__switch j-header__switch u-delta" aria-hidden="true"><span>Menu</span><svg class="e-icon e-icon--aloof u-alpha"><use xlink:href="#menu"></use></svg></a>
+
             </div>
 
-            <h1 class="l-hero-header__logo c-site-logo">
-                <a href=""><img class="c-site-logo__image" src="assets/site/img/site-logo--large.svg" alt="Decléor"></a>
-            </h1>
+            <div class="l-hero-header__promo o-wrapper">
 
-            <p class="l-hero-header__headline u-gamma">
-                Objevte svět<br>Decleor
-            </p>
+                <h1 class="l-hero-header__hero-logo c-site-logo">
+                    <a href=""><img class="c-site-logo__image" src="assets/site/img/site-logo--large.svg" alt="Decléor"></a>
+                </h1>
 
-            <svg class="l-hero-header__icon e-icon u-alpha" aria-hidden="true"><use xlink:href="#arrow"></use></svg>
+                <p class="l-hero-header__headline u-gamma">
+                    Objevte svět<br>Decleor
+                </p>
 
-            <nav class="l-hero-header__nav c-site-nav c-site-nav--centered c-site-nav--reversed j-site-nav" role="navigation">
+                <svg class="l-hero-header__icon e-icon u-alpha" aria-hidden="true"><use xlink:href="#arrow"></use></svg>
+
+            </div>
+
+            <nav id="navigace" class="l-hero-header__nav c-site-nav c-site-nav--centered c-site-nav--reversed j-site-nav j-header__nav" role="navigation">
                 <ul class="c-site-nav__list">
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Best sellers</a>
+                        <a class="c-site-nav__link" href=""><span>Best sellers</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -123,7 +133,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Obličej</a>
+                        <a class="c-site-nav__link" href=""><span>Obličej</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -174,7 +184,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Tělo</a>
+                        <a class="c-site-nav__link" href=""><span>Tělo</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -225,7 +235,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Služby</a>
+                        <a class="c-site-nav__link" href=""><span>Služby</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -276,60 +286,12 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Nabídky</a>
-                        <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
-                            <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
-
-                                <section class="c-site-subnav__section">
-
-                                    <h3 class="e-heading c-site-subnav__heading u-delta">Visage</h3>
-
-                                    <section class="c-site-subnav__column">
-
-                                        <h4 class="e-heading e-heading--stern c-site-subnav__subheading">Produits</h4>
-
-                                        <ul class="c-site-subnav__list">
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Architecto, quibusdam.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Aut, quos.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Debitis, ducimus.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Fugit, aliquam.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Est, ab.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Sunt, tempora.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Dolor, dolorum.</a></li>
-                                        </ul>
-
-                                    </section>
-
-                                </section>
-
-                                <section class="c-site-subnav__section">
-
-                                    <h3 class="e-heading c-site-subnav__heading u-delta">Our products</h3>
-
-                                    <section class="c-site-subnav__column">
-
-                                        <h4 class="e-heading e-heading--stern c-site-subnav__subheading">By range</h4>
-
-                                        <ul class="c-site-subnav__list">
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Architecto, quibusdam.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Aut, quos.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Debitis, ducimus.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Fugit, aliquam.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Est, ab.</a></li>
-                                            <li class="c-site-subnav__item"><a href="" class="c-site-subnav__link">Sunt, tempora.</a></li>
-                                        </ul>
-
-                                    </section>
-
-                                </section>
-
-                            </div>
-                        </nav>
+                        <a class="c-site-nav__link" href=""><span>Nabídky</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                     </li>
                 </ul>
                 <ul class="c-site-nav__list c-site-nav__list--secondary">
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Inside Decleor</a>
+                        <a class="c-site-nav__link" href=""><span>Inside Decleor</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -380,7 +342,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Decleor&amp;Já</a>
+                        <a class="c-site-nav__link" href=""><span>Decleor&amp;já</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -431,7 +393,7 @@
                         </nav>
                     </li>
                     <li class="c-site-nav__item j-site-nav__item">
-                        <a class="c-site-nav__link" href="">Instituty</a>
+                        <a class="c-site-nav__link" href=""><span>Instituty</span><svg class="e-icon c-site-nav__icon" aria-hidden="true"><use xlink:href="#arrow--right"></use></svg></a>
                         <nav class="c-site-nav__subnav c-site-subnav j-site-nav__subnav">
                             <div class="c-site-subnav__wrapper o-wrapper o-wrapper--medium">
 
@@ -486,7 +448,7 @@
 
         </div>
 
-        <video class="l-hero-header__video j-hero-header__video" muted loop>
+        <video class="l-hero-header__video j-hero-header__video" muted loop preload="none">
             <source src="assets/site/img/video.mp4" type="video/mp4">
         </video>
 
@@ -625,20 +587,24 @@
             </div>
         </div>
 
-        <form action="" class="c-newsletter-form">
+        <div class="o-wrapper">
 
-            <h3 class="e-heading u-beta c-newsletter-form__heading">Newsletter</h3>
+            <form action="" class="c-newsletter-form">
 
-            <p class="c-newsletter-form__info">Dostávejte vždy aktuální novinky o ze světa Decleoru</p>
+                <h3 class="e-heading u-beta c-newsletter-form__heading">Newsletter</h3>
 
-            <div class="c-newsletter-form__fieldset u-delta">
-                <input id="c-newsletter-form__email" name="email" type="email" class="c-newsletter-form__input" placeholder="Zadejte Vaší e-mailovou adresu..." required>
-                <button class="c-newsletter-form__submit">Odeslat</button>
-            </div>
+                <p class="c-newsletter-form__info">Dostávejte vždy aktuální novinky o ze světa Decleoru</p>
 
-            <p class="c-newsletter-form__info">Pokud jste profesionál, kliknete pro <a href="">obsáhlejší formulář</a></p>
+                <div class="c-newsletter-form__fieldset u-delta">
+                    <input id="c-newsletter-form__email" name="email" type="email" class="c-newsletter-form__input" placeholder="Zadejte Vaší e-mailovou adresu..." required>
+                    <button class="c-newsletter-form__submit">Odeslat</button>
+                </div>
 
-        </form>
+                <p class="c-newsletter-form__info">Pokud jste profesionál, kliknete pro <a href="">obsáhlejší formulář</a></p>
+
+            </form>
+
+        </div>
 
         <div class="l-footer__panel">
 

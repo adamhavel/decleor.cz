@@ -9,6 +9,10 @@
     padding: lines(3) 5em;
     position: relative;
 
+    @include media('<line') {
+        @include island(3);
+    }
+
     &--simple {
         border: 0;
         padding: 0;
@@ -53,6 +57,11 @@
 
         .c-gestures--simple & {
             @include h-spacing(2em);
+
+            @include media('<line') {
+                @include v-spacing(1);
+                @include h-spacing(0);
+            }
         }
     }
 

@@ -59,9 +59,5 @@ export default function(container, selector) {
         }
     );
 
-    (function init() {
-
-    })();
-
     return self;
 }

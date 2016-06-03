@@ -16,11 +16,6 @@
 
         background: color(shade);
     }
-
-    &--centered {
-        display: flex;
-        justify-content: center;
-    }
 }
 
     .c-site-nav__list {
@@ -45,7 +40,7 @@
 
             float: none;
             display: block;
-            padding: 0 const(GUTTER) * 3 !important;
+            padding: 0 const(GUTTER) !important;
             border: 0;
             background: color(background);
 

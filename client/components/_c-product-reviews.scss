@@ -4,10 +4,10 @@
 
 .c-product-reviews {
     background: color(shade);
-    padding: lines(4) const(GUTTER) * 4;
+    padding: lines(4) const(GUTTER) * 2;
 
     @include media('<line') {
-        padding: lines(2) const(GUTTER) * 2;
+        padding: lines(2) const(GUTTER);
     }
 }
 
@@ -37,10 +37,10 @@
     .c-product-reviews__form {
         @include island(5);
 
-        padding: lines(3) const(GUTTER) * 4;
+        padding: lines(3) const(GUTTER) * 2;
         background: color(background);
 
         @include media('<line') {
-            padding: lines(2) const(GUTTER) * 2;
+            padding: lines(2) const(GUTTER);
         }
     }

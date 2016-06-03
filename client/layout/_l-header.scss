@@ -40,7 +40,6 @@
         @include media('<line') {
             align-items: center;
             justify-content: space-between;
-            padding: 0 const(GUTTER) * 2;
 
             &:after {
                 display: none;

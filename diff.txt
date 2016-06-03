@@ -1,5 +1,6 @@
 footer
-inline--rigid
-sidebar switch
-header switch
+inline--rigid (sidebar + form)
+sidebar switch + id content
+header switch + js class
+hero header
 site nav icon

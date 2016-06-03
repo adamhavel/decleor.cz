@@ -93,6 +93,10 @@
                         color: color(background);
                         min-width: 15em;
 
+                        @include media('<line') {
+                            min-width: 0;
+                        }
+
                         &:hover,
                         &:focus {
                             background-color: tint(color(highlight), .2);

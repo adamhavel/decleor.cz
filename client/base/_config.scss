@@ -35,7 +35,7 @@ $constants: () !global;
 /* Layout
    ========================================================================== */
 
-@include const('GUTTER', 2%);
+@include const('GUTTER', 2vw);
 @include const('LAYOUT_WIDTH', const(LINE_LENGTH) + const(LINE_LENGTH) * macro-scale(-1));
 
 
