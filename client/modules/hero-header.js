@@ -4,6 +4,7 @@
 
 import component from 'component.js';
 import utils from 'utils.js';
+import waypoints from 'waypoints.js';
 
 export default function(node, selector) {
 
@@ -39,6 +40,10 @@ export default function(node, selector) {
         mediaQuery();
 
         window.addEventListener('resize', utils.debounce(mediaQuery, 300));
+
+        waypoints.addElement(self.element('audio-control').get(), function() {
+            console.log('yay');
+        });
 
     })();
 
