@@ -5,35 +5,52 @@
 import utils from 'utils.js';
 
 const waypoints = [];
-let lastOffset = window.scrollY;
 
-document.addEventListener('scroll', utils.debounce(function() {
-    let offset = window.scrollY;
-    let lowerOffset = Math.min(offset, lastOffset);
-    let higherOffset = Math.max(offset, lastOffset);
+const Observer = {
+    lastOffset: window.scrollY,
+    init() {
 
-    let passed = waypoints.filter(function(item) {
-        return item.offset > lowerOffset && item.offset < higherOffset;
-    });
+        document.addEventListener('scroll', utils.debounce(() => {
+            let offset = window.scrollY;
+            let lowerOffset = Math.min(offset, this.lastOffset);
+            let higherOffset = Math.max(offset, this.lastOffset);
+            let passed = this.select(lowerOffset, higherOffset);
 
-    passed.forEach(item => item.callback());
+            passed.forEach(item => item.callback());
+            this.lastOffset = offset;
+        }, 50));
 
-    lastOffset = offset;
-}, 50));
-
-export default {
+    },
     add(offset, callback) {
         let waypoint = { offset, callback };
 
+        if (!waypoints.length) {
+            this.init();
+        }
+
         waypoints.push(waypoint);
+        waypoints.sort((a, b) => a.offset - b.offset);
 
         return waypoint;
     },
-    addElement(element, callback) {
+    addElement(element, callback, border = 'top', shift = 0) {
         let bounds = element.getBoundingClientRect();
-        let offset = bounds.top + window.scrollY;
+        let offset = Math.round(bounds[border] + window.scrollY + shift);
 
-        return this.add(Math.round(offset), callback);
+        return this.add(offset, callback);
+    },
+    select(lowerOffset, higherOffset) {
+        let passed = [];
+
+        waypoints.some(function(item, index) {
+            if (item.offset > higherOffset) {
+                return true;
+            } else if (item.offset >= lowerOffset) {
+                passed.push(waypoints[index]);
+            }
+        });
+
+        return passed;
     },
     remove(waypoint) {
         waypoints.some(function(item, index) {
@@ -45,3 +62,6 @@ export default {
         });
     }
 };
+
+export default Observer;
+

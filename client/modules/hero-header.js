@@ -41,9 +41,9 @@ export default function(node, selector) {
 
         window.addEventListener('resize', utils.debounce(mediaQuery, 300));
 
-        waypoints.addElement(self.element('audio-control').get(), function() {
-            console.log('yay');
-        });
+        waypoints.addElement(self.container, function() {
+            self.container.classList.toggle('is-floating');
+        }, 'bottom');
 
     })();
 
