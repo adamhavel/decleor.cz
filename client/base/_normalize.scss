@@ -110,6 +110,10 @@ svg:not(:root) {
     overflow: hidden;
 }
 
+use {
+    pointer-events: none;
+}
+
 /* Links
    ========================================================================== */
 

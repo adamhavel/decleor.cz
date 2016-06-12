@@ -7,18 +7,18 @@ import utils from 'utils.js';
 const waypoints = [];
 
 const Observer = {
-    lastOffset: window.scrollY,
+    lastOffset: window.scrollY || window.pageYOffset,
     init() {
 
-        document.addEventListener('scroll', utils.debounce(() => {
-            let offset = window.scrollY;
+        window.addEventListener('scroll', utils.debounce(() => {
+            let offset = window.scrollY || window.pageYOffset;
             let lowerOffset = Math.min(offset, this.lastOffset);
             let higherOffset = Math.max(offset, this.lastOffset);
             let passed = this.select(lowerOffset, higherOffset);
 
             passed.forEach(item => item.callback());
             this.lastOffset = offset;
-        }, 50));
+        }, 10));
 
     },
     add(offset, callback) {
@@ -31,11 +31,16 @@ const Observer = {
         waypoints.push(waypoint);
         waypoints.sort((a, b) => a.offset - b.offset);
 
+        if (waypoint.offset < this.lastOffset) {
+            waypoint.callback();
+        }
+
         return waypoint;
     },
     addElement(element, callback, border = 'top', shift = 0) {
         let bounds = element.getBoundingClientRect();
-        let offset = Math.round(bounds[border] + window.scrollY + shift);
+        let windowOffset = window.scrollY || window.pageYOffset;
+        let offset = Math.round(bounds[border] + windowOffset + shift);
 
         return this.add(offset, callback);
     },

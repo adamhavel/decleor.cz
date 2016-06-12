@@ -10,23 +10,22 @@
     background: color(text--dark);
     overflow: hidden;
 
-    @include media('<line') {
-        height: lines(3);
-        padding: lines(.5) 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: color(background);
-        z-index: 10000;
-        border-bottom: 1px solid rgba(black, .075);
+    &:before {
+        content: '';
+        display: block;
+        padding-bottom: 50%;
 
-        & + * {
-            margin-top: lines(5) !important;
+        @include media('<layout') {
+            padding-bottom: 70%;
+        }
+
+        @include media('<line') {
+            display: none;
         }
     }
 
-    &.is-floating {
+    @include media('<line') {
+        overflow: visible;
         height: lines(3);
         padding: lines(.5) 0;
         position: fixed;
@@ -44,61 +43,100 @@
 }
 
     .l-hero-header__content {
-        position: relative;
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         padding: lines(2) 0 lines(3);
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation: fade-in 2s;
 
         @include media('<layout') {
             padding-top: lines(1);
         }
 
         @include media('<line') {
+            @include no-spacing;
+
             padding: 0;
+            position: relative;
+            display: block;
+            animation: none;
         }
 
         .l-hero-header.is-floating & {
-            padding: 0;
+            @keyframes drop-in {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-100%) translateZ(0);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateZ(0);
+                }
+            }
+
+            @include no-spacing;
+
+            display: block;
+            height: lines(5.5);
+            padding: lines(1) 0 lines(.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: auto;
+            background: color(background);
+            z-index: 10000;
+            border-bottom: 1px solid rgba(black, .075);
+            animation: drop-in .5s;
+            transform: translateZ(0);
         }
     }
 
         .l-hero-header__wrapper {
             @include no-spacing;
 
+            flex-shrink: 0;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-between;
+            width: 100%;
 
             &:after {
                 display: none;
             }
-        }
 
-            .l-hero-header__logo {
-                display: none;
-                flex: none;
-                height: lines(2);
-
-                @include media('<line') {
-                    display: block;
-                }
-
-                .l-hero-header.is-floating & {
-                    display: block;
-                }
+            @include media('<line') {
+                align-items: center;
             }
+        }
 
             .l-hero-header__audio-control {
                 float: left;
                 color: color(background);
                 transition: color .3s;
 
-                @include media('<line') {
-                    display: none;
-                }
-
                 &:hover,
                 &:focus {
                     color: color(highlight--light);
+                }
+
+                @include media('<line') {
+                    display: none;
                 }
 
                 .l-hero-header.is-floating & {
@@ -109,9 +147,31 @@
             .l-hero-header__secondary-nav {
                 float: right;
                 color: color(background) !important;
+                align-self: center;
 
                 @include media('<line') {
                     display: none;
+                }
+
+                .l-hero-header.is-floating & {
+                    margin-left: auto;
+                    color: color(highlight) !important;
+                }
+            }
+
+            .l-hero-header__logo {
+                float: left;
+                display: none;
+                flex: none;
+                height: lines(2.5);
+
+                @include media('<line') {
+                    display: block;
+                    height: lines(2);
+                }
+
+                .l-hero-header.is-floating & {
+                    display: block;
                 }
             }
 
@@ -132,11 +192,58 @@
                 }
             }
 
+            .l-hero-header__nav {
+                @include center;
+
+                color: color(background);
+
+                @include media('<line') {
+                    @include out-of-flow;
+
+                    display: block;
+                    margin-right: 0;
+                    margin-left: 0;
+                    position: fixed;
+                    top: lines(3);
+                    left: 0;
+                    bottom: 0;
+                    width: 80%;
+                    box-shadow: 1px 0 0 0 rgba(black, .075);
+                    transform: translateZ(0) translateX(-100%);
+                    will-change: transform;
+                    transition: transform .3s ease-in;
+                    z-index: 10000;
+
+                    &[aria-expanded="true"],
+                    &:target {
+                        transform: translateZ(0);
+                        transition-timing-function: ease-out;
+                    }
+                }
+
+                .l-hero-header.is-floating & {
+                    float: right;
+                    color: color(text);
+                    margin-right: 2vw;
+                    margin-bottom: lines(-.5);
+                }
+            }
+
+                .l-hero-header__subnav {
+                    top: auto;
+                    bottom: lines(5.5);
+
+                    .l-hero-header.is-floating & {
+                        top: 100%;
+                        bottom: auto;
+                    }
+                }
 
         .l-hero-header__promo {
+            @include island(2);
             @include no-spacing;
 
-            padding-top: lines(10);
+            width: 30%;
 
             @include media('<line') {
                 display: none;
@@ -148,19 +255,17 @@
         }
 
             .l-hero-header__hero-logo {
-                @include center;
-
-                width: 35em;
+                width: 100%;
             }
 
             .l-hero-header__headline {
-                @include aloof(8);
                 @include display-type;
 
                 color: color(background);
                 text-align: center;
                 text-transform: uppercase;
                 letter-spacing: .4em;
+                margin-top: 10vw;
             }
 
             .l-hero-header__icon {
@@ -172,49 +277,15 @@
                 transform: rotate(90deg);
             }
 
-        .l-hero-header__nav {
-            @include island(3);
-
-            display: flex;
-            justify-content: center;
-            color: color(background);
-            position: relative;
-
-            @include media('<line') {
-                @include out-of-flow;
-
-                display: block;
-                margin-right: 0;
-                margin-left: 0;
-                position: fixed;
-                top: lines(3);
-                left: 0;
-                bottom: 0;
-                width: 80%;
-                box-shadow: 1px 0 0 0 rgba(black, .075);
-                transform: translateZ(0) translateX(-100%);
-                will-change: transform;
-                transition: transform .3s ease-in;
-                z-index: 10000;
-
-                &[aria-expanded="true"],
-                &:target {
-                    transform: translateZ(0);
-                    transition-timing-function: ease-out;
-                }
-            }
-        }
-
     .l-hero-header__video {
         @include no-spacing;
+        @include size(100%);
 
         position: absolute;
         top: 50%;
         left: 0;
         right: 0;
         z-index: 1;
-        width: 100%;
-        height: 100%;
         transform: translateY(-50%);
         object-fit: cover;
 
