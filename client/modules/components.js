@@ -25,7 +25,7 @@ export default [
     },
     {
         selector: '.j-hero-header',
-        src: 'hero-header.js'
+        src: 'hero.js'
     },
     {
         selector: '.j-main-content',
