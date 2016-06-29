@@ -16,8 +16,15 @@
     .c-spot__media {
         @include center;
 
-        display: block;
-        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: lines(10);
+
+        > * {
+            object-fit: contain;
+            max-height: 100%;
+        }
     }
 
     .c-spot__title {
@@ -29,9 +36,6 @@
 
     .c-spot__subtitle {
         font-weight: 700;
-    }
-
-    .c-rating {
     }
 
     .c-spot__link {

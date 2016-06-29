@@ -27,6 +27,10 @@
         border: 1px solid color(highlight--light);
         pointer-events: none;
     }
+
+    &--alt {
+        background: color(shade);
+    }
 }
 
     .c-store-spot__heading {
@@ -38,6 +42,7 @@
         color: color(text--dark);
         text-transform: uppercase;
         font-family: font(sans-serif);
+        margin-bottom: auto;
 
         a {
             text-decoration: none;

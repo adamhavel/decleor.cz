@@ -10,4 +10,8 @@
         background: color(highlight);
         color: color(background);
         padding-top: lines(3);
+
+        a {
+            color: color(background);
+        }
     }

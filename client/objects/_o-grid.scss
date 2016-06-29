@@ -20,7 +20,6 @@ $grid-vgap: lines(2);
 @mixin grid($items-per-row: $grid-columns, $hgap: $grid-hgap, $vgap: $grid-vgap) {
     display: flex !important;
     flex-wrap: wrap;
-    justify-content: center;
 
     .no-flexwrap & {
         display: block;
@@ -87,5 +86,9 @@ $grid-vgap: lines(2);
         @include grid((
             '>=layout': 2,
         ));
+    }
+
+    &--centered {
+        justify-content: center;
     }
 }

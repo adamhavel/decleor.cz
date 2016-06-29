@@ -41,9 +41,12 @@
 
             .c-site-map__section {
 
-                &:hover,
-                &:focus {
-                    text-decoration: underline;
+                a {
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
+                    }
                 }
             }
 
