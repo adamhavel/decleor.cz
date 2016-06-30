@@ -72,13 +72,13 @@
 
             text-transform: uppercase;
             color: color(highlight);
-            font-size: 4.5rem;
+            font-size: 4rem;
             line-height: 1;
 
             @include media('<line') {
                 @include aloof(1);
 
-                font-size: 4.5rem;
+                font-size: 4rem;
             }
         }
 

@@ -6,6 +6,7 @@
     @include no-spacing;
 
     display: flex;
+    align-items: center;
 
     @include media('<line') {
         @include v-spacing(1);

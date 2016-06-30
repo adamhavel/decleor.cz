@@ -4,9 +4,23 @@
 
 .c-editable-content {
 
+    h3 {
+        @extend %e-heading;
+        @extend %u-gamma;
+    }
+
     h4 {
         @extend %e-heading;
         @extend %u-delta;
+    }
+
+    h5 {
+        @extend %e-heading;
+        @extend %u-epsilon;
+    }
+
+    h6 {
+        @extend %e-heading;
     }
 
     ul {
