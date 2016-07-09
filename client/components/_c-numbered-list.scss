@@ -18,6 +18,7 @@
             float: left;
             width: $taper;
             margin-left: -$taper;
+            font-feature-settings: 'lnum';
         }
     }
 }

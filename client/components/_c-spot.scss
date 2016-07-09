@@ -11,6 +11,7 @@
     align-items: center;
     text-align: center;
     position: relative;
+    transform: translateZ(0);
 }
 
     .c-spot__media {
@@ -20,6 +21,12 @@
         flex-direction: column;
         justify-content: flex-end;
         height: lines(10);
+        transition: transform .3s;
+
+        .c-spot:hover &,
+        .c-spot:focus & {
+            transform: scale(1.125);
+        }
 
         > * {
             object-fit: contain;
@@ -32,10 +39,12 @@
 
         text-transform: uppercase;
         color: color(highlight);
+        margin-bottom: auto;
     }
 
     .c-spot__subtitle {
         font-weight: 700;
+        min-height: 1.375 * 2em;
     }
 
     .c-spot__link {

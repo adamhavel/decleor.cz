@@ -6,7 +6,7 @@
 %c-bullet-list {
     @extend %o-block-list;
     $taper: 1.25em;
-    $size: const(LINE_HEIGHT) * .33em;
+    $size: 5px;
 
     > li {
         padding-left: $taper;
@@ -16,9 +16,9 @@
 
             content: '';
             float: left;
-            margin-top: (const(LINE_HEIGHT) / 2) - ($size / 2);
+            margin-top: calc(#{const(LINE_HEIGHT) * .5em} - #{$size / 2});
             margin-left: -$taper;
-            background: brand(secondary);
+            background: color(highlight);
             border-radius: 50%;
         }
     }

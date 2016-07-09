@@ -4,11 +4,11 @@
 
 import utils from 'utils.js';
 
-const waypoints = [];
-
-const Observer = {
-    lastOffset: window.scrollY || window.pageYOffset,
+const Waypoints = {
     init() {
+
+        this.waypoints = [];
+        this.lastOffset = window.scrollY || window.pageYOffset;
 
         window.addEventListener('scroll', utils.debounce(() => {
             let offset = window.scrollY || window.pageYOffset;
@@ -16,24 +16,22 @@ const Observer = {
             let higherOffset = Math.max(offset, this.lastOffset);
             let passed = this.select(lowerOffset, higherOffset);
 
-            passed.forEach(item => item.callback());
+            passed.forEach(item => item.callback(offset > item.offset));
             this.lastOffset = offset;
         }, 10));
 
     },
     add(offset, callback) {
-        let waypoint = { offset, callback };
-
-        if (!waypoints.length) {
+        if (!this.waypoints) {
             this.init();
         }
 
-        waypoints.push(waypoint);
-        waypoints.sort((a, b) => a.offset - b.offset);
+        let waypoint = { offset, callback };
+        let isBelow = waypoint.offset < this.lastOffset;
 
-        if (waypoint.offset < this.lastOffset) {
-            waypoint.callback();
-        }
+        this.waypoints.push(waypoint);
+        this.waypoints.sort((a, b) => a.offset - b.offset);
+        waypoint.callback(isBelow);
 
         return waypoint;
     },
@@ -47,20 +45,20 @@ const Observer = {
     select(lowerOffset, higherOffset) {
         let passed = [];
 
-        waypoints.some(function(item, index) {
+        this.waypoints && this.waypoints.some((item, index) => {
             if (item.offset > higherOffset) {
                 return true;
             } else if (item.offset >= lowerOffset) {
-                passed.push(waypoints[index]);
+                passed.push(this.waypoints[index]);
             }
         });
 
         return passed;
     },
     remove(waypoint) {
-        waypoints.some(function(item, index) {
+        this.waypoints && this.waypoints.some((item, index) => {
             if (waypoint === item) {
-                waypoints.splice(index, 1);
+                this.waypoints.splice(index, 1);
 
                 return true;
             }
@@ -68,5 +66,4 @@ const Observer = {
     }
 };
 
-export default Observer;
-
+export default Waypoints;

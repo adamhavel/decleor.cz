@@ -40,11 +40,15 @@ export default function(node, selector) {
         let update = function() {
             if (!utils.mediaQuery('<line')) {
                 self.element('video').get().currentSrc && self.element('video').get().play();
-                waypoints.remove(waypoint);
+                if (waypoint) waypoints.remove(waypoint);
                 self.container.classList.remove('is-floating');
 
-                waypoint = waypoints.addElement(self.container, function() {
-                    self.container.classList.toggle('is-floating');
+                waypoint = waypoints.addElement(self.container, (isBelow) => {
+                    if (isBelow) {
+                        self.container.classList.add('is-floating');
+                    } else {
+                        self.container.classList.remove('is-floating');
+                    }
                 }, 'bottom');
 
             } else {
