@@ -28,6 +28,11 @@
             }
         }
 
+        .c-sidebar__state {
+            @include hide;
+            @include out-of-flow;
+        }
+
     .c-sidebar__switch {
         font-family: font(sans-serif);
         justify-content: center !important;

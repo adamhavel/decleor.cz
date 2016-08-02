@@ -19,6 +19,9 @@ export default function(node, selector) {
             }
         },
         {
+            name: 'form'
+        },
+        {
             name: 'content',
             handlers: {
                 transitionend() {
@@ -57,9 +60,13 @@ export default function(node, selector) {
                         activeTab && activeTab.setAttribute('aria-pressed', 'false');
                         pane && pane.setAttribute('aria-expanded', 'true');
                         this.setAttribute('aria-pressed', true);
+                        self.element('state').get().setAttribute('value', paneId);
                     }
                 }
             }
+        },
+        {
+            name: 'state'
         },
         {
             name: 'pane'

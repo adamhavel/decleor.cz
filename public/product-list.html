@@ -452,378 +452,325 @@
 
             <nav class="l-main-content__sidebar c-sidebar j-sidebar">
 
-                <header class="c-sidebar__header c-tabs u-delta">
+                <form action="" class="c-sidebar__form j-sidebar__form">
 
-                    <ul class="c-tabs__list">
+                    <header class="c-sidebar__header c-tabs u-delta">
 
-                        <li class="c-tabs__item"><a href="" aria-pressed="true" aria-controls="c-sidebar__pane--products" class="c-tabs__link c-sidebar__tab j-sidebar__tab">Produkty</a></li>
-                        <li class="c-tabs__item"><a href="" aria-controls="c-sidebar__pane--treatments" class="c-tabs__link c-sidebar__tab j-sidebar__tab">Služby</a></li>
+                        <ul class="c-tabs__list">
 
-                    </ul>
+                            <li class="c-tabs__item"><a href="" aria-pressed="true" aria-controls="c-sidebar__pane--products" class="c-tabs__link c-sidebar__tab j-sidebar__tab">Produkty</a></li>
+                            <li class="c-tabs__item"><a href="" aria-controls="c-sidebar__pane--treatments" class="c-tabs__link c-sidebar__tab j-sidebar__tab">Služby</a></li>
 
-                </header>
+                        </ul>
 
-                <button class="c-sidebar__switch c-accordion__button c-accordion__button--simple j-sidebar__switch" aria-controls="c-sidebar__content">
-                    <h3 class="c-accordion__heading u-gamma">Filtry</h3>
-                    <svg class="c-accordion__icon e-icon e-icon--aloof u-gamma" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg>
-                </button>
+                        <input class="c-sidebar__state j-sidebar__state" type="hidden" name="c-sidebar__pane" value="c-sidebar__pane--products">
 
-                <div class="c-sidebar__content j-sidebar__content" id="c-sidebar__content">
+                    </header>
 
-                    <section class="c-sidebar__pane j-sidebar__pane" aria-expanded="true" id="c-sidebar__pane--products">
+                    <button type="button" class="c-sidebar__switch c-accordion__button c-accordion__button--simple j-sidebar__switch" aria-controls="c-sidebar__content">
+                        <h3 class="c-accordion__heading u-gamma">Filtry</h3>
+                        <svg class="c-accordion__icon e-icon e-icon--aloof u-gamma" aria-hidden="true"><use xlink:href="#arrow--down"></use></svg>
+                    </button>
 
-                        <h3 class="e-heading c-sidebar__heading u-delta">Decléor products</h3>
+                    <div class="c-sidebar__content j-sidebar__content" id="c-sidebar__content">
 
-                        <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion is-active">
-                            <button aria-controls="c-sidebar__accordion--products--category" aria-pressed="true" class="c-accordion__button j-accordion__button u-gamma">
-                                <h4 class="c-accordion__heading e-heading u-gamma">Kategorie</h4>
-                                <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                            </button>
-                            <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category" aria-expanded="true">
+                        <section class="c-sidebar__pane j-sidebar__pane" aria-expanded="true" id="c-sidebar__pane--products">
 
-                                <ul class="o-block-list o-block-list--loose u-delta">
-                                    <li>
-                                        <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                            <input id="c-sidebar__input--products--category-1" aria-controls="c-sidebar__subset--products--category-1" name="c-sidebar__input--products--category" type="radio" class="e-input j-sidebar__input" checked>
-                                            <label for="c-sidebar__input--products--category-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                            <label for="c-sidebar__input--products--category-1" class="c-form-cell__label">Tělo</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                            <input id="c-sidebar__input--products--category-2" aria-controls="c-sidebar__subset--products--category-2" name="c-sidebar__input--products--category" type="radio" class="e-input j-sidebar__input">
-                                            <label for="c-sidebar__input--products--category-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                            <label for="c-sidebar__input--products--category-2" class="c-form-cell__label">Obličej</label>
-                                        </div>
-                                    </li>
-                                </ul>
+                            <h3 class="e-heading c-sidebar__heading u-delta">Decléor products</h3>
+
+                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion is-active">
+                                <button aria-controls="c-sidebar__accordion--products--category" aria-pressed="true" class="c-accordion__button j-accordion__button u-gamma">
+                                    <h4 class="c-accordion__heading e-heading u-gamma">Kategorie</h4>
+                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                </button>
+                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category" aria-expanded="true">
+
+                                    <ul class="o-block-list o-block-list--loose u-delta">
+                                        <li>
+                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                <input id="c-sidebar__input--products--category-1" aria-controls="c-sidebar__subset--products--category-1" name="c-sidebar__input--products--category" type="radio" class="e-input j-sidebar__input" checked>
+                                                <label for="c-sidebar__input--products--category-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                <label for="c-sidebar__input--products--category-1" class="c-form-cell__label">Tělo</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                <input id="c-sidebar__input--products--category-2" aria-controls="c-sidebar__subset--products--category-2" name="c-sidebar__input--products--category" type="radio" class="e-input j-sidebar__input">
+                                                <label for="c-sidebar__input--products--category-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                <label for="c-sidebar__input--products--category-2" class="c-form-cell__label">Obličej</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </section>
+
+                            <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--products--category-1" aria-expanded="true">
+
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--products--need" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Potřeby</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--need" aria-expanded="false">
+
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--need-1" name="c-sidebar__input--products--category-1--need-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--need-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--need-1" class="c-form-cell__label">Alias</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--need-2" name="c-sidebar__input--products--category-1--need-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--need-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--need-2" class="c-form-cell__label">Necessitatibus</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--need-3" name="c-sidebar__input--products--category-1--need-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--need-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--need-3" class="c-form-cell__label">Odit</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--need-4" name="c-sidebar__input--products--category-1--need-4" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--need-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--need-4" class="c-form-cell__label">Eligendi</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--need-5" name="c-sidebar__input--products--category-1--need-5" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--need-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--need-5" class="c-form-cell__label">Voluptatum</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </section>
+
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--products--category-1--series" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Řady</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-1--series" aria-expanded="false">
+
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--series-1" name="c-sidebar__input--products--category-1--series-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--series-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--series-1" class="c-form-cell__label">Earum</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--series-2" name="c-sidebar__input--products--category-1--series-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--series-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--series-2" class="c-form-cell__label">Accusantium</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--series-3" name="c-sidebar__input--products--category-1--series-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--series-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--series-3" class="c-form-cell__label">Dolorem</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </section>
+
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--products--category-1--skin-type" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Typ pleti</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-1--skin-type" aria-expanded="false">
+
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--skin-type-1" name="c-sidebar__input--products--category-1--skin-type-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--skin-type-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--skin-type-1" class="c-form-cell__label">Earum</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--skin-type-2" name="c-sidebar__input--products--category-1--skin-type-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--skin-type-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--skin-type-2" class="c-form-cell__label">Accusantium</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-1--skin-type-3" name="c-sidebar__input--products--category-1--skin-type-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-1--skin-type-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-1--skin-type-3" class="c-form-cell__label">Dolorem</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </section>
 
                             </div>
-                        </section>
 
-                        <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--products--category-1" aria-expanded="true">
+                            <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--products--category-2">
 
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--products--need" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Potřeby</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--need" aria-expanded="false">
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--products--need" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Potřeby</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--need" aria-expanded="false">
 
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--need-1" name="c-sidebar__input--products--category-1--need-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--need-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--need-1" class="c-form-cell__label">Alias</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--need-2" name="c-sidebar__input--products--category-1--need-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--need-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--need-2" class="c-form-cell__label">Necessitatibus</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--need-3" name="c-sidebar__input--products--category-1--need-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--need-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--need-3" class="c-form-cell__label">Odit</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--need-4" name="c-sidebar__input--products--category-1--need-4" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--need-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--need-4" class="c-form-cell__label">Eligendi</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--need-5" name="c-sidebar__input--products--category-1--need-5" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--need-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--need-5" class="c-form-cell__label">Voluptatum</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--need-1" name="c-sidebar__input--products--category-2--need-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--need-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--need-1" class="c-form-cell__label">Alias</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--need-2" name="c-sidebar__input--products--category-2--need-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--need-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--need-2" class="c-form-cell__label">Necessitatibus</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--need-3" name="c-sidebar__input--products--category-2--need-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--need-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--need-3" class="c-form-cell__label">Odit</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--need-4" name="c-sidebar__input--products--category-2--need-4" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--need-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--need-4" class="c-form-cell__label">Eligendi</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--need-5" name="c-sidebar__input--products--category-2--need-5" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--need-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--need-5" class="c-form-cell__label">Voluptatum</label>
+                                                </div>
+                                            </li>
+                                        </ul>
 
-                                </div>
-                            </section>
+                                    </div>
+                                </section>
 
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--products--category-1--series" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Řady</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-1--series" aria-expanded="false">
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--products--category-2--series" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Řady</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-2--series" aria-expanded="false">
 
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--series-1" name="c-sidebar__input--products--category-1--series-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--series-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--series-1" class="c-form-cell__label">Earum</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--series-2" name="c-sidebar__input--products--category-1--series-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--series-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--series-2" class="c-form-cell__label">Accusantium</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--series-3" name="c-sidebar__input--products--category-1--series-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--series-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--series-3" class="c-form-cell__label">Dolorem</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--series-1" name="c-sidebar__input--products--category-2--series-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--series-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--series-1" class="c-form-cell__label">Earum</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--series-2" name="c-sidebar__input--products--category-2--series-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--series-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--series-2" class="c-form-cell__label">Accusantium</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--series-3" name="c-sidebar__input--products--category-2--series-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--series-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--series-3" class="c-form-cell__label">Dolorem</label>
+                                                </div>
+                                            </li>
+                                        </ul>
 
-                                </div>
-                            </section>
+                                    </div>
+                                </section>
 
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--products--category-1--skin-type" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Typ pleti</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-1--skin-type" aria-expanded="false">
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--products--category-2--skin-type" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Typ pleti</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-2--skin-type" aria-expanded="false">
 
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--skin-type-1" name="c-sidebar__input--products--category-1--skin-type-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--skin-type-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--skin-type-1" class="c-form-cell__label">Earum</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--skin-type-2" name="c-sidebar__input--products--category-1--skin-type-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--skin-type-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--skin-type-2" class="c-form-cell__label">Accusantium</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-1--skin-type-3" name="c-sidebar__input--products--category-1--skin-type-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-1--skin-type-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-1--skin-type-3" class="c-form-cell__label">Dolorem</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--skin-type-1" name="c-sidebar__input--products--category-2--skin-type-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--skin-type-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--skin-type-1" class="c-form-cell__label">Earum</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--skin-type-2" name="c-sidebar__input--products--category-2--skin-type-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--skin-type-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--skin-type-2" class="c-form-cell__label">Accusantium</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--products--category-2--skin-type-3" name="c-sidebar__input--products--category-2--skin-type-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--products--category-2--skin-type-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--products--category-2--skin-type-3" class="c-form-cell__label">Dolorem</label>
+                                                </div>
+                                            </li>
+                                        </ul>
 
-                                </div>
-                            </section>
-
-                        </div>
-
-                        <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--products--category-2">
-
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--products--need" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Potřeby</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--need" aria-expanded="false">
-
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--need-1" name="c-sidebar__input--products--category-2--need-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--need-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--need-1" class="c-form-cell__label">Alias</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--need-2" name="c-sidebar__input--products--category-2--need-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--need-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--need-2" class="c-form-cell__label">Necessitatibus</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--need-3" name="c-sidebar__input--products--category-2--need-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--need-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--need-3" class="c-form-cell__label">Odit</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--need-4" name="c-sidebar__input--products--category-2--need-4" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--need-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--need-4" class="c-form-cell__label">Eligendi</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--need-5" name="c-sidebar__input--products--category-2--need-5" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--need-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--need-5" class="c-form-cell__label">Voluptatum</label>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </section>
-
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--products--category-2--series" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Řady</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-2--series" aria-expanded="false">
-
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--series-1" name="c-sidebar__input--products--category-2--series-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--series-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--series-1" class="c-form-cell__label">Earum</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--series-2" name="c-sidebar__input--products--category-2--series-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--series-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--series-2" class="c-form-cell__label">Accusantium</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--series-3" name="c-sidebar__input--products--category-2--series-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--series-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--series-3" class="c-form-cell__label">Dolorem</label>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </section>
-
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--products--category-2--skin-type" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Typ pleti</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--products--category-2--skin-type" aria-expanded="false">
-
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--skin-type-1" name="c-sidebar__input--products--category-2--skin-type-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--skin-type-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--skin-type-1" class="c-form-cell__label">Earum</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--skin-type-2" name="c-sidebar__input--products--category-2--skin-type-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--skin-type-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--skin-type-2" class="c-form-cell__label">Accusantium</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--products--category-2--skin-type-3" name="c-sidebar__input--products--category-2--skin-type-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--products--category-2--skin-type-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--products--category-2--skin-type-3" class="c-form-cell__label">Dolorem</label>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </section>
-
-                        </div>
-
-                    </section>
-
-                    <section class="c-sidebar__pane j-sidebar__pane" aria-expanded="false" id="c-sidebar__pane--treatments">
-
-                        <h3 class="e-heading c-sidebar__heading u-delta">Decléor treatments</h3>
-
-                        <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion is-active">
-                            <button aria-controls="c-sidebar__accordion--treatments--category" aria-pressed="true" class="c-accordion__button j-accordion__button u-gamma">
-                                <h4 class="c-accordion__heading e-heading u-gamma">Kategorie</h4>
-                                <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                            </button>
-                            <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category" aria-expanded="true">
-
-                                <ul class="o-block-list o-block-list--loose u-delta">
-                                    <li>
-                                        <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                            <input id="c-sidebar__input--treatments--category-1" aria-controls="c-sidebar__subset--treatments--category-1" name="c-sidebar__input--treatments--category" type="radio" class="e-input j-sidebar__input" checked>
-                                            <label for="c-sidebar__input--treatments--category-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                            <label for="c-sidebar__input--treatments--category-1" class="c-form-cell__label">Tělo</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                            <input id="c-sidebar__input--treatments--category-2" aria-controls="c-sidebar__subset--treatments--category-2" name="c-sidebar__input--treatments--category" type="radio" class="e-input j-sidebar__input">
-                                            <label for="c-sidebar__input--treatments--category-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                            <label for="c-sidebar__input--treatments--category-2" class="c-form-cell__label">Obličej</label>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </section>
 
                             </div>
+
                         </section>
 
-                        <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--treatments--category-1" aria-expanded="true">
+                        <section class="c-sidebar__pane j-sidebar__pane" aria-expanded="false" id="c-sidebar__pane--treatments">
 
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--treatments--category-1--time" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Čas</h4>
+                            <h3 class="e-heading c-sidebar__heading u-delta">Decléor treatments</h3>
+
+                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion is-active">
+                                <button aria-controls="c-sidebar__accordion--treatments--category" aria-pressed="true" class="c-accordion__button j-accordion__button u-gamma">
+                                    <h4 class="c-accordion__heading e-heading u-gamma">Kategorie</h4>
                                     <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
                                 </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-1--time" aria-expanded="false">
+                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category" aria-expanded="true">
 
                                     <ul class="o-block-list o-block-list--loose u-delta">
                                         <li>
                                             <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--time-1" name="c-sidebar__input--treatments--category-1--time-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--time-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--time-1" class="c-form-cell__label">In</label>
+                                                <input id="c-sidebar__input--treatments--category-1" aria-controls="c-sidebar__subset--treatments--category-1" name="c-sidebar__input--treatments--category" type="radio" class="e-input j-sidebar__input" checked>
+                                                <label for="c-sidebar__input--treatments--category-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                <label for="c-sidebar__input--treatments--category-1" class="c-form-cell__label">Tělo</label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--time-2" name="c-sidebar__input--treatments--category-1--time-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--time-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--time-2" class="c-form-cell__label">Necessitatibus</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--time-3" name="c-sidebar__input--treatments--category-1--time-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--time-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--time-3" class="c-form-cell__label">Velit</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--time-4" name="c-sidebar__input--treatments--category-1--time-4" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--time-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--time-4" class="c-form-cell__label">Error</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--time-5" name="c-sidebar__input--treatments--category-1--time-5" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--time-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--time-5" class="c-form-cell__label">Eveniet</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--time-6" name="c-sidebar__input--treatments--category-1--time-6" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--time-6" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--time-6" class="c-form-cell__label">Alias</label>
+                                                <input id="c-sidebar__input--treatments--category-2" aria-controls="c-sidebar__subset--treatments--category-2" name="c-sidebar__input--treatments--category" type="radio" class="e-input j-sidebar__input">
+                                                <label for="c-sidebar__input--treatments--category-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                <label for="c-sidebar__input--treatments--category-2" class="c-form-cell__label">Obličej</label>
                                             </div>
                                         </li>
                                     </ul>
@@ -831,140 +778,199 @@
                                 </div>
                             </section>
 
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--treatments--category-1--wishes" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Přání</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-1--wishes" aria-expanded="false">
+                            <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--treatments--category-1" aria-expanded="true">
 
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--wishes-1" name="c-sidebar__input--treatments--category-1--wishes-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--wishes-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--wishes-1" class="c-form-cell__label">Earum</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--wishes-2" name="c-sidebar__input--treatments--category-1--wishes-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--wishes-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--wishes-2" class="c-form-cell__label">Accusantium</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-1--wishes-3" name="c-sidebar__input--treatments--category-1--wishes-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-1--wishes-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-1--wishes-3" class="c-form-cell__label">Dolorem</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--treatments--category-1--time" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Čas</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-1--time" aria-expanded="false">
 
-                                </div>
-                            </section>
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--time-1" name="c-sidebar__input--treatments--category-1--time-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--time-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--time-1" class="c-form-cell__label">In</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--time-2" name="c-sidebar__input--treatments--category-1--time-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--time-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--time-2" class="c-form-cell__label">Necessitatibus</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--time-3" name="c-sidebar__input--treatments--category-1--time-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--time-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--time-3" class="c-form-cell__label">Velit</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--time-4" name="c-sidebar__input--treatments--category-1--time-4" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--time-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--time-4" class="c-form-cell__label">Error</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--time-5" name="c-sidebar__input--treatments--category-1--time-5" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--time-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--time-5" class="c-form-cell__label">Eveniet</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--time-6" name="c-sidebar__input--treatments--category-1--time-6" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--time-6" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--time-6" class="c-form-cell__label">Alias</label>
+                                                </div>
+                                            </li>
+                                        </ul>
 
-                        </div>
+                                    </div>
+                                </section>
 
-                        <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--treatments--category-2">
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--treatments--category-1--wishes" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Přání</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-1--wishes" aria-expanded="false">
 
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--treatments--category-2--time" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Čas</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-2--time" aria-expanded="false">
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--wishes-1" name="c-sidebar__input--treatments--category-1--wishes-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--wishes-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--wishes-1" class="c-form-cell__label">Earum</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--wishes-2" name="c-sidebar__input--treatments--category-1--wishes-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--wishes-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--wishes-2" class="c-form-cell__label">Accusantium</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-1--wishes-3" name="c-sidebar__input--treatments--category-1--wishes-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-1--wishes-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-1--wishes-3" class="c-form-cell__label">Dolorem</label>
+                                                </div>
+                                            </li>
+                                        </ul>
 
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--time-1" name="c-sidebar__input--treatments--category-2--time-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--time-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--time-1" class="c-form-cell__label">In</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--time-2" name="c-sidebar__input--treatments--category-2--time-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--time-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--time-2" class="c-form-cell__label">Necessitatibus</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--time-3" name="c-sidebar__input--treatments--category-2--time-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--time-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--time-3" class="c-form-cell__label">Velit</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--time-4" name="c-sidebar__input--treatments--category-2--time-4" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--time-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--time-4" class="c-form-cell__label">Error</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--time-5" name="c-sidebar__input--treatments--category-2--time-5" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--time-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--time-5" class="c-form-cell__label">Eveniet</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--time-6" name="c-sidebar__input--treatments--category-2--time-6" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--time-6" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--time-6" class="c-form-cell__label">Alias</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                </section>
 
-                                </div>
-                            </section>
+                            </div>
 
-                            <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
-                                <button aria-controls="c-sidebar__accordion--treatments--category-2--wishes" class="c-accordion__button j-accordion__button u-gamma">
-                                    <h4 class="c-accordion__heading e-heading u-gamma">Přání</h4>
-                                    <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
-                                </button>
-                                <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-2--wishes" aria-expanded="false">
+                            <div class="c-sidebar__subset j-sidebar__subset" id="c-sidebar__subset--treatments--category-2">
 
-                                    <ul class="o-block-list o-block-list--loose u-delta">
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--wishes-1" name="c-sidebar__input--treatments--category-2--wishes-1" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--wishes-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--wishes-1" class="c-form-cell__label">Earum</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--wishes-2" name="c-sidebar__input--treatments--category-2--wishes-2" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--wishes-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--wishes-2" class="c-form-cell__label">Accusantium</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
-                                                <input id="c-sidebar__input--treatments--category-2--wishes-3" name="c-sidebar__input--treatments--category-2--wishes-3" type="checkbox" class="e-input">
-                                                <label for="c-sidebar__input--treatments--category-2--wishes-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
-                                                <label for="c-sidebar__input--treatments--category-2--wishes-3" class="c-form-cell__label">Dolorem</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--treatments--category-2--time" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Čas</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-2--time" aria-expanded="false">
 
-                                </div>
-                            </section>
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--time-1" name="c-sidebar__input--treatments--category-2--time-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--time-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--time-1" class="c-form-cell__label">In</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--time-2" name="c-sidebar__input--treatments--category-2--time-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--time-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--time-2" class="c-form-cell__label">Necessitatibus</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--time-3" name="c-sidebar__input--treatments--category-2--time-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--time-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--time-3" class="c-form-cell__label">Velit</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--time-4" name="c-sidebar__input--treatments--category-2--time-4" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--time-4" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--time-4" class="c-form-cell__label">Error</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--time-5" name="c-sidebar__input--treatments--category-2--time-5" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--time-5" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--time-5" class="c-form-cell__label">Eveniet</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--time-6" name="c-sidebar__input--treatments--category-2--time-6" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--time-6" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--time-6" class="c-form-cell__label">Alias</label>
+                                                </div>
+                                            </li>
+                                        </ul>
 
-                        </div>
+                                    </div>
+                                </section>
 
-                    </section>
+                                <section class="c-accordion j-accordion c-sidebar__accordion j-sidebar__accordion">
+                                    <button aria-controls="c-sidebar__accordion--treatments--category-2--wishes" class="c-accordion__button j-accordion__button u-gamma">
+                                        <h4 class="c-accordion__heading e-heading u-gamma">Přání</h4>
+                                        <svg class="c-accordion__icon e-icon" role="image" aria-label="Rozbalit"><use xlink:href="#arrow--down"></use></svg>
+                                    </button>
+                                    <div class="c-accordion__content j-accordion__content" id="c-sidebar__accordion--treatments--category-2--wishes" aria-expanded="false">
 
-                    <a href="" class="c-sidebar__loader j-sidebar__loader u-delta"><svg class="e-icon e-icon--aloof e-icon--wide u-gamma" aria-hidden="true"><use xlink:href="#arrow"></use></svg><span>Zobrazit</span></a>
+                                        <ul class="o-block-list o-block-list--loose u-delta">
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--wishes-1" name="c-sidebar__input--treatments--category-2--wishes-1" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--wishes-1" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--wishes-1" class="c-form-cell__label">Earum</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--wishes-2" name="c-sidebar__input--treatments--category-2--wishes-2" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--wishes-2" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--wishes-2" class="c-form-cell__label">Accusantium</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="c-form-cell c-form-cell--inline c-form-cell--inline--rigid">
+                                                    <input id="c-sidebar__input--treatments--category-2--wishes-3" name="c-sidebar__input--treatments--category-2--wishes-3" type="checkbox" class="e-input">
+                                                    <label for="c-sidebar__input--treatments--category-2--wishes-3" class="e-input e-input--faux c-form-cell__input" aria-hidden="true"></label>
+                                                    <label for="c-sidebar__input--treatments--category-2--wishes-3" class="c-form-cell__label">Dolorem</label>
+                                                </div>
+                                            </li>
+                                        </ul>
 
-                </div>
+                                    </div>
+                                </section>
+
+                            </div>
+
+                        </section>
+
+                        <button class="c-sidebar__loader j-sidebar__loader u-delta"><svg class="e-icon e-icon--aloof e-icon--wide u-gamma" aria-hidden="true"><use xlink:href="#arrow"></use></svg><span>Zobrazit</span></button>
+
+                    </div>
+
+                </form>
 
             </nav>
 
