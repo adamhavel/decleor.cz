@@ -20,13 +20,19 @@
             padding-bottom: 0;
             border-bottom: 0;
         }
+
+        @mixin no-flexbox {
+            @include clearfix;
+        }
     }
 
         .c-accordion__heading {
+            float: left;
             text-transform: uppercase;
         }
 
         .c-accordion__icon {
+            float: right;
             transition: transform .3s;
 
             .c-accordion__button[aria-pressed="true"] & {

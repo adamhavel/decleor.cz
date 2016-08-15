@@ -77,7 +77,8 @@ export default function(node, selector) {
                 change() {
                     let subsetId = this.getAttribute('aria-controls');
                     let subset = self.element('subset').query(`[id="${subsetId}"]`);
-                    let activeSubset = self.element('subset').query('[aria-expanded="true"]');
+                    let activePane = self.element('pane').query('[aria-expanded="true"]');
+                    let activeSubset = activePane.querySelector(self.element('subset').selector + '[aria-expanded="true"]');
 
                     activeSubset && activeSubset.setAttribute('aria-expanded', 'false');
                     subset && subset.setAttribute('aria-expanded', 'true');
