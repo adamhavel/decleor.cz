@@ -40,11 +40,13 @@
         text-transform: uppercase;
         color: color(highlight);
         margin-bottom: auto;
+        max-width: 100%;
     }
 
     .c-spot__subtitle {
         font-weight: 700;
         min-height: 1.375 * 2em;
+        max-width: 100%;
     }
 
     .c-spot__link {

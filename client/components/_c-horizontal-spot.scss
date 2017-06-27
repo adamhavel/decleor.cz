@@ -40,6 +40,7 @@
 
         .c-horizontal-spot__title {
             font-style: italic;
+            max-width: 100%;
         }
 
         .c-horizontal-spot__subtitle {
@@ -47,6 +48,7 @@
             text-transform: uppercase;
             color: color(text--dark);
             margin-bottom: auto;
+            max-width: 100%;
         }
 
         .c-horizontal-spot__link {

@@ -32,10 +32,12 @@
     .c-treatment-spot__heading {
         color: color(highlight);
         text-transform: uppercase;
+        max-width: 100%;
     }
 
     .c-treatment-spot__subtitle {
         color: color(text--dark);
+        max-width: 100%;
     }
 
     .c-treatment-spot__skin-type {
